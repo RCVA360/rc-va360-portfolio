@@ -1,73 +1,186 @@
-<div align="center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | RC.VA360</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
 
-# 🌿 About Me | Rowena Carla
-### Virtual Assistant & Remote Operations Support
+  <style>
+    :root {
+      --bg-cream: #F8F6F1;
+      --dusty-rose: #D9A7A0;
+      --sage-green: #A8B09A;
+      --charcoal: #2E3A3F;
+      --white: #FFFFFF;
+    }
 
-*“You Focus on Business. I'll Handle the Details. ♡”*
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
----
+    body {
+      background-color: var(--bg-cream);
+      color: var(--charcoal);
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      padding: 24px 16px;
+    }
 
-[![Back to Home](https://img.shields.io/badge/←_Back_to_Home-2E3A3F?style=for-the-badge&logoColor=white)](../)
-[![Get in Touch](https://img.shields.io/badge/Get_in_Touch-D9A7A0?style=for-the-badge&logoColor=2E3A3F)](mailto:cipriano.rowenacarla.va@gmail.com)
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
 
----
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
 
-</div>
+    .nav-btn {
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.85rem;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-weight: 500;
+      background: var(--charcoal);
+      color: var(--white);
+      transition: opacity 0.2s ease;
+    }
 
-## 👋 Hi, I'm Rowena Carla
+    .card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(46, 58, 63, 0.03);
+      border-left: 5px solid var(--sage-green);
+    }
 
-I am an aspiring Virtual Assistant with more than **9 years of experience** in customer service and operations.
+    .card-rose {
+      border-left-color: var(--dusty-rose);
+    }
 
-My professional background includes experience in hospitality, gaming, and service-focused environments. These experiences helped me develop strong communication, organization, customer service, teamwork, and problem-solving skills.
+    .card-charcoal {
+      border-left-color: var(--charcoal);
+    }
 
-I am now building my career in virtual assistance, combining my previous experience with digital tools, AI tools, content creation, and remote work skills.
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+    }
 
----
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      color: var(--dusty-rose);
+      margin-bottom: 14px;
+    }
 
-## 💼 What I Bring
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem;
+      color: var(--charcoal);
+      margin-bottom: 14px;
+    }
 
-* **Core Operational Skills:** Customer service experience, operations experience, administrative support skills.
-* **Communication & Mindset:** Strong communication, organization and attention to detail, adaptability, responsibility, and team support.
-* **Modern Workflows:** AI-assisted workflows, content creation, and video creation.
+    .tagline {
+      font-style: italic;
+      color: var(--charcoal);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
 
----
+    ul {
+      list-style-position: inside;
+      margin-left: 4px;
+    }
 
-## 🎯 My Goal
+    li {
+      margin-bottom: 8px;
+    }
 
-My goal is to provide reliable virtual assistance that helps business owners and teams save time, stay organized, and manage their daily operations more efficiently.
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
 
-I am continuously learning new tools and improving my skills so I can provide better support to clients.
+    .cert-item {
+      background: var(--bg-cream);
+      border-radius: 10px;
+      padding: 14px 16px;
+      border: 1px solid rgba(168, 176, 154, 0.4);
+    }
 
----
+    .cert-item h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      margin-bottom: 3px;
+    }
 
-## 💡 My Work Style
+    .cert-item p {
+      font-size: 0.82rem;
+      color: #556268;
+    }
 
-| Value | Principle |
-| :--- | :--- |
-| 🛡️ **Professional** | I aim to communicate clearly and handle tasks responsibly. |
-| 🤝 **Reliable** | I take deadlines, instructions, and responsibilities seriously. |
-| 😊 **Approachable** | I believe good communication makes working together easier. |
+    .values-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
 
----
+    .values-table th, .values-table td {
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid rgba(46, 58, 63, 0.08);
+      font-size: 0.95rem;
+    }
 
-## 🛠️ Currently Building
+    .values-table th {
+      font-family: 'Poppins', sans-serif;
+      color: var(--charcoal);
+      background: rgba(248, 246, 241, 0.7);
+    }
 
-I am actively expanding my portfolio across these areas:
+    .contact-btn {
+      display: inline-block;
+      background: var(--charcoal);
+      color: var(--white);
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
 
-* [Administrative Support](../02-Administrative-Support)
-* [Customer Service Support](../03-Customer-Service)
-* [Operations Support](../04-Operations-Support)
-* [Social Media Support](../05-Social-Media-Support)
-* [AI-Powered Tasks](../06-AI-Powered-Tasks)
-* [Content Creation & Video](../07-Content-Creation)
+  <div class="container">
+    
+    <div class="top-nav">
+      <a href="../" class="nav-btn">← Back to Home</a>
+      <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="nav-btn" style="background: var(--dusty-rose); color: var(--charcoal);">Get in Touch</a>
+    </div>
 
----
-
-<div align="center">
-
-### RC.VA360
-*“You Focus on Business. I'll Handle the Details.”*
-
-[![Hire Me](https://img.shields.io/badge/Connect_With_Me-A8B09A?style=for-the-badge&logoColor=white)](mailto:cipriano.rowenacarla.va@gmail.com)
-
-</div>
+    <header class="card card-rose">
+      <h1>Rowena Carla Cipriano</h1>
+      <h2>Virtual Assistant & Remote Operations Support</h2>
+      <p class="tagline">“You Focus on Business. I'll Handle the Details. ♡”</p>
+      
+      <p style="margin-top: 14px;">
+        Hi, I'm
