@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RC.VA360 | Virtual Assistance & Remote Operations</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-cream: #F8F6F1;
+      --dusty-rose: #D9A7A0;
+      --sage-green: #A8B09A;
+      --charcoal: #2E3A3F;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--charcoal);
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      padding: 24px 16px;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      background: var(--white);
+      border: 1px solid rgba(217, 167, 160, 0.4);
+      border-radius: 16px;
+      padding: 40px 24px;
+      box-shadow: 0 4px 20px rgba(46, 58, 63, 0.04);
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--dusty-rose);
+      margin-bottom: 12px;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: var(--charcoal);
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    /* Badges */
+    .badge-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    .badge {
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.85rem;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: opacity 0.2s ease;
+    }
+
+    .badge:hover {
+      opacity: 0.85;
+    }
+
+    .bg-rose { background: var(--dusty-rose); color: var(--charcoal); }
+    .bg-sage { background: var(--sage-green); color: var(--white); }
+    .bg-charcoal { background: var(--charcoal); color: var(--white); }
+
+    /* Content Cards */
+    .card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 12px rgba(46, 58, 63, 0.03);
+      border-left: 5px solid var(--sage-green);
+    }
+
+    .card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+      color: var(--charcoal);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    ul {
+      list-style-position: inside;
+      margin-left: 4px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    /* Contact Button */
+    .contact-btn {
+      display: inline-block;
+      background: var(--charcoal);
+      color: var(--white);
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <header class="hero">
+      <h1>RC.VA360</h1>
+      <h2>Virtual Assistance & Remote Operations Support</h2>
+      <p class="tagline">“You Focus on Business. I'll Handle the Details. ♡”</p>
+      
+      <div class="badge-bar">
+        <a class="badge bg-rose" href="./01-About-Me">About Me</a>
+        <a class="badge bg-sage" href="./02-Administrative-Support">Admin Support</a>
+        <a class="badge bg-charcoal" href="./03-Customer-Service">Customer Care</a>
+        <a class="badge bg-rose" href="./04-Operations-Support">Operations</a>
+        <a class="badge bg-sage" href="./06-AI-Powered-Tasks">AI Tasks</a>
+        <a class="badge bg-charcoal" href="./07-Content-Creation">Content Creation</a>
+      </div>
+    </header>
+
+    <section class="card">
+      <h3>Welcome</h3>
+      <p>I am a Virtual Assistant with more than <strong>9 years of experience</strong> in customer service and operations across hospitality, gaming, and service-focused environments. My goal is to help busy business owners stay organized, delight customers, and streamline daily operations.</p>
+    </section>
+
+    <section class="grid-2">
+      <div class="card">
+        <h3>Administrative Support</h3>
+        <ul>
+          <li>Data entry & document filing</li>
+          <li>Calendar management & scheduling</li>
+          <li>Executive research & email triage</li>
+          <li>Spreadsheet maintenance</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Customer Service</h3>
+        <ul>
+          <li>Multi-channel client communication</li>
+          <li>Response template development</li>
+          <li>Inquiry handling & ticket follow-ups</li>
+          <li>Escalation management</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Operations Support</h3>
+        <ul>
+          <li>Workflow & task tracking</li>
+          <li>Standard Operating Procedures (SOPs)</li>
+          <li>Team scheduling coordination</li>
+          <li>Process documentation</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>AI & Content Workflows</h3>
+        <ul>
+          <li>AI-assisted commercial scripting</li>
+          <li>Visual concept generation (Bichu-Bichu)</li>
+          <li>Social media calendar planning</li>
+          <li>Canva asset preparation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" style="text-align: center; border-left: 5px solid var(--dusty-rose);">
+      <h3>Let's Work Together</h3>
+      <p>Available for freelance administrative, customer care, and operations projects.</p>
+      <a class="contact-btn" href="mailto:cipriano.rowenacarla.va@gmail.com">Send an Email</a>
+    </section>
+
+  </div>
+
+</body>
+</html>
