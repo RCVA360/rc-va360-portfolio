@@ -1,28 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RC.VA360 | Virtual Assistance & Remote Operations Support</title>
-
-  <!-- Google Fonts according to RC.VA360 Brand Kit -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Service Support - Portfolio</title>
   <style>
     :root {
-      --color-charcoal: #2F3E46;
-      --color-sage: #9CAF88;
-      --color-rose: #DCAE96;
-      --color-cream-bg: #F8F6F0;
-      --color-white: #FFFFFF;
-      --color-border: #EFE9DF;
-      --color-muted: #5C6B73;
-
-      --font-heading: 'Montserrat', sans-serif;
-      --font-subheading: 'Poppins', sans-serif;
-      --font-body: 'Open Sans', sans-serif;
+      --primary: #2563eb;
+      --primary-light: #eff6ff;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --bg: #f9fafb;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
     }
 
     * {
@@ -32,458 +22,223 @@
     }
 
     body {
-      background-color: var(--color-cream-bg);
-      font-family: var(--font-body);
-      color: var(--color-charcoal);
-      line-height: 1.65;
-      padding: 24px 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-main);
+      background-color: var(--bg);
+      padding: 2.5rem 1rem;
     }
 
-    /* Common Card Styling */
-    .card {
-      width: 100%;
-      max-width: 480px;
-      background: var(--color-white);
-      border-radius: 24px;
-      box-shadow: 0 8px 24px rgba(47, 62, 70, 0.06);
-      border: 1px solid var(--color-border);
-      overflow: hidden;
-    }
-
-    /* ---------------- CARD 1: BANNER, LOGO & NAVIGATION ---------------- */
-    .banner-container {
-      width: 100%;
-      height: 140px;
-      background-color: #EDE8DF;
-      overflow: hidden;
-    }
-
-    .banner-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .header-content {
-      padding: 20px 18px 24px;
-      text-align: center;
-    }
-
-    .logo-container {
-      margin-bottom: 20px;
-    }
-
-    .logo-img {
-      max-width: 250px;
-      width: 100%;
-      height: auto;
-      display: block;
+    .container {
+      max-width: 800px;
       margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     }
 
-    /* Navigation Pills Grid */
-    .nav-pills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
+    header {
+      margin-bottom: 2rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
     }
 
-    .pill-btn {
-      display: inline-block;
-      text-decoration: none;
-      font-family: var(--font-subheading);
-      font-size: 0.82rem;
-      font-weight: 500;
-      padding: 7px 16px;
-      border-radius: 20px;
-      transition: all 0.25s ease;
-      white-space: nowrap;
-    }
-
-    .pill-rose {
-      background-color: var(--color-rose);
-      color: var(--color-white);
-    }
-
-    .pill-sage {
-      background-color: var(--color-sage);
-      color: var(--color-white);
-    }
-
-    .pill-charcoal {
-      background-color: var(--color-charcoal);
-      color: var(--color-white);
-    }
-
-    .pill-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(47, 62, 70, 0.16);
-      opacity: 0.95;
-    }
-
-    /* ---------------- CARD 2: WELCOME & PROFILE ---------------- */
-    .about-card {
-      padding: 30px 22px;
-      text-align: center;
-    }
-
-    .profile-frame {
-      width: 120px;
-      height: 120px;
-      margin: 0 auto 18px;
-      border-radius: 50%;
-      padding: 4px;
-      background: var(--color-rose);
-      box-shadow: 0 6px 16px rgba(220, 174, 150, 0.35);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .profile-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-      display: block;
-      background-color: #EDE8DF;
-    }
-
-    .section-title {
-      font-family: var(--font-heading);
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: var(--color-charcoal);
-      margin-bottom: 12px;
-    }
-
-    .bio-text {
-      font-size: 0.94rem;
-      line-height: 1.7;
-      color: var(--color-muted);
-      text-align: left;
-      margin-bottom: 14px;
-    }
-
-    .bio-text strong {
-      color: var(--color-charcoal);
-      font-weight: 600;
-    }
-
-    /* ---------------- CARD 3: CORE SERVICES ---------------- */
-    .content-card {
-      padding: 26px 22px;
-    }
-
-    .badge-label {
-      display: inline-block;
-      font-family: var(--font-subheading);
-      font-size: 0.78rem;
+    h1 {
+      font-size: 2rem;
+      color: var(--text-main);
       font-weight: 700;
-      letter-spacing: 1.8px;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin: 2rem 0 1rem;
+      color: var(--primary);
       text-transform: uppercase;
-      color: var(--color-charcoal);
-      border-bottom: 2px solid var(--color-rose);
-      padding-bottom: 2px;
-      margin-bottom: 18px;
+      letter-spacing: 0.05em;
     }
 
-    .service-group {
-      margin-bottom: 22px;
+    p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
     }
 
-    .service-group:last-child {
+    .grid-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.75rem;
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+
+    .grid-list li {
+      background: var(--primary-light);
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      border-left: 4px solid var(--primary);
+    }
+
+    .styles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .style-card {
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+
+    .style-card strong {
+      display: block;
+      color: var(--text-main);
+      margin-bottom: 0.35rem;
+      font-size: 1rem;
+    }
+
+    .style-card span {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .sample-box {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fafafa;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .bubble {
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .bubble:last-child {
       margin-bottom: 0;
     }
 
-    .service-title {
-      font-family: var(--font-subheading);
-      font-size: 1.02rem;
-      font-weight: 600;
-      color: var(--color-charcoal);
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .customer-bubble {
+      background: #f3f4f6;
+      border-left: 4px solid #9ca3af;
     }
 
-    .service-title::before {
-      content: '';
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      background: var(--color-sage);
-      border-radius: 50%;
+    .response-bubble {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
     }
 
-    .service-list {
-      list-style: none;
-      padding-left: 16px;
-    }
-
-    .service-list li {
-      position: relative;
-      padding-left: 18px;
-      margin-bottom: 5px;
-      font-size: 0.91rem;
-      color: var(--color-muted);
-    }
-
-    .service-list li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--color-sage);
-      font-weight: bold;
-    }
-
-    /* ---------------- CARD 4: CERTIFICATIONS ---------------- */
-    .cert-item {
-      background: #FAF8F5;
-      border-left: 3px solid var(--color-sage);
-      border-radius: 8px;
-      padding: 12px 14px;
-      margin-bottom: 12px;
-    }
-
-    .cert-item strong {
-      font-family: var(--font-subheading);
-      font-size: 0.92rem;
-      color: var(--color-charcoal);
+    .label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
       display: block;
-      margin-bottom: 3px;
     }
 
-    .cert-item p {
-      font-size: 0.88rem;
-      color: var(--color-muted);
-      margin: 0;
+    .customer-bubble .label {
+      color: #6b7280;
     }
 
-    /* ---------------- CARD 5: FOOTER & CONTACT ---------------- */
-    .footer-card {
-      padding: 28px 20px;
-      text-align: center;
+    .response-bubble .label {
+      color: var(--primary);
     }
 
-    .email-display {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background-color: var(--color-cream-bg);
-      border: 1px solid var(--color-rose);
-      padding: 10px 18px;
-      border-radius: 20px;
-      margin: 14px 0 16px;
-      max-width: 100%;
+    .portfolio-list {
+      list-style-type: square;
+      padding-left: 1.5rem;
+      color: var(--text-muted);
     }
 
-    .email-icon {
-      font-size: 1.1rem;
-      color: var(--color-sage);
-    }
-
-    .email-text {
-      font-family: var(--font-body);
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--color-charcoal);
-      text-decoration: none;
-      word-break: break-all;
-      transition: color 0.2s ease;
-    }
-
-    .email-text:hover {
-      color: var(--color-rose);
-    }
-
-    .contact-btn {
-      display: block;
-      width: fit-content;
-      margin: 0 auto;
-      text-decoration: none;
-      font-family: var(--font-subheading);
-      font-size: 0.92rem;
-      font-weight: 600;
-      background-color: var(--color-charcoal);
-      color: var(--color-white);
-      padding: 11px 28px;
-      border-radius: 25px;
-      transition: all 0.25s ease;
-    }
-
-    .contact-btn:hover {
-      background-color: var(--color-sage);
-      transform: translateY(-2px);
+    .portfolio-list li {
+      margin-bottom: 0.5rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- ================= CARD 1: BANNER, LOGO & NAVIGATION ================= -->
-  <section class="card">
-    <div class="banner-container">
-      <img src="banner.jpeg" alt="RC.VA360 Banner" class="banner-img" />
-    </div>
+  <main class="container">
+    <header>
+      <h1>Customer Service Support</h1>
+    </header>
 
-    <div class="header-content">
-      <div class="logo-container">
-        <img src="logo.png" alt="RC.VA360 Logo" class="logo-img" />
+    <section>
+      <h2>Overview</h2>
+      <p>Customer service is one of the strongest parts of my professional background.</p>
+      <p>I have more than 9 years of experience working in customer-facing and operations environments.</p>
+      <p>This experience taught me the importance of professional communication, patience, accuracy, teamwork, and understanding customer needs.</p>
+    </section>
+
+    <section>
+      <h2>Services Provided</h2>
+      <ul class="grid-list">
+        <li>Customer inquiries</li>
+        <li>Professional message responses</li>
+        <li>Follow-ups</li>
+        <li>Customer communication</li>
+        <li>FAQ organization</li>
+        <li>Response templates</li>
+        <li>Customer information organization</li>
+        <li>Escalation documentation</li>
+        <li>Communication tracking</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Communication Style</h2>
+      <div class="styles-grid">
+        <div class="style-card">
+          <strong>Clear</strong>
+          <span>Keep information easy to understand.</span>
+        </div>
+        <div class="style-card">
+          <strong>Professional</strong>
+          <span>Maintain a respectful and helpful tone.</span>
+        </div>
+        <div class="style-card">
+          <strong>Helpful</strong>
+          <span>Focus on understanding the concern and providing the next step.</span>
+        </div>
+        <div class="style-card">
+          <strong>Consistent</strong>
+          <span>Follow the client's guidelines and brand voice.</span>
+        </div>
       </div>
+    </section>
 
-      <!-- 8 Navigation Pills matching folders -->
-      <nav class="nav-pills" aria-label="Main Navigation">
-        <a href="01-About-Me/index.html" class="pill-btn pill-rose">About Me</a>
-        <a href="02-Administrative-Support/index.html" class="pill-btn pill-sage">Admin Support</a>
-        <a href="03-Customer-Service-Support/index.html" class="pill-btn pill-charcoal">Customer Care</a>
-        <a href="04-Operations-Support/index.html" class="pill-btn pill-rose">Operations</a>
-        <a href="05-Social-Media-Support/index.html" class="pill-btn pill-sage">Social Media</a>
-        <a href="06-AI-Powered-Tasks/index.html" class="pill-btn pill-charcoal">AI Tasks</a>
-        <a href="07-Content-Creation/index.html" class="pill-btn pill-rose">Content Creation</a>
-        <a href="08-Certifications/index.html" class="pill-btn pill-sage">Certifications</a>
-      </nav>
-    </div>
-  </section>
+    <section>
+      <h2>Sample Customer Response</h2>
+      <div class="sample-box">
+        <div class="bubble customer-bubble">
+          <span class="label">Customer Inquiry</span>
+          <p>"Hi, I haven't received an update about my request yet."</p>
+        </div>
+        <div class="bubble response-bubble">
+          <span class="label">Professional Response</span>
+          <p>"Hi! Thank you for following up. Let me check the status of your request and provide you with an update as soon as possible. Thank you for your patience."</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- ================= CARD 2: WELCOME & ABOUT PROFILE ================= -->
-  <section class="card about-card" id="about">
-    <div class="profile-frame">
-      <img src="profile.png" alt="Rowena Carla" class="profile-img" />
-    </div>
-
-    <h2 class="section-title">Welcome to My Portfolio</h2>
-
-    <p class="bio-text">
-      I am a dedicated <strong>Virtual Assistant</strong> with more than <strong>9 years of experience</strong> in customer service, operations, and administrative coordination across hospitality, gaming, and service-focused environments.
-    </p>
-
-    <p class="bio-text">
-      My goal is to help busy business owners and teams stay organized, communicate effectively with customers, and manage everyday tasks more efficiently.
-    </p>
-  </section>
-
-  <!-- ================= CARD 3: CORE SERVICES ================= -->
-  <section class="card content-card">
-    <span class="badge-label">CORE SERVICES</span>
-
-    <!-- 02 Admin Support -->
-    <div class="service-group">
-      <h3 class="service-title">Administrative Support</h3>
-      <ul class="service-list">
-        <li>Data entry and organization</li>
-        <li>File and document organization</li>
-        <li>Scheduling and calendar support</li>
-        <li>Internet research and data collation</li>
-        <li>Email and follow-up support</li>
-        <li>Spreadsheet organization</li>
+    <section>
+      <h2>Portfolio Samples</h2>
+      <p>Future samples may include:</p>
+      <ul class="portfolio-list">
+        <li>Customer response templates</li>
+        <li>FAQ documents</li>
+        <li>Customer service workflows</li>
+        <li>Communication tracking sheets</li>
       </ul>
-    </div>
-
-    <!-- 03 Customer Service Support -->
-    <div class="service-group">
-      <h3 class="service-title">Customer Service Support</h3>
-      <ul class="service-list">
-        <li>Customer inquiry handling</li>
-        <li>Professional response templates</li>
-        <li>Follow-up management</li>
-        <li>FAQ and information organization</li>
-        <li>Escalation documentation &amp; tracking</li>
-      </ul>
-    </div>
-
-    <!-- 04 Operations Support -->
-    <div class="service-group">
-      <h3 class="service-title">Operations Support</h3>
-      <ul class="service-list">
-        <li>Daily task and priority organization</li>
-        <li>Workflow and team coordination</li>
-        <li>Process and SOP documentation</li>
-        <li>Administrative operations maintenance</li>
-      </ul>
-    </div>
-
-    <!-- 05 Social Media Support -->
-    <div class="service-group">
-      <h3 class="service-title">Social Media Support</h3>
-      <ul class="service-list">
-        <li>Content planning and calendars</li>
-        <li>Caption writing and scheduling</li>
-        <li>Basic graphic content organization</li>
-        <li>Engagement and metrics tracking</li>
-      </ul>
-    </div>
-
-    <!-- 06 AI-Powered Tasks -->
-    <div class="service-group">
-      <h3 class="service-title">AI-Powered Tasks</h3>
-      <ul class="service-list">
-        <li>AI-assisted web research</li>
-        <li>Prompt creation and optimization</li>
-        <li>AI-accelerated drafting &amp; workflows</li>
-        <li>AI video and image concept generation</li>
-      </ul>
-    </div>
-
-    <!-- 07 Content Creation -->
-    <div class="service-group">
-      <h3 class="service-title">Content Creation</h3>
-      <ul class="service-list">
-        <li>Social media visual content (Canva)</li>
-        <li>Product presentation decks</li>
-        <li>Commercial scripts &amp; storyboard concepts</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ================= CARD 4: CERTIFICATIONS & TRAINING ================= -->
-  <section class="card content-card">
-    <span class="badge-label">CREDENTIALS &amp; TRAINING</span>
-
-    <div class="cert-item">
-      <strong>Virtual Assistance &amp; Remote Operations Training</strong>
-      <p>Administrative workflow management, remote coordination, and client support best practices.</p>
-    </div>
-
-    <div class="cert-item">
-      <strong>Customer Experience &amp; Operations Standards</strong>
-      <p>9+ years of verified on-the-job experience in high-standard customer-facing environments.</p>
-    </div>
-
-    <div class="cert-item">
-      <strong>AI Tools &amp; Workflow Productivity</strong>
-      <p>Practical application of modern AI tools for prompt crafting, research synthesis, and content creation.</p>
-    </div>
-  </section>
-
-  <!-- ================= CARD 5: CALL TO ACTION & EMAIL ================= -->
-  <section class="card footer-card">
-    <h2 class="section-title">Let's Work Together</h2>
-    <p class="bio-text" style="text-align: center; margin-bottom: 12px;">
-      Ready to streamline your daily operations and free up your time? Let's connect.
-    </p>
-
-    <!-- Visible Email Address -->
-    <div class="email-display">
-      <span class="email-icon">✉</span>
-      <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="email-text">
-        cipriano.rowenacarla.va@gmail.com
-      </a>
-    </div>
-
-    <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="contact-btn">
-      Send Message
-    </a>
-  </section>
+    </section>
+  </main>
 
 </body>
 </html>
-
