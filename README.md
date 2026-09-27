@@ -2,7 +2,11 @@
 
 ## Virtual Assistance & Remote Operations Support
 
-**Aspiring Virtual Assistant | Customer Service | Operations | AI Tools | Content Support**
+[![About Me](https://img.shields.io/badge/Profile-About%20Me-blue?style=for-the-badge)](./01-About-Me)
+[![Customer Service](https://img.shields.io/badge/Support-Customer%20Service-green?style=for-the-badge)](./03-Customer-Service)
+[![Operations](https://img.shields.io/badge/Workflow-Operations-orange?style=for-the-badge)](./04-Operations-Support)
+[![AI Tasks](https://img.shields.io/badge/AI-Powered%20Tasks-purple?style=for-the-badge)](./06-AI-Powered-Tasks)
+[![Content](https://img.shields.io/badge/Creative-Content%20Creation-red?style=for-the-badge)](./07-Content-Creation)
 
 Welcome to my portfolio.
 
