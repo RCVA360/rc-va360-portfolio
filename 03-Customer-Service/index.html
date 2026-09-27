@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer Service Support - Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Service Support | RC.VA360</title>
+
+  <!-- Google Fonts according to RC.VA360 Brand Kit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --primary: #D9A7A0;        /* Dusty Rose */
-      --secondary: #A8B09A;      /* Sage Green */
-      --text-main: #2E3A3F;      /* Charcoal */
-      --text-muted: #536269;     /* Soft Charcoal */
-      --bg: #F8F6F1;             /* Warm White / Cream */
-      --card-bg: #FFFFFF;
-      --border: #E8E5DD;
-      --tint-rose: #FAF2F0;
-      --tint-sage: #F2F5F0;
+      --color-charcoal: #2F3E46;
+      --color-sage: #9CAF88;
+      --color-rose: #DCAE96;
+      --color-cream-bg: #F8F6F0;
+      --color-white: #FFFFFF;
+      --color-card-border: #E8E3D9;
+      --color-muted: #5C6B73;
+
+      --font-heading: 'Montserrat', sans-serif;
+      --font-subheading: 'Poppins', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+      --font-script: 'Caveat', cursive;
     }
 
     * {
@@ -24,107 +33,207 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      color: var(--text-main);
-      background-color: var(--bg);
-      padding: 2.5rem 1rem;
+      background-color: var(--color-cream-bg);
+      color: var(--color-charcoal);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 24px 16px;
     }
 
-    .container {
-      max-width: 800px;
+    /* Container Card matching mobile screenshot style */
+    .page-container {
+      max-width: 680px;
       margin: 0 auto;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2.5rem;
-      box-shadow: 0 4px 12px rgba(46, 58, 63, 0.05);
+      background: var(--color-white);
+      border-radius: 20px;
+      padding: 32px 28px;
+      box-shadow: 0 10px 30px rgba(47, 62, 70, 0.05);
+      border: 1px solid var(--color-card-border);
     }
 
-    header {
-      margin-bottom: 2rem;
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 1.5rem;
+    /* Navigation Bar / Back Button */
+    .nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
     }
 
-    h1 {
-      font-size: 2rem;
-      color: var(--text-main);
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-family: var(--font-subheading);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      background: var(--color-cream-bg);
+      border: 1px solid var(--color-rose);
+      padding: 8px 18px;
+      border-radius: 25px;
+      transition: all 0.25s ease;
+    }
+
+    .back-btn .arrow {
+      font-size: 1.1rem;
+      transition: transform 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background: var(--color-sage);
+      color: var(--color-white);
+      border-color: var(--color-sage);
+    }
+
+    .back-btn:hover .arrow {
+      transform: translateX(-3px);
+    }
+
+    .brand-mark {
+      font-family: var(--font-heading);
       font-weight: 700;
-      letter-spacing: -0.02em;
+      font-size: 0.95rem;
+      color: var(--color-charcoal);
+      letter-spacing: 0.5px;
     }
 
-    h2 {
-      font-size: 1.15rem;
-      margin: 2rem 0 1rem;
-      color: var(--text-main);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+    .brand-mark span {
+      color: var(--color-rose);
+    }
+
+    /* Titles & Headings */
+    h1 {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 2rem;
+      line-height: 1.25;
+      color: var(--color-charcoal);
+      margin-bottom: 18px;
+    }
+
+    .divider {
+      height: 2px;
+      width: 100%;
+      background: #EFE9DF;
+      margin-bottom: 30px;
+    }
+
+    .section-tag {
       display: inline-block;
-      border-bottom: 2px solid var(--primary);
-      padding-bottom: 0.25rem;
+      font-family: var(--font-subheading);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-charcoal);
+      position: relative;
+      margin-bottom: 14px;
+    }
+
+    .section-tag::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background-color: var(--color-rose);
+      border-radius: 2px;
     }
 
     p {
-      color: var(--text-muted);
-      margin-bottom: 1rem;
+      margin-bottom: 16px;
+      color: var(--color-muted);
     }
 
-    .grid-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 0.75rem;
+    .section {
+      margin-bottom: 36px;
+    }
+
+    /* Service Check List */
+    .service-grid {
       list-style: none;
-      margin: 1.5rem 0;
-    }
-
-    .grid-list li {
-      background: var(--tint-sage);
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-      font-size: 0.95rem;
-      color: var(--text-main);
-      border-left: 4px solid var(--secondary);
-    }
-
-    .styles-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    @media (min-width: 500px) {
+      .service-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .service-grid li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #FAF8F5;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-charcoal);
+      border-left: 3px solid var(--color-sage);
+    }
+
+    .check-icon {
+      color: var(--color-sage);
+      font-weight: bold;
+    }
+
+    /* Style Pillars Cards */
+    .style-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    @media (min-width: 500px) {
+      .style-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     .style-card {
-      border: 1px solid var(--border);
-      padding: 1.25rem;
-      border-radius: 8px;
-      background: var(--bg);
+      background: #FDFCF9;
+      border: 1px solid var(--color-card-border);
+      border-radius: 12px;
+      padding: 14px 16px;
     }
 
     .style-card strong {
       display: block;
-      color: var(--text-main);
-      margin-bottom: 0.35rem;
+      font-family: var(--font-subheading);
+      color: var(--color-charcoal);
       font-size: 1rem;
+      margin-bottom: 4px;
     }
 
-    .style-card span {
+    .style-card p {
       font-size: 0.9rem;
-      color: var(--text-muted);
+      margin-bottom: 0;
     }
 
-    .sample-box {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--bg);
-      padding: 1.5rem;
-      margin: 1.5rem 0;
+    /* Dialogue / Sample Box */
+    .dialogue-box {
+      background: #FDFBF8;
+      border: 1px solid var(--color-card-border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-top: 14px;
+      position: relative;
     }
 
     .bubble {
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
+      padding: 12px 16px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      font-size: 0.92rem;
     }
 
     .bubble:last-child {
@@ -132,118 +241,145 @@
     }
 
     .customer-bubble {
-      background: #FFFFFF;
-      border-left: 4px solid var(--secondary);
+      background: #F3ECE7;
+      border-left: 3px solid var(--color-rose);
+      color: var(--color-charcoal);
     }
 
-    .response-bubble {
-      background: var(--tint-rose);
-      border-left: 4px solid var(--primary);
+    .va-bubble {
+      background: #EDF1EB;
+      border-left: 3px solid var(--color-sage);
+      color: var(--color-charcoal);
     }
 
-    .label {
+    .bubble-label {
+      font-family: var(--font-subheading);
       font-size: 0.75rem;
       font-weight: 700;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.25rem;
+      margin-bottom: 4px;
       display: block;
     }
 
-    .customer-bubble .label {
-      color: var(--secondary);
+    .customer-bubble .bubble-label { color: #A66E53; }
+    .va-bubble .bubble-label { color: #5B7248; }
+
+    /* Footer / Tagline */
+    .footer-quote {
+      text-align: center;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px dashed var(--color-card-border);
     }
 
-    .response-bubble .label {
-      color: #b57a72;
+    .script-tagline {
+      font-family: var(--font-script);
+      font-size: 1.35rem;
+      color: var(--color-charcoal);
     }
 
-    .portfolio-list {
-      list-style-type: square;
-      padding-left: 1.5rem;
-      color: var(--text-muted);
-    }
-
-    .portfolio-list li {
-      margin-bottom: 0.5rem;
+    .script-tagline span {
+      color: var(--color-rose);
     }
   </style>
 </head>
 <body>
 
-  <main class="container">
-    <header>
-      <h1>Customer Service Support</h1>
+  <main class="page-container">
+    
+    <!-- Top Bar with Back Button -->
+    <header class="nav-header">
+      <a href="index.html" class="back-btn">
+        <span class="arrow">←</span> Back Home
+      </a>
+      <div class="brand-mark">RC.VA<span>360</span></div>
     </header>
 
-    <section>
-      <h2>Overview</h2>
+    <!-- Main Title -->
+    <h1>Customer Service Support</h1>
+    <div class="divider"></div>
+
+    <!-- Section: Overview -->
+    <section class="section">
+      <div class="section-tag">OVERVIEW</div>
       <p>Customer service is one of the strongest parts of my professional background.</p>
       <p>I have more than 9 years of experience working in customer-facing and operations environments.</p>
       <p>This experience taught me the importance of professional communication, patience, accuracy, teamwork, and understanding customer needs.</p>
     </section>
 
-    <section>
-      <h2>Services Provided</h2>
-      <ul class="grid-list">
-        <li>Customer inquiries</li>
-        <li>Professional message responses</li>
-        <li>Follow-ups</li>
-        <li>Customer communication</li>
-        <li>FAQ organization</li>
-        <li>Response templates</li>
-        <li>Customer information organization</li>
-        <li>Escalation documentation</li>
-        <li>Communication tracking</li>
+    <!-- Section: What I Can Assist With -->
+    <section class="section">
+      <div class="section-tag">I CAN ASSIST WITH</div>
+      <ul class="service-grid">
+        <li><span class="check-icon">✓</span> Customer inquiries</li>
+        <li><span class="check-icon">✓</span> Professional message responses</li>
+        <li><span class="check-icon">✓</span> Follow-ups</li>
+        <li><span class="check-icon">✓</span> Customer communication</li>
+        <li><span class="check-icon">✓</span> FAQ organization</li>
+        <li><span class="check-icon">✓</span> Response templates</li>
+        <li><span class="check-icon">✓</span> Customer information organization</li>
+        <li><span class="check-icon">✓</span> Escalation documentation</li>
+        <li><span class="check-icon">✓</span> Communication tracking</li>
       </ul>
     </section>
 
-    <section>
-      <h2>Communication Style</h2>
-      <div class="styles-grid">
+    <!-- Section: Communication Style -->
+    <section class="section">
+      <div class="section-tag">COMMUNICATION STYLE</div>
+      <p>My approach to customer communication is:</p>
+      <div class="style-grid">
         <div class="style-card">
           <strong>Clear</strong>
-          <span>Keep information easy to understand.</span>
+          <p>Keep information easy to understand.</p>
         </div>
         <div class="style-card">
           <strong>Professional</strong>
-          <span>Maintain a respectful and helpful tone.</span>
+          <p>Maintain a respectful and helpful tone.</p>
         </div>
         <div class="style-card">
           <strong>Helpful</strong>
-          <span>Focus on understanding the concern and providing the next step.</span>
+          <p>Focus on understanding the concern and providing the appropriate next step.</p>
         </div>
         <div class="style-card">
           <strong>Consistent</strong>
-          <span>Follow the client's guidelines and brand voice.</span>
+          <p>Follow the client's communication guidelines and brand voice.</p>
         </div>
       </div>
     </section>
 
-    <section>
-      <h2>Sample Customer Response</h2>
-      <div class="sample-box">
+    <!-- Section: Sample Customer Response -->
+    <section class="section">
+      <div class="section-tag">SAMPLE CUSTOMER RESPONSE</div>
+      <div class="dialogue-box">
         <div class="bubble customer-bubble">
-          <span class="label">Customer Inquiry</span>
-          <p>"Hi, I haven't received an update about my request yet."</p>
+          <span class="bubble-label">Customer</span>
+          "Hi, I haven't received an update about my request yet."
         </div>
-        <div class="bubble response-bubble">
-          <span class="label">Professional Response</span>
-          <p>"Hi! Thank you for following up. Let me check the status of your request and provide you with an update as soon as possible. Thank you for your patience."</p>
+        <div class="bubble va-bubble">
+          <span class="bubble-label">Professional Response</span>
+          "Hi! Thank you for following up. Let me check the status of your request and provide you with an update as soon as possible. Thank you for your patience."
         </div>
       </div>
     </section>
 
-    <section>
-      <h2>Portfolio Samples</h2>
+    <!-- Section: Portfolio Samples -->
+    <section class="section">
+      <div class="section-tag">PORTFOLIO SAMPLES</div>
       <p>Future samples may include:</p>
-      <ul class="portfolio-list">
-        <li>Customer response templates</li>
-        <li>FAQ documents</li>
-        <li>Customer service workflows</li>
-        <li>Communication tracking sheets</li>
+      <ul class="service-grid">
+        <li><span class="check-icon">✦</span> Customer response templates</li>
+        <li><span class="check-icon">✦</span> FAQ documents</li>
+        <li><span class="check-icon">✦</span> Customer service workflows</li>
+        <li><span class="check-icon">✦</span> Communication tracking sheets</li>
       </ul>
     </section>
+
+    <!-- Brand Sign-off Footer -->
+    <footer class="footer-quote">
+      <p class="script-tagline">"You Focus on Business. I'll Handle the Details. <span>♡</span>"</p>
+    </footer>
+
   </main>
 
 </body>
