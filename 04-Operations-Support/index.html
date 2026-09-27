@@ -8,7 +8,7 @@
   <!-- Google Fonts according to RC.VA360 Brand Kit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -23,7 +23,6 @@
       --font-heading: 'Montserrat', sans-serif;
       --font-subheading: 'Poppins', sans-serif;
       --font-body: 'Open Sans', sans-serif;
-      --font-tagline: 'Caveat', cursive;
     }
 
     * {
@@ -56,56 +55,45 @@
       overflow: hidden;
     }
 
-    /* Navigation Header / Back Button */
-    .nav-header {
+    /* Top Action Bar matching dual-pill layout */
+    .top-action-bar {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      margin-bottom: 20px;
+      gap: 14px;
+      margin-bottom: 22px;
+      width: 100%;
     }
 
-    .back-btn {
+    .pill-nav-btn {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       text-decoration: none;
       font-family: var(--font-subheading);
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       font-weight: 600;
-      color: var(--color-charcoal);
-      background: var(--color-cream-bg);
-      border: 1px solid var(--color-rose);
-      padding: 7px 18px;
-      border-radius: 20px;
+      padding: 10px 22px;
+      border-radius: 30px;
       transition: all 0.25s ease;
+      white-space: nowrap;
     }
 
-    .back-btn .arrow {
-      font-size: 1.05rem;
-      transition: transform 0.2s ease;
-    }
-
-    .back-btn:hover {
-      background: var(--color-sage);
+    .btn-back {
+      background-color: var(--color-charcoal);
       color: var(--color-white);
-      border-color: var(--color-sage);
-      transform: translateY(-2px);
     }
 
-    .back-btn:hover .arrow {
-      transform: translateX(-3px);
-    }
-
-    .brand-mark {
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 1rem;
+    .btn-touch {
+      background-color: var(--color-rose);
       color: var(--color-charcoal);
-      letter-spacing: 0.5px;
     }
 
-    .brand-mark span {
-      color: var(--color-rose);
+    .pill-nav-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(47, 62, 70, 0.16);
+      opacity: 0.95;
     }
 
     /* Typography & Section Styles */
@@ -334,12 +322,10 @@
   <!-- ================= MAIN CONTENT CARD ================= -->
   <main class="card">
     
-    <!-- Top Navigation Bar -->
-    <header class="nav-header">
-      <a href="../index.html" class="back-btn">
-        <span class="arrow">←</span> Back Home
-      </a>
-      <div class="brand-mark">RC.VA<span>360</span></div>
+    <!-- Top Action Bar Matching Your Pill Design -->
+    <header class="top-action-bar">
+      <a href="../index.html" class="pill-nav-btn btn-back">← Back to Home</a>
+      <a href="#contact" class="pill-nav-btn btn-touch">Get in Touch</a>
     </header>
 
     <!-- Page Title -->
@@ -350,7 +336,7 @@
     <section class="section-block">
       <span class="badge-label">OVERVIEW</span>
       <p class="bio-text">My background in operations has helped me understand the importance of organization, teamwork, procedures, and consistent daily support.</p>
-      <p class="bio-text">I can assist businesses with routine operational tasks that help keep work organized and efficient.</p>
+      <p class="bio-text">I can assist businesses with routine operational tasks that help keep work organized.</p>
     </section>
 
     <!-- Section: Operations Support Areas -->
@@ -442,7 +428,7 @@
   </main>
 
   <!-- ================= FOOTER / GET IN TOUCH CARD ================= -->
-  <section class="card footer-card">
+  <section class="card footer-card" id="contact">
     <h2 class="section-title">Let's Work Together</h2>
     <p class="bio-text" style="text-align: center; margin-bottom: 12px;">
       Ready to keep routine work organized and optimize your operations? Let's connect.
@@ -456,9 +442,9 @@
       </a>
     </div>
 
-    <!-- Get In Touch Button -->
+    <!-- Send Message Button -->
     <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="contact-btn">
-      Get In Touch
+      Send Message
     </a>
   </section>
 
