@@ -7,18 +7,25 @@
   <meta name="supported-color-schemes" content="light" />
   <title>Administrative Support | RC.VA360</title>
 
+  <!-- Google Fonts according to RC.VA360 Brand Kit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       color-scheme: light only;
-      --bg-cream: #F8F6F1;
-      --dusty-rose: #D9A7A0;
-      --sage-green: #A8B09A;
-      --charcoal: #2E3A3F;
-      --white: #FFFFFF;
+      --color-charcoal: #2F3E46;
+      --color-sage: #9CAF88;
+      --color-rose: #DCAE96;
+      --color-cream-bg: #F8F6F0;
+      --color-white: #FFFFFF;
+      --color-border: #EFE9DF;
+      --color-muted: #5C6B73;
+
+      --font-heading: 'Montserrat', sans-serif;
+      --font-subheading: 'Poppins', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
     }
 
     * {
@@ -28,111 +35,177 @@
     }
 
     body {
-      background-color: var(--bg-cream) !important;
-      color: var(--charcoal) !important;
-      font-family: 'Open Sans', sans-serif;
-      line-height: 1.6;
+      background-color: var(--color-cream-bg) !important;
+      color: var(--color-charcoal) !important;
+      font-family: var(--font-body);
+      line-height: 1.65;
       padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
 
-    .container {
-      max-width: 820px;
-      margin: 0 auto;
+    /* Common Card Styling matching subpages */
+    .card {
+      width: 100%;
+      max-width: 480px;
+      background: var(--color-white) !important;
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(47, 62, 70, 0.06);
+      border: 1px solid var(--color-border);
+      padding: 28px 22px;
+      overflow: hidden;
     }
 
-    .top-nav {
+    /* Top Action Bar with Logo and Back Button */
+    .top-action-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+      width: 100%;
+    }
+
+    .pill-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      text-decoration: none;
+      font-family: var(--font-subheading);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+      background-color: var(--color-charcoal);
+      color: var(--color-white) !important;
+      flex-shrink: 0;
+    }
+
+    .pill-nav-btn:hover {
+      background-color: var(--color-sage);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(47, 62, 70, 0.16);
+    }
+
+    .top-logo-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .header-logo-img {
+      height: 34px;
+      width: auto;
+      max-width: 130px;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Typography & Section Styles */
+    h1 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--color-charcoal) !important;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .divider {
+      height: 2px;
+      width: 100%;
+      background: var(--color-border);
       margin-bottom: 24px;
     }
 
-    .nav-btn {
-      text-decoration: none;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.85rem;
-      padding: 8px 18px;
-      border-radius: 20px;
-      font-weight: 500;
-      background: var(--charcoal);
-      color: var(--white) !important;
-      transition: opacity 0.2s ease;
-    }
-
-    .nav-btn-accent {
-      background: var(--dusty-rose);
-      color: var(--charcoal) !important;
-    }
-
-    .card {
-      background: var(--white) !important;
-      color: var(--charcoal) !important;
-      border-radius: 14px;
-      padding: 28px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 12px rgba(46, 58, 63, 0.04);
-      border-left: 5px solid var(--sage-green);
-    }
-
-    .card-rose {
-      border-left-color: var(--dusty-rose);
-    }
-
-    .card-charcoal {
-      border-left-color: var(--charcoal);
-    }
-
-    h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.8rem;
-      color: var(--charcoal) !important;
-      margin-bottom: 8px;
-    }
-
-    h3 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.25rem;
-      color: var(--charcoal) !important;
+    .badge-label {
+      display: inline-block;
+      font-family: var(--font-subheading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--color-charcoal);
+      border-bottom: 2px solid var(--color-rose);
+      padding-bottom: 2px;
       margin-bottom: 14px;
     }
 
-    .task-item {
-      background: var(--bg-cream) !important;
-      border-radius: 10px;
-      padding: 16px;
+    .section-block {
+      margin-bottom: 26px;
+    }
+
+    .section-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .bio-text {
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: var(--color-muted);
       margin-bottom: 12px;
-      border: 1px solid rgba(168, 176, 154, 0.35);
     }
 
-    .task-item h4 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
-      color: var(--charcoal) !important;
-      margin-bottom: 4px;
-    }
-
-    .task-item p {
-      font-size: 0.9rem;
-      color: #556268 !important;
-      margin: 0;
-    }
-
+    /* Services Grid List */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .service-pill {
+      background: #FAF8F5;
+      padding: 9px 14px;
+      border-radius: 10px;
+      font-size: 0.91rem;
+      color: var(--color-charcoal);
+      border-left: 3px solid var(--color-sage);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .check-icon {
+      color: var(--color-sage);
+      font-weight: bold;
+    }
+
+    /* Sample Tasks Cards */
+    .task-timeline {
+      display: flex;
+      flex-direction: column;
       gap: 10px;
       margin-top: 10px;
     }
 
-    .service-pill {
-      background: var(--bg-cream) !important;
-      border: 1px solid rgba(168, 176, 154, 0.3);
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 500;
+    .task-item {
+      background: #FDFCF9;
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 12px 14px;
     }
 
+    .task-item h4 {
+      font-family: var(--font-subheading);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--color-charcoal) !important;
+      margin-bottom: 3px;
+    }
+
+    .task-item p {
+      font-size: 0.88rem;
+      color: var(--color-muted) !important;
+      margin: 0;
+    }
+
+    /* Tool Tags */
     .tool-tags {
       display: flex;
       flex-wrap: wrap;
@@ -141,110 +214,182 @@
     }
 
     .tag {
-      background: var(--bg-cream) !important;
-      color: var(--charcoal) !important;
+      background: #FAF8F5;
+      color: var(--color-charcoal);
       padding: 6px 14px;
       border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      border: 1px solid rgba(168, 176, 154, 0.4);
+      font-family: var(--font-subheading);
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: 1px solid var(--color-border);
     }
 
     .placeholder-box {
-      border: 2px dashed rgba(168, 176, 154, 0.5);
-      border-radius: 10px;
-      padding: 24px;
+      border: 2px dashed rgba(156, 175, 136, 0.6);
+      border-radius: 12px;
+      padding: 20px 14px;
       text-align: center;
-      color: #6c757d;
-      font-size: 0.9rem;
-      margin-top: 10px;
-      background: rgba(248, 246, 241, 0.5);
+      color: var(--color-muted);
+      font-size: 0.88rem;
+      margin-top: 8px;
+      background: #FAF8F5;
+      line-height: 1.5;
+    }
+
+    /* Footer Card & Contact Styling */
+    .footer-card {
+      text-align: center;
+      padding: 28px 20px;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--color-charcoal);
+      margin-bottom: 12px;
+    }
+
+    .email-display {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--color-cream-bg);
+      border: 1px solid var(--color-rose);
+      padding: 10px 18px;
+      border-radius: 20px;
+      margin: 14px 0 16px;
+      max-width: 100%;
+    }
+
+    .email-icon {
+      font-size: 1.1rem;
+      color: var(--color-sage);
+    }
+
+    .email-text {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      text-decoration: none;
+      word-break: break-all;
+      transition: color 0.2s ease;
+    }
+
+    .email-text:hover {
+      color: var(--color-rose);
     }
 
     .contact-btn {
-      display: inline-block;
-      background: var(--charcoal) !important;
-      color: var(--white) !important;
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
       text-decoration: none;
-      padding: 12px 28px;
-      border-radius: 8px;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 500;
-      margin-top: 14px;
+      font-family: var(--font-subheading);
+      font-size: 0.92rem;
+      font-weight: 600;
+      background-color: var(--color-charcoal);
+      color: var(--color-white) !important;
+      padding: 11px 28px;
+      border-radius: 25px;
+      transition: all 0.25s ease;
+    }
+
+    .contact-btn:hover {
+      background-color: var(--color-sage);
+      transform: translateY(-2px);
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-
-    <div class="top-nav">
-      <a href="../" class="nav-btn">← Back to Home</a>
-      <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="nav-btn nav-btn-accent">Get in Touch</a>
-    </div>
-
-    <header class="card card-rose">
-      <h1>Administrative Support</h1>
-      <p style="font-size: 1rem; margin-top: 8px;">
-        This section demonstrates my ability to organize information, support daily administrative tasks, and keep business activities structured.
-      </p>
+  <!-- ================= MAIN CONTENT CARD ================= -->
+  <main class="card">
+    
+    <!-- Top Action Bar: Clean Logo on Right, Back Button on Left -->
+    <header class="top-action-bar">
+      <a href="../index.html" class="pill-nav-btn">← Back to Home</a>
+      <a href="../index.html" class="top-logo-link" title="Return to Home">
+        <img src="../logo.png" alt="RC.VA360 Logo" class="header-logo-img" />
+      </a>
     </header>
 
-    <section class="card">
-      <h3>📋 Services I Can Support</h3>
-      <div class="services-grid">
-        <div class="service-pill">✔ Data entry</div>
-        <div class="service-pill">✔ Spreadsheet organization</div>
-        <div class="service-pill">✔ File organization</div>
-        <div class="service-pill">✔ Document organization</div>
-        <div class="service-pill">✔ Online research</div>
-        <div class="service-pill">✔ Scheduling</div>
-        <div class="service-pill">✔ Calendar management</div>
-        <div class="service-pill">✔ Email organization</div>
-        <div class="service-pill">✔ Follow-up tracking</div>
-        <div class="service-pill">✔ Information gathering</div>
-        <div class="service-pill">✔ Basic admin workflows</div>
-      </div>
-    </section>
+    <!-- Page Title -->
+    <h1>Administrative Support</h1>
+    <div class="divider"></div>
 
-    <section class="card card-charcoal">
-      <h3>📂 Sample Tasks</h3>
-
-      <div class="task-item" style="border-left: 4px solid var(--dusty-rose);">
-        <h4>Spreadsheet Organization</h4>
-        <p>I can organize information into clear and easy-to-use spreadsheets.</p>
-      </div>
-
-      <div class="task-item" style="border-left: 4px solid var(--sage-green);">
-        <h4>File Organization</h4>
-        <p>I can help structure digital files and folders so important information is easier to find.</p>
-      </div>
-
-      <div class="task-item" style="border-left: 4px solid var(--charcoal);">
-        <h4>Research</h4>
-        <p>I can gather information from reliable sources and organize the results in a practical format.</p>
-      </div>
-
-      <div class="task-item" style="border-left: 4px solid var(--dusty-rose);">
-        <h4>Scheduling</h4>
-        <p>I can help organize appointments, tasks, deadlines, and schedules.</p>
-      </div>
-
-      <div class="task-item" style="border-left: 4px solid var(--sage-green);">
-        <h4>Follow-Up Tracking</h4>
-        <p>I can create simple systems for tracking pending responses, tasks, and follow-ups.</p>
-      </div>
-    </section>
-
-    <section class="card card-rose">
-      <h3>🎯 My Approach</h3>
-      <p>
-        I focus on accuracy, organization, clear documentation, and following client instructions.
+    <!-- Section: Overview -->
+    <section class="section-block">
+      <span class="badge-label">OVERVIEW</span>
+      <p class="bio-text">
+        This section demonstrates my ability to organize information, support daily administrative tasks, and keep business activities structured and reliable.
       </p>
     </section>
 
-    <section class="card">
-      <h3>🛠️ Tools</h3>
+    <!-- Section: Services I Can Support -->
+    <section class="section-block">
+      <span class="badge-label">SERVICES I CAN SUPPORT</span>
+      <div class="services-grid">
+        <div class="service-pill"><span class="check-icon">✓</span> Data entry</div>
+        <div class="service-pill"><span class="check-icon">✓</span> Spreadsheet organization</div>
+        <div class="service-pill"><span class="check-icon">✓</span> File organization</div>
+        <div class="service-pill"><span class="check-icon">✓</span> Document organization</div>
+        <div class="service-pill"><span class="check-icon">✓</span> Online research</div>
+        <div class="service-pill"><span class="check-icon">✓</span> Scheduling</div>
+        <div class="service-pill"><span class="check-icon">✓</span> Calendar management</div>
+        <div class="service-pill"><span class="check-icon">✓</span> Email organization</div>
+        <div class="service-pill"><span class="check-icon">✓</span> Follow-up tracking</div>
+        <div class="service-pill"><span class="check-icon">✓</span> Information gathering</div>
+        <div class="service-pill"><span class="check-icon">✓</span> Basic admin workflows</div>
+      </div>
+    </section>
+
+    <!-- Section: Sample Tasks -->
+    <section class="section-block">
+      <span class="badge-label">SAMPLE TASKS</span>
+      <div class="task-timeline">
+
+        <div class="task-item" style="border-left: 3px solid var(--color-rose);">
+          <h4>Spreadsheet Organization</h4>
+          <p>Organize information into clean, intuitive, and easy-to-use spreadsheets.</p>
+        </div>
+
+        <div class="task-item" style="border-left: 3px solid var(--color-sage);">
+          <h4>File Organization</h4>
+          <p>Structure digital files and folders so critical documentation is accessible instantly.</p>
+        </div>
+
+        <div class="task-item" style="border-left: 3px solid var(--color-charcoal);">
+          <h4>Research</h4>
+          <p>Gather accurate data from reliable sources and summarize findings into structured reports.</p>
+        </div>
+
+        <div class="task-item" style="border-left: 3px solid var(--color-rose);">
+          <h4>Scheduling</h4>
+          <p>Organize appointments, calendar invites, deadlines, and daily agenda timelines.</p>
+        </div>
+
+        <div class="task-item" style="border-left: 3px solid var(--color-sage);">
+          <h4>Follow-Up Tracking</h4>
+          <p>Build reliable logging systems for monitoring pending responses and task milestones.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section: My Approach -->
+    <section class="section-block">
+      <span class="badge-label">MY APPROACH</span>
+      <p class="bio-text">
+        I prioritize accuracy, organization, clear documentation, and strict adherence to client instructions to ensure workflows operate smoothly.
+      </p>
+    </section>
+
+    <!-- Section: Tools -->
+    <section class="section-block">
+      <span class="badge-label">TOOLS</span>
       <div class="tool-tags">
         <span class="tag">Google Workspace</span>
         <span class="tag">Microsoft Office</span>
@@ -254,20 +399,36 @@
       </div>
     </section>
 
-    <section class="card card-charcoal">
-      <h3>📁 Portfolio Samples</h3>
+    <!-- Section: Portfolio Samples -->
+    <section class="section-block">
+      <span class="badge-label">PORTFOLIO SAMPLES</span>
       <div class="placeholder-box">
-        Sample files and screenshots can be added to this section as my portfolio develops.
+        Sample documentation, trackers, and workflow templates will be showcased here as portfolio artifacts develop.
       </div>
     </section>
 
-    <footer class="card card-rose" style="text-align: center;">
-      <h3>RC.VA360</h3>
-      <p style="font-style: italic; font-weight: 600;">“You Focus on Business. I'll Handle the Details.”</p>
-      <a class="contact-btn" href="mailto:cipriano.rowenacarla.va@gmail.com">Let's Connect</a>
-    </footer>
+  </main>
 
-  </div>
+  <!-- ================= FOOTER / GET IN TOUCH CARD ================= -->
+  <section class="card footer-card" id="contact">
+    <h2 class="section-title">Let's Work Together</h2>
+    <p class="bio-text" style="text-align: center; margin-bottom: 12px;">
+      Ready to organize your business workflows and daily administration? Let's connect.
+    </p>
+
+    <!-- Visible Email Address -->
+    <div class="email-display">
+      <span class="email-icon">✉</span>
+      <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="email-text">
+        cipriano.rowenacarla.va@gmail.com
+      </a>
+    </div>
+
+    <!-- Send Message Button -->
+    <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="contact-btn">
+      Send Message
+    </a>
+  </section>
 
 </body>
 </html>
