@@ -17,6 +17,9 @@
   <a href="./04-Operations-Support"><img src="https://img.shields.io/badge/Operations-2E3A3F?style=for-the-badge&logoColor=white" alt="Operations"/></a>
   <a href="./06-AI-Powered-Tasks"><img src="https://img.shields.io/badge/AI_Tools-D9A7A0?style=for-the-badge&logoColor=2E3A3F" alt="AI Tools"/></a>
   <a href="./07-Content-Creation"><img src="https://img.shields.io/badge/Content_Support-A8B09A?style=for-the-badge&logoColor=white" alt="Content Support"/></a>
+  <a href="./08-Certifications">
+<img src="https://img.shields.io/badge/Certifications-D9A7A0?style=for-the-badge&logoColor=2E3A3F" alt="Certifications"/></a>
+
 </p>
 
 <hr/>
