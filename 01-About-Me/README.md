@@ -1,60 +1,73 @@
-# 🌿 Rowena Carla Cipriano
-### Virtual Assistant & Remote Operations Support
+# About Me
 
-*“You Focus on Business. I'll Handle the Details. ♡”*
+Hi, I'm Rowena
 
----
+I am an aspiring Virtual Assistant with more than 9 years of experience in customer service and operations.
 
-[← Back to Portfolio Home](../) • [Get in Touch](mailto:cipriano.rowenacarla.va@gmail.com)
+My professional background includes experience in hospitality, gaming, and service-focused environments. These experiences helped me develop strong communication, organization, customer service, teamwork, and problem-solving skills.
 
----
-
-## 👋 Hi, I'm Rowena!
-
-I am an aspiring Virtual Assistant with more than **9 years of experience** in customer service and operations across hospitality, gaming, and service-focused environments.
-
-These experiences helped me develop strong communication, organization, customer service, teamwork, and problem-solving skills. I am now building my career in virtual assistance, combining my professional background with modern digital tools, AI-assisted workflows, content creation, and remote operations management.
+I am now building my career in virtual assistance, combining my previous experience with digital tools, AI tools, content creation, and remote work skills.
 
 ---
 
-## 🎓 Education & Academic Background
+### Education & Academic Background
 
-* **Bachelor of Science in Hotel and Restaurant Management** *Far Eastern University (FEU Manila) • 2010 – 2013* Built the foundational discipline for 9+ years of service-driven operations, client care, and multitasking in high-volume environments.
+* **Bachelor of Science in Hotel and Restaurant Management**
+  * Far Eastern University (FEU Manila) | 2010 – 2013
+  * Built the foundational discipline for 9+ years of service-driven operations, hospitality management, customer care, and team coordination.
 
-* **Undergraduate Coursework in Nursing** *Far Eastern University (FEU Manila) • 2007 – 2010* Provided the healthcare and clinical terminology foundation that directly supports Medical VA tasks and HIPAA compliance.
-
----
-
-## 📜 Verified Certifications & Training
-
-* **Data Annotation for Aspiring BPO Professionals** — *UP Open University & Concentrix (16 Hours MODeL • QR Verified)*
-* **Medical VA 102: Medical Billing** — *VA Growth PH (HIPAA Compliant Badge)*
-* **Medical VA 101: Medical Administrative** — *VA Growth PH (Clinical & Admin Workflows)*
-* **HIPAA for Business Associates** — *HIPAA Exams, Inc. (IACET Accredited & NY State Approved)*
-* **Freelancing Skills & VA Training** — *Mastery of Five Key Skills for Freelancing*
-* **General Virtual Assistant** — *TESDA (18-Day Intensive Training Program)*
+* **Undergraduate Coursework in Nursing**
+  * Far Eastern University (FEU Manila) | 2007 – 2010
+  * Provided core healthcare and clinical knowledge, directly supporting Medical VA workflows, medical administrative procedures, and HIPAA-compliant support.
 
 ---
 
-## 💼 What I Bring
+### What I Bring
 
-* **Core Operations:** Customer service excellence, operations support, administrative management.
-* **Professional Mindset:** Clear communication, meticulous attention to detail, adaptability, responsibility, and dependable team support.
-* **Modern Workflows:** AI-assisted workflows, prompt ideation, content planning, and video creation.
+* Customer service experience
+* Operations experience
+* Administrative support skills
+* Strong communication
+* Organization and attention to detail
+* Adaptability
+* Responsibility
+* Team support
+* AI-assisted workflows
+* Content creation
+* Video creation
 
 ---
 
-## 🎯 My Goal & Work Philosophy
+### My Goal
 
-My goal is to provide reliable virtual assistance that helps business owners and teams save time, stay organized, and manage daily operations smoothly.
+My goal is to provide reliable virtual assistance that helps business owners and teams save time, stay organized, and manage their daily operations more efficiently.
 
-| Value | My Commitment |
-| :--- | :--- |
-| 🛡️ **Professional** | I communicate clearly and handle confidential tasks responsibly. |
-| 🤝 **Reliable** | I take deadlines, instructions, and accountability seriously. |
-| 😊 **Approachable** | I believe positive, open communication makes working together effortless. |
+I am continuously learning new tools and improving my skills so I can provide better support to clients.
+
+---
+
+### My Work Style
+
+* **Professional:** I aim to communicate clearly and handle tasks responsibly.
+* **Reliable:** I take deadlines, instructions, and responsibilities seriously.
+* **Approachable:** I believe good communication makes working together easier.
+
+---
+
+### Currently Building
+
+I am currently developing my portfolio in:
+
+* Administrative support
+* Customer service
+* Operations support
+* Social media support
+* AI-powered tasks
+* Content creation
+* Video creation
 
 ---
 
 ### RC.VA360
-*“You Focus on Business. I'll Handle the Details.”* **Email:** cipriano.rowenacarla.va@gmail.com
+
+*“You Focus on Business. I'll Handle the Details.”*
