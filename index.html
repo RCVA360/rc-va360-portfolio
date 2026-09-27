@@ -3,16 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer Service Support - Portfolio</title>
+  <title>RC.VA360 | Virtual Assistant & Business Support Portfolio</title>
+  
+  <!-- RC.VA360 Official Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --primary: #2563eb;
-      --primary-light: #eff6ff;
-      --text-main: #1f2937;
-      --text-muted: #4b5563;
-      --bg: #f9fafb;
-      --card-bg: #ffffff;
-      --border: #e5e7eb;
+      --primary-rose: #D9A7A0;      /* Dusty Rose */
+      --secondary-sage: #A8B09A;    /* Sage Green */
+      --text-charcoal: #2E3A3F;     /* Charcoal */
+      --text-muted: #52636a;        /* Soft Charcoal */
+      --bg-cream: #F8F6F1;          /* Warm White / Cream */
+      --card-white: #FFFFFF;
+      --border-color: #E8E5DD;
+      
+      --font-heading: 'Montserrat', sans-serif;
+      --font-subheading: 'Poppins', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+      --font-script: 'Caveat', cursive;
     }
 
     * {
@@ -22,222 +33,354 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      color: var(--text-main);
-      background-color: var(--bg);
-      padding: 2.5rem 1rem;
+      font-family: var(--font-body);
+      line-height: 1.65;
+      color: var(--text-charcoal);
+      background-color: var(--bg-cream);
+      padding: 2rem 1rem 4rem;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2.5rem;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      background: var(--card-white);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(46, 58, 63, 0.06);
     }
 
-    header {
-      margin-bottom: 2rem;
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 1.5rem;
+    /* Top Brand Banner Image */
+    .brand-banner-wrapper {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, var(--secondary-sage), var(--primary-rose));
+      overflow: hidden;
+      position: relative;
     }
 
-    h1 {
-      font-size: 2rem;
-      color: var(--text-main);
-      font-weight: 700;
-    }
-
-    h2 {
-      font-size: 1.25rem;
-      margin: 2rem 0 1rem;
-      color: var(--primary);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    p {
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-    }
-
-    .grid-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 0.75rem;
-      list-style: none;
-      margin: 1.5rem 0;
-    }
-
-    .grid-list li {
-      background: var(--primary-light);
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-      font-size: 0.95rem;
-      color: var(--text-main);
-      border-left: 4px solid var(--primary);
-    }
-
-    .styles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .style-card {
-      border: 1px solid var(--border);
-      padding: 1.25rem;
-      border-radius: 8px;
-      background: #fafafa;
-    }
-
-    .style-card strong {
+    .brand-banner-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       display: block;
-      color: var(--text-main);
-      margin-bottom: 0.35rem;
-      font-size: 1rem;
     }
 
-    .style-card span {
+    /* Brand Header: Profile Photo & Logo Image */
+    .brand-header {
+      padding: 0 2.5rem 1.75rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .profile-photo-wrapper {
+      margin-top: -65px;
+      position: relative;
+    }
+
+    .profile-photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 5px solid var(--card-white);
+      object-fit: cover;
+      background-color: var(--bg-cream);
+      display: block;
+      box-shadow: 0 6px 16px rgba(46, 58, 63, 0.12);
+    }
+
+    .brand-identity {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+    }
+
+    .brand-logo-img {
+      max-height: 60px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: 0.35rem;
+    }
+
+    .brand-tagline {
+      font-family: var(--font-script);
+      font-size: 1.35rem;
+      color: var(--primary-rose);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    /* Main Content */
+    .content-area {
+      padding: 2.5rem;
+    }
+
+    .hero-intro {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .hero-intro h1 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--text-charcoal);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-intro p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
+
+    .section-title {
+      font-family: var(--font-subheading);
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--secondary-sage);
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-color);
+    }
+
+    /* Portfolio Category Hub */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    .category-card {
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      background: var(--bg-cream);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .category-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary-rose);
+      box-shadow: 0 8px 20px rgba(46, 58, 63, 0.08);
+    }
+
+    .category-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      color: var(--text-charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .category-card p {
       font-size: 0.9rem;
       color: var(--text-muted);
-    }
-
-    .sample-box {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: #fafafa;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-    }
-
-    .bubble {
-      padding: 1rem;
-      border-radius: 8px;
       margin-bottom: 1rem;
+      flex-grow: 1;
     }
 
-    .bubble:last-child {
-      margin-bottom: 0;
+    .card-link {
+      font-family: var(--font-subheading);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary-rose);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
     }
 
-    .customer-bubble {
-      background: #f3f4f6;
-      border-left: 4px solid #9ca3af;
+    /* About & Stats Section */
+    .about-summary {
+      background: #F4F6F2;
+      border-left: 4px solid var(--secondary-sage);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 3rem;
     }
 
-    .response-bubble {
-      background: var(--primary-light);
-      border-left: 4px solid var(--primary);
+    .about-summary p {
+      color: var(--text-charcoal);
+      margin: 0;
+      font-size: 0.98rem;
     }
 
-    .label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.25rem;
-      display: block;
+    /* Contact Footer Card */
+    .contact-card {
+      text-align: center;
+      background: var(--bg-cream);
+      border: 1px dashed var(--border-color);
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
     }
 
-    .customer-bubble .label {
-      color: #6b7280;
-    }
-
-    .response-bubble .label {
-      color: var(--primary);
-    }
-
-    .portfolio-list {
-      list-style-type: square;
-      padding-left: 1.5rem;
-      color: var(--text-muted);
-    }
-
-    .portfolio-list li {
+    .contact-card h2 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--text-charcoal);
       margin-bottom: 0.5rem;
+    }
+
+    .contact-card p {
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      font-size: 0.95rem;
+    }
+
+    .btn-contact {
+      display: inline-block;
+      background: var(--primary-rose);
+      color: #FFFFFF;
+      font-family: var(--font-subheading);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.75rem 1.75rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn-contact:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 640px) {
+      .brand-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 1.5rem 1.5rem;
+      }
+      .brand-identity {
+        align-items: center;
+        text-align: center;
+      }
+      .content-area {
+        padding: 1.5rem;
+      }
+      .profile-photo-wrapper {
+        margin-top: -55px;
+      }
+      .profile-photo {
+        width: 105px;
+        height: 105px;
+      }
+      .hero-intro h1 {
+        font-size: 1.75rem;
+      }
     }
   </style>
 </head>
 <body>
 
   <main class="container">
-    <header>
-      <h1>Customer Service Support</h1>
+    <!-- Brand Banner -->
+    <div class="brand-banner-wrapper">
+      <img src="banner.jpg" alt="RC.VA360 Banner" onerror="this.onerror=null; this.src='banner.png';">
+    </div>
+
+    <!-- Header: Photo & Brand Identity -->
+    <header class="brand-header">
+      <div class="profile-photo-wrapper">
+        <img src="profile.png" alt="Profile Photo" class="profile-photo" onerror="this.onerror=null; this.src='profile.jpg';">
+      </div>
+
+      <div class="brand-identity">
+        <img src="logo.png" alt="RC.VA360 Logo" class="brand-logo-img">
+        <div class="brand-tagline">You Focus on Business. I'll Handle the Details. ♡</div>
+      </div>
     </header>
 
-    <section>
-      <h2>Overview</h2>
-      <p>Customer service is one of the strongest parts of my professional background.</p>
-      <p>I have more than 9 years of experience working in customer-facing and operations environments.</p>
-      <p>This experience taught me the importance of professional communication, patience, accuracy, teamwork, and understanding customer needs.</p>
-    </section>
-
-    <section>
-      <h2>Services Provided</h2>
-      <ul class="grid-list">
-        <li>Customer inquiries</li>
-        <li>Professional message responses</li>
-        <li>Follow-ups</li>
-        <li>Customer communication</li>
-        <li>FAQ organization</li>
-        <li>Response templates</li>
-        <li>Customer information organization</li>
-        <li>Escalation documentation</li>
-        <li>Communication tracking</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Communication Style</h2>
-      <div class="styles-grid">
-        <div class="style-card">
-          <strong>Clear</strong>
-          <span>Keep information easy to understand.</span>
-        </div>
-        <div class="style-card">
-          <strong>Professional</strong>
-          <span>Maintain a respectful and helpful tone.</span>
-        </div>
-        <div class="style-card">
-          <strong>Helpful</strong>
-          <span>Focus on understanding the concern and providing the next step.</span>
-        </div>
-        <div class="style-card">
-          <strong>Consistent</strong>
-          <span>Follow the client's guidelines and brand voice.</span>
-        </div>
+    <!-- Main Content Area -->
+    <article class="content-area">
+      <div class="hero-intro">
+        <h1>Reliable Operational & Virtual Assistance</h1>
+        <p>Providing business owners with high-touch administrative support, customer experience management, and workflow organization.</p>
       </div>
-    </section>
 
-    <section>
-      <h2>Sample Customer Response</h2>
-      <div class="sample-box">
-        <div class="bubble customer-bubble">
-          <span class="label">Customer Inquiry</span>
-          <p>"Hi, I haven't received an update about my request yet."</p>
-        </div>
-        <div class="bubble response-bubble">
-          <span class="label">Professional Response</span>
-          <p>"Hi! Thank you for following up. Let me check the status of your request and provide you with an update as soon as possible. Thank you for your patience."</p>
-        </div>
+      <div class="about-summary">
+        <p><strong>Over 9 years of professional experience</strong> managing operations, client inquiries, scheduling, and digital tasks with precision, patience, and proactive communication.</p>
       </div>
-    </section>
 
-    <section>
-      <h2>Portfolio Samples</h2>
-      <p>Future samples may include:</p>
-      <ul class="portfolio-list">
-        <li>Customer response templates</li>
-        <li>FAQ documents</li>
-        <li>Customer service workflows</li>
-        <li>Communication tracking sheets</li>
-      </ul>
-    </section>
+      <h2 class="section-title">Core Services & Portfolio Hub</h2>
+      
+      <div class="category-grid">
+        <a href="customer-service.html" class="category-card">
+          <div>
+            <h3>Customer Service Support</h3>
+            <p>Inquiries, email responses, escalation handling, ticketing, and customer tracking systems.</p>
+          </div>
+          <span class="card-link">View Portfolio &rarr;</span>
+        </a>
+
+        <a href="administrative-support.html" class="category-card">
+          <div>
+            <h3>Administrative Support</h3>
+            <p>Calendar scheduling, inbox clean-up, data entry, document formatting, and day-to-day coordination.</p>
+          </div>
+          <span class="card-link">View Portfolio &rarr;</span>
+        </a>
+
+        <a href="operations-support.html" class="category-card">
+          <div>
+            <h3>Operations Support</h3>
+            <p>SOP development, workflow tracking, CRM updates, and internal task organization.</p>
+          </div>
+          <span class="card-link">View Portfolio &rarr;</span>
+        </a>
+
+        <a href="social-media.html" class="category-card">
+          <div>
+            <h3>Social Media & Marketing</h3>
+            <p>Post scheduling, community engagement, audience inbox management, and campaign support.</p>
+          </div>
+          <span class="card-link">View Portfolio &rarr;</span>
+        </a>
+
+        <a href="ai-tasks.html" class="category-card">
+          <div>
+            <h3>AI & Tech Workflow</h3>
+            <p>Prompt assistance, workflow automation setup, data organization, and tool integration.</p>
+          </div>
+          <span class="card-link">View Portfolio &rarr;</span>
+        </a>
+
+        <a href="content-creation.html" class="category-card">
+          <div>
+            <h3>Content Creation</h3>
+            <p>Response templates, FAQ guides, presentation decks, and client-ready documentation.</p>
+          </div>
+          <span class="card-link">View Portfolio &rarr;</span>
+        </a>
+      </div>
+
+      <!-- Contact / Call to Action -->
+      <section class="contact-card">
+        <h2>Ready to delegate?</h2>
+        <p>Let's collaborate to streamline your workflow and take daily operations off your plate.</p>
+        <a href="mailto:your-email@example.com" class="btn-contact">Get in Touch</a>
+      </section>
+    </article>
   </main>
 
 </body>
