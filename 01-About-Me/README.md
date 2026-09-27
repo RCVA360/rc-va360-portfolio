@@ -1,186 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me | RC.VA360</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+# 🌿 Rowena Carla Cipriano
+### Virtual Assistant & Remote Operations Support
 
-  <style>
-    :root {
-      --bg-cream: #F8F6F1;
-      --dusty-rose: #D9A7A0;
-      --sage-green: #A8B09A;
-      --charcoal: #2E3A3F;
-      --white: #FFFFFF;
-    }
+*“You Focus on Business. I'll Handle the Details. ♡”*
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+---
 
-    body {
-      background-color: var(--bg-cream);
-      color: var(--charcoal);
-      font-family: 'Open Sans', sans-serif;
-      line-height: 1.6;
-      padding: 24px 16px;
-    }
+[← Back to Portfolio Home](../) • [Get in Touch](mailto:cipriano.rowenacarla.va@gmail.com)
 
-    .container {
-      max-width: 820px;
-      margin: 0 auto;
-    }
+---
 
-    .top-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 24px;
-    }
+## 👋 Hi, I'm Rowena!
 
-    .nav-btn {
-      text-decoration: none;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.85rem;
-      padding: 8px 18px;
-      border-radius: 20px;
-      font-weight: 500;
-      background: var(--charcoal);
-      color: var(--white);
-      transition: opacity 0.2s ease;
-    }
+I am an aspiring Virtual Assistant with more than **9 years of experience** in customer service and operations across hospitality, gaming, and service-focused environments.
 
-    .card {
-      background: var(--white);
-      border-radius: 14px;
-      padding: 28px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 12px rgba(46, 58, 63, 0.03);
-      border-left: 5px solid var(--sage-green);
-    }
+These experiences helped me develop strong communication, organization, customer service, teamwork, and problem-solving skills. I am now building my career in virtual assistance, combining my professional background with modern digital tools, AI-assisted workflows, content creation, and remote operations management.
 
-    .card-rose {
-      border-left-color: var(--dusty-rose);
-    }
+---
 
-    .card-charcoal {
-      border-left-color: var(--charcoal);
-    }
+## 🎓 Education & Academic Background
 
-    h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.8rem;
-      color: var(--charcoal);
-      margin-bottom: 6px;
-    }
+* **Bachelor of Science in Hotel and Restaurant Management** *Far Eastern University (FEU Manila) • 2010 – 2013* Built the foundational discipline for 9+ years of service-driven operations, client care, and multitasking in high-volume environments.
 
-    h2 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.1rem;
-      color: var(--dusty-rose);
-      margin-bottom: 14px;
-    }
+* **Undergraduate Coursework in Nursing** *Far Eastern University (FEU Manila) • 2007 – 2010* Provided the healthcare and clinical terminology foundation that directly supports Medical VA tasks and HIPAA compliance.
 
-    h3 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.25rem;
-      color: var(--charcoal);
-      margin-bottom: 14px;
-    }
+---
 
-    .tagline {
-      font-style: italic;
-      color: var(--charcoal);
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
+## 📜 Verified Certifications & Training
 
-    ul {
-      list-style-position: inside;
-      margin-left: 4px;
-    }
+* **Data Annotation for Aspiring BPO Professionals** — *UP Open University & Concentrix (16 Hours MODeL • QR Verified)*
+* **Medical VA 102: Medical Billing** — *VA Growth PH (HIPAA Compliant Badge)*
+* **Medical VA 101: Medical Administrative** — *VA Growth PH (Clinical & Admin Workflows)*
+* **HIPAA for Business Associates** — *HIPAA Exams, Inc. (IACET Accredited & NY State Approved)*
+* **Freelancing Skills & VA Training** — *Mastery of Five Key Skills for Freelancing*
+* **General Virtual Assistant** — *TESDA (18-Day Intensive Training Program)*
 
-    li {
-      margin-bottom: 8px;
-    }
+---
 
-    .cert-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 12px;
-      margin-top: 10px;
-    }
+## 💼 What I Bring
 
-    .cert-item {
-      background: var(--bg-cream);
-      border-radius: 10px;
-      padding: 14px 16px;
-      border: 1px solid rgba(168, 176, 154, 0.4);
-    }
+* **Core Operations:** Customer service excellence, operations support, administrative management.
+* **Professional Mindset:** Clear communication, meticulous attention to detail, adaptability, responsibility, and dependable team support.
+* **Modern Workflows:** AI-assisted workflows, prompt ideation, content planning, and video creation.
 
-    .cert-item h4 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.95rem;
-      color: var(--charcoal);
-      margin-bottom: 3px;
-    }
+---
 
-    .cert-item p {
-      font-size: 0.82rem;
-      color: #556268;
-    }
+## 🎯 My Goal & Work Philosophy
 
-    .values-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
+My goal is to provide reliable virtual assistance that helps business owners and teams save time, stay organized, and manage daily operations smoothly.
 
-    .values-table th, .values-table td {
-      padding: 10px 14px;
-      text-align: left;
-      border-bottom: 1px solid rgba(46, 58, 63, 0.08);
-      font-size: 0.95rem;
-    }
+| Value | My Commitment |
+| :--- | :--- |
+| 🛡️ **Professional** | I communicate clearly and handle confidential tasks responsibly. |
+| 🤝 **Reliable** | I take deadlines, instructions, and accountability seriously. |
+| 😊 **Approachable** | I believe positive, open communication makes working together effortless. |
 
-    .values-table th {
-      font-family: 'Poppins', sans-serif;
-      color: var(--charcoal);
-      background: rgba(248, 246, 241, 0.7);
-    }
+---
 
-    .contact-btn {
-      display: inline-block;
-      background: var(--charcoal);
-      color: var(--white);
-      text-decoration: none;
-      padding: 12px 28px;
-      border-radius: 8px;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 500;
-      margin-top: 14px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-    
-    <div class="top-nav">
-      <a href="../" class="nav-btn">← Back to Home</a>
-      <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="nav-btn" style="background: var(--dusty-rose); color: var(--charcoal);">Get in Touch</a>
-    </div>
-
-    <header class="card card-rose">
-      <h1>Rowena Carla Cipriano</h1>
-      <h2>Virtual Assistant & Remote Operations Support</h2>
-      <p class="tagline">“You Focus on Business. I'll Handle the Details. ♡”</p>
-      
-      <p style="margin-top: 14px;">
-        Hi, I'm
+### RC.VA360
+*“You Focus on Business. I'll Handle the Details.”* **Email:** cipriano.rowenacarla.va@gmail.com
