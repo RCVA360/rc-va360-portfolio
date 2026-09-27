@@ -55,12 +55,11 @@
       overflow: hidden;
     }
 
-    /* Top Action Bar with Logo and Back Button */
+    /* Top Action Bar with Logo */
     .top-action-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
       margin-bottom: 22px;
       width: 100%;
     }
@@ -69,40 +68,36 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 5px;
+      gap: 6px;
       text-decoration: none;
       font-family: var(--font-subheading);
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       font-weight: 600;
-      padding: 8px 16px;
-      border-radius: 20px;
+      padding: 9px 18px;
+      border-radius: 30px;
       transition: all 0.25s ease;
       white-space: nowrap;
       background-color: var(--color-charcoal);
       color: var(--color-white);
-      flex-shrink: 0;
     }
 
     .pill-nav-btn:hover {
       background-color: var(--color-sage);
       transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(47, 62, 70, 0.16);
+      box-shadow: 0 4px 12px rgba(47, 62, 70, 0.16);
     }
 
     .top-logo-link {
-      display: inline-flex;
-      align-items: center;
+      display: inline-block;
       text-decoration: none;
     }
 
-    /* Blends away off-white box from the logo */
     .header-logo-img {
-      height: 34px;
+      height: 38px;
       width: auto;
-      max-width: 130px;
+      max-width: 150px;
       object-fit: contain;
       display: block;
-      mix-blend-mode: multiply;
     }
 
     /* Typography & Section Styles */
@@ -331,7 +326,7 @@
   <!-- ================= MAIN CONTENT CARD ================= -->
   <main class="card">
     
-    <!-- Top Action Bar: Clean Logo on Right, Back Button on Left -->
+    <!-- Top Action Bar with Logo replacing the redundant button -->
     <header class="top-action-bar">
       <a href="../index.html" class="pill-nav-btn">← Back to Home</a>
       <a href="../index.html" class="top-logo-link" title="Return to Home">
