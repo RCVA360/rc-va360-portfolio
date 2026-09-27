@@ -1,23 +1,35 @@
+<div align="center">
+
 # RC.VA360
+### Virtual Assistance & Remote Operations Support
 
-## Virtual Assistance & Remote Operations Support
+*“You Focus on Business. I'll Handle the Details. ♡”*
 
-[![About Me](https://img.shields.io/badge/Profile-About%20Me-blue?style=for-the-badge)](./01-About-Me)
-[![Customer Service](https://img.shields.io/badge/Support-Customer%20Service-green?style=for-the-badge)](./03-Customer-Service)
-[![Operations](https://img.shields.io/badge/Workflow-Operations-orange?style=for-the-badge)](./04-Operations-Support)
-[![AI Tasks](https://img.shields.io/badge/AI-Powered%20Tasks-purple?style=for-the-badge)](./06-AI-Powered-Tasks)
-[![Content](https://img.shields.io/badge/Creative-Content%20Creation-red?style=for-the-badge)](./07-Content-Creation)
+---
 
-Welcome to my portfolio.
+[![Aspiring VA](https://img.shields.io/badge/Aspiring_Virtual_Assistant-D9A7A0?style=for-the-badge&logoColor=2E3A3F)](#about-rcva360)
+[![Customer Service](https://img.shields.io/badge/Customer_Service-A8B09A?style=for-the-badge&logoColor=white)](./03-Customer-Service)
+[![Operations](https://img.shields.io/badge/Operations-2E3A3F?style=for-the-badge&logoColor=white)](./04-Operations-Support)
+[![AI Tools](https://img.shields.io/badge/AI_Tools-D9A7A0?style=for-the-badge&logoColor=2E3A3F)](./06-AI-Powered-Tasks)
+[![Content Support](https://img.shields.io/badge/Content_Support-A8B09A?style=for-the-badge&logoColor=white)](./07-Content-Creation)
 
-I am an aspiring Virtual Assistant with more than 9 years of experience in customer service and operations across hospitality, gaming, and service-focused environments.
+---
+
+</div>
+
+## 🌿 Welcome to My Portfolio
+
+I am an aspiring Virtual Assistant with more than **9 years of experience** in customer service and operations across hospitality, gaming, and service-focused environments.
 
 My goal is to help busy business owners and teams stay organized, communicate effectively with customers, and manage everyday tasks more efficiently.
 
-## What I Can Help With
+> **Brand Values:** 🛡️ **Professional** | 🤝 **Reliable** | 😊 **Approachable**
 
-### Administrative Support
+---
 
+## 📂 What I Can Help With
+
+### [02. Administrative Support](./02-Administrative-Support)
 * Data entry and organization
 * File and document organization
 * Scheduling and calendar support
@@ -25,24 +37,21 @@ My goal is to help busy business owners and teams stay organized, communicate ef
 * Email and follow-up support
 * Spreadsheet organization
 
-### Customer Service Support
-
+### [03. Customer Service Support](./03-Customer-Service)
 * Customer communication
 * Professional response templates
 * Follow-up management
 * Customer inquiry handling
 * Communication organization
 
-### Operations Support
-
+### [04. Operations Support](./04-Operations-Support)
 * Daily task organization
 * Workflow support
 * Team coordination
 * Process documentation
 * Administrative operations
 
-### Social Media Support
-
+### [05. Social Media Support](./05-Social-Media-Support)
 * Content planning
 * Content calendars
 * Caption writing
@@ -50,8 +59,7 @@ My goal is to help busy business owners and teams stay organized, communicate ef
 * Basic graphic content
 * Engagement tracking
 
-### AI-Powered Tasks
-
+### [06. AI-Powered Tasks](./06-AI-Powered-Tasks)
 * AI-assisted research
 * Prompt creation
 * Content development
@@ -59,8 +67,7 @@ My goal is to help busy business owners and teams stay organized, communicate ef
 * AI-assisted marketing tasks
 * AI video and image concepts
 
-### Content Creation
-
+### [07. Content Creation](./07-Content-Creation)
 * Social media content
 * Product presentation
 * Video concepts
@@ -68,57 +75,57 @@ My goal is to help busy business owners and teams stay organized, communicate ef
 * AI-generated video concepts
 * Canva-based visual content
 
-## My Approach
+---
 
-I believe good virtual assistance is more than completing tasks.
+## 💡 My Approach
 
-It is about being reliable, organized, adaptable, and willing to learn.
+I believe good virtual assistance is more than completing tasks. It is about being **reliable**, **organized**, **adaptable**, and **willing to learn**. 
 
-I focus on clear communication, attention to detail, and finding practical ways to make everyday business tasks easier.
+I focus on clear communication, sharp attention to detail, and finding practical ways to make everyday business tasks easier.
 
-## Featured Portfolio Projects
+---
 
-### Bichu-Bichu Product Commercial
+## 🥐 Portfolio Projects
 
-A product marketing concept demonstrating AI-assisted commercial planning, scripting, visual direction, and product presentation.
+* **[Bichu-Bichu Product Commercial](./07-Content-Creation):** A product marketing concept demonstrating AI-assisted commercial planning, scripting, visual direction, and product presentation.
+* **[RC.VA360 Social Media Campaign](./05-Social-Media-Support):** A sample social media project demonstrating content planning, captions, creative direction, and campaign organization.
 
-### RC.VA360 Social Media Campaign
+---
 
-A sample social media project demonstrating content planning, captions, creative direction, and campaign organization.
+## 🛠️ Tools & Tech Stack
 
-## Tools
+| Category | Tools & Platforms |
+| :--- | :--- |
+| **Design & Media** | Canva, Video creation tools |
+| **AI & Automation** | Generative AI Tools, Prompt Engineering |
+| **Productivity & Docs** | Google Workspace, Microsoft Office, Spreadsheets |
+| **Channels & Management** | Social media platforms, Git / GitHub |
 
-* Canva
-* AI tools
-* Google Workspace
-* Microsoft Office
-* Spreadsheets
-* Social media platforms
-* Video creation tools
+---
 
-## Professional Strengths
+## ⭐ Professional Strengths
 
-* Customer service
-* Communication
-* Organization
-* Adaptability
-* Responsibility
-* Attention to detail
-* Team support
-* Willingness to learn
+* Customer service & communication
+* Organization & attention to detail
+* Adaptability & willingness to learn
+* Responsibility & team support
 
-## About RC.VA360
+---
 
-**RC.VA360** represents my goal of providing practical virtual assistance and remote operations support to businesses that need reliable help with their day-to-day tasks.
+## 💼 About RC.VA360
 
-**Tagline:**
-"You Focus on Business. I'll Handle the Details."
+RC.VA360 represents my goal of providing practical virtual assistance and remote operations support to businesses that need reliable help with their day-to-day tasks.
 
-## Let's Work Together
+> **Tagline:** > *"You Focus on Business. I'll Handle the Details. ♡"*
 
-I am open to opportunities where I can provide administrative, customer service, operations, social media, AI, and content support.
+---
 
-Thank you for visiting my portfolio.
+## 📬 Let's Work Together
 
-**RC.VA360**
-Virtual Assistance & Remote Operations Support
+I am open to opportunities where I can provide administrative, customer service, operations, social media, AI, and content support. 
+
+* **Email:** [cipriano.rowenacarla.va@gmail.com](mailto:cipriano.rowenacarla.va@gmail.com)  
+* **Location:** Philippines (GMT+8)  
+* **Status:** Available for Hire  
+
+*Thank you for visiting my portfolio!*
