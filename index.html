@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RC.VA360 | Virtual Assistance & Remote Operations Support</title>
 
-  <!-- Google Fonts: Montserrat, Poppins, Open Sans, Caveat -->
+  <!-- Google Fonts according to RC.VA360 Brand Kit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
@@ -23,7 +23,6 @@
       --font-heading: 'Montserrat', sans-serif;
       --font-subheading: 'Poppins', sans-serif;
       --font-body: 'Open Sans', sans-serif;
-      --font-tagline: 'Caveat', cursive;
     }
 
     * {
@@ -41,25 +40,25 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 22px;
+      gap: 20px;
     }
 
-    /* Common Card Wrapper */
+    /* Common Card Styling */
     .card {
       width: 100%;
-      max-width: 520px;
+      max-width: 480px;
       background: var(--color-white);
       border-radius: 24px;
-      box-shadow: 0 10px 28px rgba(47, 62, 70, 0.05);
+      box-shadow: 0 8px 24px rgba(47, 62, 70, 0.06);
       border: 1px solid var(--color-border);
       overflow: hidden;
     }
 
-    /* ---------------- 1. HEADER & BANNER CARD ---------------- */
+    /* ---------------- CARD 1: BANNER, LOGO & NAV ---------------- */
     .banner-container {
       width: 100%;
-      height: 160px;
-      background: linear-gradient(135deg, #F4EFE6 0%, #E8E2D5 100%);
+      height: 140px;
+      background-color: #EDE8DF;
       position: relative;
     }
 
@@ -71,31 +70,20 @@
     }
 
     .header-content {
-      padding: 22px 20px 24px;
+      padding: 20px 18px 24px;
       text-align: center;
     }
 
     .logo-container {
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
     .logo-img {
-      max-width: 240px;
+      max-width: 250px;
       width: 100%;
       height: auto;
       display: block;
       margin: 0 auto;
-    }
-
-    .tagline {
-      font-family: var(--font-tagline);
-      font-size: 1.35rem;
-      color: var(--color-charcoal);
-      margin-bottom: 20px;
-    }
-
-    .tagline span {
-      color: var(--color-rose);
     }
 
     /* Navigation Pills Grid */
@@ -104,7 +92,7 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      gap: 9px;
+      gap: 8px;
     }
 
     .pill-btn {
@@ -136,24 +124,24 @@
 
     .pill-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(47, 62, 70, 0.16);
+      box-shadow: 0 4px 10px rgba(47, 62, 70, 0.16);
       opacity: 0.95;
     }
 
-    /* ---------------- 2. WELCOME & ABOUT CARD ---------------- */
+    /* ---------------- CARD 2: WELCOME & PROFILE ---------------- */
     .about-card {
-      padding: 32px 24px;
+      padding: 30px 22px;
       text-align: center;
     }
 
     .profile-frame {
-      width: 124px;
-      height: 124px;
+      width: 120px;
+      height: 120px;
       margin: 0 auto 18px;
       border-radius: 50%;
       padding: 4px;
       background: var(--color-rose);
-      box-shadow: 0 6px 18px rgba(220, 174, 150, 0.35);
+      box-shadow: 0 6px 16px rgba(220, 174, 150, 0.35);
     }
 
     .profile-img {
@@ -162,19 +150,19 @@
       object-fit: cover;
       border-radius: 50%;
       display: block;
-      background: #EDE8DF;
+      background-color: #EDE8DF;
     }
 
     .section-title {
       font-family: var(--font-heading);
-      font-size: 1.45rem;
+      font-size: 1.4rem;
       font-weight: 800;
       color: var(--color-charcoal);
       margin-bottom: 12px;
     }
 
     .bio-text {
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       line-height: 1.7;
       color: var(--color-muted);
       text-align: left;
@@ -186,9 +174,9 @@
       font-weight: 600;
     }
 
-    /* ---------------- 3. SERVICES & ACCORDION SECTIONS ---------------- */
+    /* ---------------- CARD 3: CORE SERVICES ---------------- */
     .content-card {
-      padding: 28px 24px;
+      padding: 26px 22px;
     }
 
     .badge-label {
@@ -214,7 +202,7 @@
 
     .service-title {
       font-family: var(--font-subheading);
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       font-weight: 600;
       color: var(--color-charcoal);
       margin-bottom: 8px;
@@ -241,7 +229,7 @@
       position: relative;
       padding-left: 18px;
       margin-bottom: 5px;
-      font-size: 0.92rem;
+      font-size: 0.91rem;
       color: var(--color-muted);
     }
 
@@ -253,7 +241,7 @@
       font-weight: bold;
     }
 
-    /* ---------------- 4. CERTIFICATIONS & HIGHLIGHTS ---------------- */
+    /* ---------------- CARD 4: CERTIFICATIONS ---------------- */
     .cert-item {
       background: #FAF8F5;
       border-left: 3px solid var(--color-sage);
@@ -264,7 +252,7 @@
 
     .cert-item strong {
       font-family: var(--font-subheading);
-      font-size: 0.94rem;
+      font-size: 0.92rem;
       color: var(--color-charcoal);
       display: block;
       margin-bottom: 3px;
@@ -276,23 +264,56 @@
       margin: 0;
     }
 
-    /* ---------------- 5. FOOTER & CONTACT CARD ---------------- */
+    /* ---------------- CARD 5: FOOTER & CONTACT ---------------- */
     .footer-card {
-      padding: 26px 20px;
+      padding: 28px 20px;
       text-align: center;
     }
 
+    .email-display {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--color-cream-bg);
+      border: 1px solid var(--color-rose);
+      padding: 10px 18px;
+      border-radius: 20px;
+      margin: 14px 0 16px;
+      max-width: 100%;
+    }
+
+    .email-icon {
+      font-size: 1.1rem;
+      color: var(--color-sage);
+    }
+
+    .email-text {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      text-decoration: none;
+      word-break: break-all;
+      transition: color 0.2s ease;
+    }
+
+    .email-text:hover {
+      color: var(--color-rose);
+    }
+
     .contact-btn {
-      display: inline-block;
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
       text-decoration: none;
       font-family: var(--font-subheading);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 600;
       background-color: var(--color-charcoal);
       color: var(--color-white);
-      padding: 11px 26px;
+      padding: 11px 28px;
       border-radius: 25px;
-      margin-top: 14px;
       transition: all 0.25s ease;
     }
 
@@ -307,21 +328,17 @@
   <!-- ================= CARD 1: BANNER, LOGO & NAVIGATION ================= -->
   <section class="card">
     <div class="banner-container">
-      <!-- Replace banner.jpg with your banner image file -->
       <img src="banner.jpg" alt="RC.VA360 Banner" class="banner-img" />
     </div>
 
     <div class="header-content">
       <div class="logo-container">
-        <!-- Replace logo.png with your logo image file -->
         <img src="logo.png" alt="RC.VA360 Logo" class="logo-img" />
       </div>
 
-      <p class="tagline">"You Focus on Business. I'll Handle the Details. <span>♡</span>"</p>
-
-      <!-- All 8 Navigation Options Matching Your Folders -->
+      <!-- 8 Navigation Pills -->
       <nav class="nav-pills" aria-label="Main Navigation">
-        <a href="#about" class="pill-btn pill-rose">About Me</a>
+        <a href="01-About-Me/index.html" class="pill-btn pill-rose">About Me</a>
         <a href="02-Administrative-Support/index.html" class="pill-btn pill-sage">Admin Support</a>
         <a href="03-Customer-Service-Support/index.html" class="pill-btn pill-charcoal">Customer Care</a>
         <a href="04-Operations-Support/index.html" class="pill-btn pill-rose">Operations</a>
@@ -336,14 +353,13 @@
   <!-- ================= CARD 2: WELCOME & ABOUT PROFILE ================= -->
   <section class="card about-card" id="about">
     <div class="profile-frame">
-      <!-- Replace profile.jpg with your profile picture file -->
       <img src="profile.jpg" alt="RC Profile Picture" class="profile-img" />
     </div>
 
     <h2 class="section-title">Welcome to My Portfolio</h2>
 
     <p class="bio-text">
-      I am a dedicated <strong>Virtual Assistant</strong> with more than <strong>9 years of experience</strong> in customer service and operations across hospitality, gaming, and service-focused environments.
+      I am a dedicated <strong>Virtual Assistant</strong> with more than <strong>9 years of experience</strong> in customer service, operations, and administrative coordination across hospitality, gaming, and service-focused environments.
     </p>
 
     <p class="bio-text">
@@ -351,7 +367,7 @@
     </p>
   </section>
 
-  <!-- ================= CARD 3: WHAT I CAN HELP WITH ================= -->
+  <!-- ================= CARD 3: CORE SERVICES ================= -->
   <section class="card content-card">
     <span class="badge-label">CORE SERVICES</span>
 
@@ -444,13 +460,24 @@
     </div>
   </section>
 
-  <!-- ================= CARD 5: CALL TO ACTION FOOTER ================= -->
+  <!-- ================= CARD 5: CALL TO ACTION & EMAIL ================= -->
   <section class="card footer-card">
     <h2 class="section-title">Let's Work Together</h2>
-    <p class="bio-text" style="text-align: center;">
+    <p class="bio-text" style="text-align: center; margin-bottom: 12px;">
       Ready to streamline your daily operations and free up your time? Let's connect.
     </p>
-    <a href="mailto:your-email@example.com" class="contact-btn">Get In Touch</a>
+
+    <!-- Clear, Clickable Email Address -->
+    <div class="email-display">
+      <span class="email-icon">✉</span>
+      <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="email-text">
+        cipriano.rowenacarla.va@gmail.com
+      </a>
+    </div>
+
+    <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="contact-btn">
+      Send Message
+    </a>
   </section>
 
 </body>
