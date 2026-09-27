@@ -3,7 +3,6 @@
 # 📜 Verified Certifications & Professional Training
 ### RC.VA360 | Rowena Carla Cipriano
 
-*“Certified Professional • One VA, 360° Support”*
 
 ---
 
