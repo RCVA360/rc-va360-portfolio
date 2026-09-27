@@ -14,7 +14,7 @@
 
 </div>
 
-## 👋 Hi, I'm Rowena
+## 👋 Hi, I'm Rowena Carla
 
 I am an aspiring Virtual Assistant with more than **9 years of experience** in customer service and operations.
 
