@@ -1,0 +1,59 @@
+AI-Powered Tasks
+
+Overview
+
+I use AI tools as productivity assistants to help with research, content development, organization, brainstorming, and creative workflows.
+
+AI is used as a support tool while keeping human review and accuracy as important parts of the process.
+
+AI-Assisted Services
+
+- Prompt creation
+- Content ideas
+- Caption development
+- Research assistance
+- Content planning
+- Commercial scripts
+- Video concepts
+- Image concepts
+- Workflow ideas
+- Administrative assistance
+- Information organization
+
+Prompt Development
+
+I create structured prompts that provide AI tools with:
+
+- Clear objectives
+- Required format
+- Brand information
+- Product information
+- Visual instructions
+- Restrictions
+- Desired output
+
+Example Project
+
+Bichu-Bichu Commercial
+
+I developed AI prompts for a product commercial concept that focused on:
+
+- Product consistency
+- Authentic product texture
+- Packaging consistency
+- Scene planning
+- Voiceover
+- Overlay text
+- Commercial direction
+
+My AI Workflow
+
+Plan → Prompt → Generate → Review → Refine → Finalize
+
+AI-generated work is reviewed and refined to better match the project requirements.
+
+Important
+
+AI tools are assistants.
+
+I still review the output, check details, and make adjustments based on the client's instructions.
