@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RC.VA360 | Remote Operations & Virtual Support</title>
 
-  <!-- RC.VA360 Brand Typography -->
+  <!-- RC.VA360 Brand Typography (Montserrat, Poppins, Open Sans, & Cormorant Garamond for Editorial Tagline) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Montserrat:ital,wght@0,600;0,700;0,800;1,500;1,600&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -25,7 +25,7 @@
       --font-heading: 'Montserrat', sans-serif;
       --font-subheading: 'Poppins', sans-serif;
       --font-body: 'Open Sans', sans-serif;
-      --font-script: 'Caveat', cursive;
+      --font-editorial: 'Cormorant Garamond', serif;
     }
 
     * {
@@ -150,16 +150,16 @@
       font-weight: 800;
       line-height: 1.18;
       color: var(--text-charcoal);
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.5rem;
     }
 
-    /* UPDATED: Clean, modern brand font for the tagline */
+    /* Editorial Executive Tagline (Cormorant Garamond) */
     .hero-tagline {
-      font-family: var(--font-heading);
-      font-size: 1.2rem;
-      color: var(--primary-rose);
-      font-weight: 600;
+      font-family: var(--font-editorial);
+      font-size: 1.75rem;
       font-style: italic;
+      font-weight: 500;
+      color: var(--primary-rose);
       letter-spacing: 0.02em;
       margin-bottom: 1.25rem;
       display: block;
@@ -213,7 +213,7 @@
       color: var(--secondary-sage);
     }
 
-    /* Hero Right Visual */
+    /* Hero Right Visual: Cutout Profile Photo */
     .hero-visual-wrapper {
       position: relative;
       display: flex;
@@ -441,7 +441,7 @@
       margin-bottom: 1.25rem;
     }
 
-    /* Call to Action Banner */
+    /* Call to Action Banner (Styled with banner.jpeg background) */
     .cta-banner-wrapper {
       margin: 0 3.5rem 4rem;
       border-radius: 20px;
@@ -503,15 +503,14 @@
       color: var(--text-muted);
     }
 
-    /* UPDATED: Clean, modern brand font for footer tagline */
     .footer-tagline {
-      font-family: var(--font-heading);
-      font-size: 0.95rem;
+      font-family: var(--font-editorial);
+      font-size: 1.2rem;
       color: var(--primary-rose);
-      font-weight: 600;
       font-style: italic;
     }
 
+    /* Responsive adjustments */
     @media (max-width: 900px) {
       .hero-section {
         grid-template-columns: 1fr;
@@ -565,7 +564,7 @@
       </a>
 
       <nav class="nav-links">
-        <a href="about-me/index.html">About</a>
+        <a href="about-me/index.html">About Me</a>
         <a href="customer-service-support/index.html">Customer Care</a>
         <a href="operations-support/index.html">Operations</a>
         <a href="ai-powered-tasks/index.html">AI Tasks</a>
@@ -581,8 +580,8 @@
           <span></span> 9+ Years Professional Operations Experience
         </div>
         <h1 class="hero-title">Virtual Assistance & Operations Support</h1>
-        <!-- Updated font: Montserrat italic -->
-        <span class="hero-tagline">"You Focus on Business. I'll Handle the Details. ♡"</span>
+        <!-- Upgraded Editorial Font (No quotes, no heart symbol) -->
+        <span class="hero-tagline">You focus on business — I'll handle the details.</span>
         <p class="hero-desc">
           High-level operational systems, customer communication, and calendar triage. Helping busy entrepreneurs and leadership teams reclaim their time through reliable remote execution.
         </p>
@@ -757,7 +756,7 @@
     <!-- Footer -->
     <footer>
       <span>RC.VA360 · All Rights Reserved</span>
-      <span class="footer-tagline">"You Focus on Business. I'll Handle the Details. ♡"</span>
+      <span class="footer-tagline">You focus on business — I'll handle the details.</span>
     </footer>
   </div>
 
