@@ -189,7 +189,7 @@
       font-size: 0.9rem;
     }
 
-    /* Hero Right Visual */
+    /* Hero Right Visual (Clean Framing, No Circle) */
     .hero-visual-wrapper {
       position: relative;
       display: flex;
@@ -198,21 +198,11 @@
       min-height: 380px;
     }
 
-    .hero-backdrop-circle {
-      position: absolute;
-      width: 310px;
-      height: 310px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--tint-sage), var(--tint-rose));
-      border: 1px solid var(--border-color);
-      z-index: 1;
-    }
-
     .hero-headshot-img {
       position: relative;
       z-index: 2;
-      width: 270px;
-      height: 340px;
+      width: 280px;
+      height: 350px;
       object-fit: cover;
       border-radius: 18px;
       border: 5px solid #FFFFFF;
@@ -223,7 +213,7 @@
     .floating-exp-pill {
       position: absolute;
       bottom: 10px;
-      left: 10px;
+      left: 15px;
       z-index: 3;
       background: #FFFFFF;
       border: 1px solid var(--border-color);
@@ -309,7 +299,7 @@
       margin-bottom: 2.25rem;
     }
 
-    /* HIGHLIGHTED CREDENTIALS CARDS (Experience & Education) */
+    /* Credentials Showcase */
     .credentials-showcase {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -463,7 +453,7 @@
       color: var(--secondary-sage);
     }
 
-    /* Core Principles (How I Work) */
+    /* Principles */
     .principles-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -498,14 +488,13 @@
       color: var(--text-charcoal);
     }
 
-    /* Clean Body Text for Principles (Balanced Size) */
     .principle-desc {
       font-size: 0.88rem;
       color: var(--text-muted);
       line-height: 1.6;
     }
 
-    /* Call to Action Banner */
+    /* CTA Banner */
     .cta-banner-wrapper {
       margin: 0 2.5rem 3.5rem;
       border-radius: 18px;
@@ -565,7 +554,7 @@
       font-style: italic;
     }
 
-    /* RESPONSIVE SAFETY (Prevents squishing on mobile inspection) */
+    /* Responsive */
     @media (max-width: 850px) {
       .hero-section {
         grid-template-columns: 1fr;
@@ -656,9 +645,8 @@
         </div>
       </div>
 
-      <!-- Hero Visual: Framed Headshot -->
+      <!-- Hero Visual (Clean Portrait without background circle) -->
       <div class="hero-visual-wrapper">
-        <div class="hero-backdrop-circle"></div>
         <img src="about-photo.png" alt="Rowena Carla Cipriano" class="hero-headshot-img" onerror="this.onerror=null; this.src='../profile.png';">
         <div class="floating-exp-pill">
           <strong>9+ Years Hands-On Experience</strong>
@@ -702,7 +690,7 @@
     <!-- MAIN BODY SECTION -->
     <section class="content-section">
       
-      <!-- HIGHLIGHTED BACKGROUND & QUALIFICATIONS (Centerpiece) -->
+      <!-- HIGHLIGHTED BACKGROUND & QUALIFICATIONS -->
       <div class="section-eyebrow">Proven Experience & Academic Foundation</div>
       <h2 class="section-title">Background & Qualifications</h2>
       <p class="section-subtitle">Real-world corporate tenure and service-driven academic training.</p>
@@ -719,18 +707,28 @@
           </div>
 
           <div class="timeline-list">
+            <!-- Neutral Sports Analytics & Training Role -->
+            <div class="timeline-entry">
+              <div class="timeline-role">Sports Market Analyst & Operations Trainer</div>
+              <div class="timeline-org">Sports Data Analytics & Trading</div>
+              <div class="timeline-desc">Led onboarding and technical training for incoming analysts on internal platforms, while auditing real-time data feeds, managing risk workflows, and standardizing operational SOPs.</div>
+            </div>
+
+            <!-- Melco Resorts -->
             <div class="timeline-entry">
               <div class="timeline-role">Operations & Customer Service Specialist</div>
               <div class="timeline-org">Melco Resorts & Entertainment</div>
               <div class="timeline-desc">Mastered high-volume guest engagement, dispute resolution, and luxury VIP standards in high-stakes environments.</div>
             </div>
 
+            <!-- Accenture -->
             <div class="timeline-entry">
               <div class="timeline-role">Front Office & Administrative Coordinator</div>
               <div class="timeline-org">Accenture</div>
               <div class="timeline-desc">Managed corporate front-of-house communications, visitor logistics, and executive administrative coordination within a global enterprise environment.</div>
             </div>
 
+            <!-- RC.VA360 -->
             <div class="timeline-entry">
               <div class="timeline-role">Founder & Lead Specialist</div>
               <div class="timeline-org">RC.VA360 Virtual Assistance</div>
@@ -787,7 +785,7 @@
         </div>
       </div>
 
-      <!-- Core Work Principles (Properly Sized & Stacked) -->
+      <!-- Core Work Principles -->
       <div class="section-eyebrow">Operating Standards</div>
       <h2 class="section-title">How I Work</h2>
       <p class="section-subtitle">Core standards applied across every project and team interaction.</p>
