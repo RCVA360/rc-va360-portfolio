@@ -6,13 +6,15 @@
   <title>Customer Service Support - Portfolio</title>
   <style>
     :root {
-      --primary: #2563eb;
-      --primary-light: #eff6ff;
-      --text-main: #1f2937;
-      --text-muted: #4b5563;
-      --bg: #f9fafb;
-      --card-bg: #ffffff;
-      --border: #e5e7eb;
+      --primary: #D9A7A0;        /* Dusty Rose */
+      --secondary: #A8B09A;      /* Sage Green */
+      --text-main: #2E3A3F;      /* Charcoal */
+      --text-muted: #536269;     /* Soft Charcoal */
+      --bg: #F8F6F1;             /* Warm White / Cream */
+      --card-bg: #FFFFFF;
+      --border: #E8E5DD;
+      --tint-rose: #FAF2F0;
+      --tint-sage: #F2F5F0;
     }
 
     * {
@@ -36,7 +38,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 2.5rem;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 12px rgba(46, 58, 63, 0.05);
     }
 
     header {
@@ -49,14 +51,18 @@
       font-size: 2rem;
       color: var(--text-main);
       font-weight: 700;
+      letter-spacing: -0.02em;
     }
 
     h2 {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       margin: 2rem 0 1rem;
-      color: var(--primary);
+      color: var(--text-main);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
+      display: inline-block;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.25rem;
     }
 
     p {
@@ -73,12 +79,12 @@
     }
 
     .grid-list li {
-      background: var(--primary-light);
+      background: var(--tint-sage);
       padding: 0.75rem 1rem;
       border-radius: 6px;
       font-size: 0.95rem;
       color: var(--text-main);
-      border-left: 4px solid var(--primary);
+      border-left: 4px solid var(--secondary);
     }
 
     .styles-grid {
@@ -92,7 +98,7 @@
       border: 1px solid var(--border);
       padding: 1.25rem;
       border-radius: 8px;
-      background: #fafafa;
+      background: var(--bg);
     }
 
     .style-card strong {
@@ -110,7 +116,7 @@
     .sample-box {
       border: 1px solid var(--border);
       border-radius: 8px;
-      background: #fafafa;
+      background: var(--bg);
       padding: 1.5rem;
       margin: 1.5rem 0;
     }
@@ -126,12 +132,12 @@
     }
 
     .customer-bubble {
-      background: #f3f4f6;
-      border-left: 4px solid #9ca3af;
+      background: #FFFFFF;
+      border-left: 4px solid var(--secondary);
     }
 
     .response-bubble {
-      background: var(--primary-light);
+      background: var(--tint-rose);
       border-left: 4px solid var(--primary);
     }
 
@@ -145,11 +151,11 @@
     }
 
     .customer-bubble .label {
-      color: #6b7280;
+      color: var(--secondary);
     }
 
     .response-bubble .label {
-      color: var(--primary);
+      color: #b57a72;
     }
 
     .portfolio-list {
