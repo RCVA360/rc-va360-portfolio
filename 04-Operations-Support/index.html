@@ -1,1 +1,467 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operations Support | RC.VA360</title>
+
+  <!-- Google Fonts according to RC.VA360 Brand Kit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-charcoal: #2F3E46;
+      --color-sage: #9CAF88;
+      --color-rose: #DCAE96;
+      --color-cream-bg: #F8F6F0;
+      --color-white: #FFFFFF;
+      --color-border: #EFE9DF;
+      --color-muted: #5C6B73;
+
+      --font-heading: 'Montserrat', sans-serif;
+      --font-subheading: 'Poppins', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+      --font-tagline: 'Caveat', cursive;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--color-cream-bg);
+      font-family: var(--font-body);
+      color: var(--color-charcoal);
+      line-height: 1.65;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Common Card Styling matching homepage */
+    .card {
+      width: 100%;
+      max-width: 480px;
+      background: var(--color-white);
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(47, 62, 70, 0.06);
+      border: 1px solid var(--color-border);
+      padding: 28px 22px;
+      overflow: hidden;
+    }
+
+    /* Navigation Header / Back Button */
+    .nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-family: var(--font-subheading);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      background: var(--color-cream-bg);
+      border: 1px solid var(--color-rose);
+      padding: 7px 18px;
+      border-radius: 20px;
+      transition: all 0.25s ease;
+    }
+
+    .back-btn .arrow {
+      font-size: 1.05rem;
+      transition: transform 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background: var(--color-sage);
+      color: var(--color-white);
+      border-color: var(--color-sage);
+      transform: translateY(-2px);
+    }
+
+    .back-btn:hover .arrow {
+      transform: translateX(-3px);
+    }
+
+    .brand-mark {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--color-charcoal);
+      letter-spacing: 0.5px;
+    }
+
+    .brand-mark span {
+      color: var(--color-rose);
+    }
+
+    /* Typography & Section Styles */
+    h1 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--color-charcoal);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .divider {
+      height: 2px;
+      width: 100%;
+      background: #EFE9DF;
+      margin-bottom: 24px;
+    }
+
+    .badge-label {
+      display: inline-block;
+      font-family: var(--font-subheading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--color-charcoal);
+      border-bottom: 2px solid var(--color-rose);
+      padding-bottom: 2px;
+      margin-bottom: 14px;
+    }
+
+    .section-block {
+      margin-bottom: 26px;
+    }
+
+    .section-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .bio-text {
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: var(--color-muted);
+      margin-bottom: 12px;
+    }
+
+    .bio-text strong {
+      color: var(--color-charcoal);
+      font-weight: 600;
+    }
+
+    /* Operations Support Area List */
+    .service-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #FAF8F5;
+      padding: 9px 14px;
+      border-radius: 10px;
+      font-size: 0.91rem;
+      color: var(--color-charcoal);
+      border-left: 3px solid var(--color-sage);
+    }
+
+    .check-icon {
+      color: var(--color-sage);
+      font-weight: bold;
+    }
+
+    /* Step-by-Step Workflow Cards */
+    .workflow-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .workflow-card {
+      background: #FDFCF9;
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .step-number {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--color-sage);
+      color: var(--color-white);
+      font-family: var(--font-subheading);
+      font-weight: 700;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .workflow-card:nth-child(even) .step-number {
+      background: var(--color-rose);
+    }
+
+    .workflow-content strong {
+      display: block;
+      font-family: var(--font-subheading);
+      color: var(--color-charcoal);
+      font-size: 0.95rem;
+      margin-bottom: 3px;
+    }
+
+    .workflow-content p {
+      font-size: 0.88rem;
+      color: var(--color-muted);
+      margin: 0;
+    }
+
+    /* Portfolio Samples List */
+    .sample-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .sample-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #FAF8F5;
+      padding: 9px 14px;
+      border-radius: 10px;
+      font-size: 0.91rem;
+      color: var(--color-charcoal);
+      border-left: 3px solid var(--color-rose);
+    }
+
+    .sample-icon {
+      color: var(--color-rose);
+      font-weight: bold;
+    }
+
+    /* Footer Card & Contact styling */
+    .footer-card {
+      text-align: center;
+      padding: 28px 20px;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--color-charcoal);
+      margin-bottom: 12px;
+    }
+
+    .email-display {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--color-cream-bg);
+      border: 1px solid var(--color-rose);
+      padding: 10px 18px;
+      border-radius: 20px;
+      margin: 14px 0 16px;
+      max-width: 100%;
+    }
+
+    .email-icon {
+      font-size: 1.1rem;
+      color: var(--color-sage);
+    }
+
+    .email-text {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      text-decoration: none;
+      word-break: break-all;
+      transition: color 0.2s ease;
+    }
+
+    .email-text:hover {
+      color: var(--color-rose);
+    }
+
+    .contact-btn {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      text-decoration: none;
+      font-family: var(--font-subheading);
+      font-size: 0.92rem;
+      font-weight: 600;
+      background-color: var(--color-charcoal);
+      color: var(--color-white);
+      padding: 11px 28px;
+      border-radius: 25px;
+      transition: all 0.25s ease;
+    }
+
+    .contact-btn:hover {
+      background-color: var(--color-sage);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= MAIN CONTENT CARD ================= -->
+  <main class="card">
+    
+    <!-- Top Navigation Bar -->
+    <header class="nav-header">
+      <a href="../index.html" class="back-btn">
+        <span class="arrow">←</span> Back Home
+      </a>
+      <div class="brand-mark">RC.VA<span>360</span></div>
+    </header>
+
+    <!-- Page Title -->
+    <h1>Operations Support</h1>
+    <div class="divider"></div>
+
+    <!-- Section: Overview -->
+    <section class="section-block">
+      <span class="badge-label">OVERVIEW</span>
+      <p class="bio-text">My background in operations has helped me understand the importance of organization, teamwork, procedures, and consistent daily support.</p>
+      <p class="bio-text">I can assist businesses with routine operational tasks that help keep work organized and efficient.</p>
+    </section>
+
+    <!-- Section: Operations Support Areas -->
+    <section class="section-block">
+      <span class="badge-label">OPERATIONS SUPPORT AREAS</span>
+      <ul class="service-list">
+        <li><span class="check-icon">✓</span> Daily task tracking</li>
+        <li><span class="check-icon">✓</span> Workflow organization</li>
+        <li><span class="check-icon">✓</span> Team support</li>
+        <li><span class="check-icon">✓</span> Process documentation</li>
+        <li><span class="check-icon">✓</span> Task follow-ups</li>
+        <li><span class="check-icon">✓</span> Scheduling</li>
+        <li><span class="check-icon">✓</span> Information management</li>
+        <li><span class="check-icon">✓</span> Administrative coordination</li>
+        <li><span class="check-icon">✓</span> Documentation</li>
+        <li><span class="check-icon">✓</span> Routine operations support</li>
+      </ul>
+    </section>
+
+    <!-- Section: Example Workflow -->
+    <section class="section-block">
+      <span class="badge-label">EXAMPLE WORKFLOW</span>
+      <div class="workflow-timeline">
+        
+        <div class="workflow-card">
+          <div class="step-number">1</div>
+          <div class="workflow-content">
+            <strong>Receive</strong>
+            <p>Understand the task, instructions, and deadline.</p>
+          </div>
+        </div>
+
+        <div class="workflow-card">
+          <div class="step-number">2</div>
+          <div class="workflow-content">
+            <strong>Organize</strong>
+            <p>Break the task into clear steps and gather the required information.</p>
+          </div>
+        </div>
+
+        <div class="workflow-card">
+          <div class="step-number">3</div>
+          <div class="workflow-content">
+            <strong>Complete</strong>
+            <p>Perform the task according to the client's instructions.</p>
+          </div>
+        </div>
+
+        <div class="workflow-card">
+          <div class="step-number">4</div>
+          <div class="workflow-content">
+            <strong>Review</strong>
+            <p>Check the completed work for accuracy and missing information.</p>
+          </div>
+        </div>
+
+        <div class="workflow-card">
+          <div class="step-number">5</div>
+          <div class="workflow-content">
+            <strong>Report</strong>
+            <p>Provide a clear update on the completed task or any items that need attention.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section: My Goal -->
+    <section class="section-block">
+      <span class="badge-label">MY GOAL</span>
+      <p class="bio-text">
+        My goal is to help business owners and teams keep routine work organized so they can focus on higher-priority business activities.
+      </p>
+    </section>
+
+    <!-- Section: Portfolio Samples -->
+    <section class="section-block">
+      <span class="badge-label">PORTFOLIO SAMPLES</span>
+      <p class="bio-text">This section can include:</p>
+      <ul class="sample-list">
+        <li><span class="sample-icon">✦</span> Workflow examples</li>
+        <li><span class="sample-icon">✦</span> Task trackers</li>
+        <li><span class="sample-icon">✦</span> SOP samples</li>
+        <li><span class="sample-icon">✦</span> Operations checklists</li>
+        <li><span class="sample-icon">✦</span> Process documentation</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER / GET IN TOUCH CARD ================= -->
+  <section class="card footer-card">
+    <h2 class="section-title">Let's Work Together</h2>
+    <p class="bio-text" style="text-align: center; margin-bottom: 12px;">
+      Ready to keep routine work organized and optimize your operations? Let's connect.
+    </p>
+
+    <!-- Visible Email Address -->
+    <div class="email-display">
+      <span class="email-icon">✉</span>
+      <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="email-text">
+        cipriano.rowenacarla.va@gmail.com
+      </a>
+    </div>
+
+    <!-- Get In Touch Button -->
+    <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="contact-btn">
+      Get In Touch
+    </a>
+  </section>
+
+</body>
+</html>
