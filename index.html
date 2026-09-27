@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light only" />
+  <meta name="supported-color-schemes" content="light" />
   <title>RC.VA360 | Virtual Assistance & Remote Operations</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +13,7 @@
 
   <style>
     :root {
+      color-scheme: light only;
       --bg-cream: #F8F6F1;
       --dusty-rose: #D9A7A0;
       --sage-green: #A8B09A;
@@ -25,8 +28,8 @@
     }
 
     body {
-      background-color: var(--bg-cream);
-      color: var(--charcoal);
+      background-color: var(--bg-cream) !important;
+      color: var(--charcoal) !important;
       font-family: 'Open Sans', sans-serif;
       line-height: 1.6;
       padding: 24px 16px;
@@ -39,12 +42,12 @@
 
     .hero {
       text-align: center;
-      background: var(--white);
+      background: var(--white) !important;
       border: 1px solid rgba(217, 167, 160, 0.4);
       border-radius: 20px;
-      padding: 40px 20px;
+      padding: 30px 16px;
       box-shadow: 0 4px 20px rgba(46, 58, 63, 0.05);
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
     .brand-logo {
@@ -71,41 +74,65 @@
       flex-wrap: wrap;
       gap: 8px;
       justify-content: center;
-      margin-top: 18px;
+      margin-top: 14px;
     }
 
     .badge {
       text-decoration: none;
       font-family: 'Poppins', sans-serif;
-      font-size: 0.85rem;
-      padding: 8px 16px;
+      font-size: 0.82rem;
+      padding: 7px 14px;
       border-radius: 25px;
       font-weight: 500;
       transition: transform 0.2s ease;
     }
 
-    .badge:hover {
-      transform: translateY(-2px);
-    }
-
-    .bg-rose { background: var(--dusty-rose); color: var(--charcoal); }
-    .bg-sage { background: var(--sage-green); color: var(--white); }
-    .bg-charcoal { background: var(--charcoal); color: var(--white); }
+    .bg-rose { background: var(--dusty-rose) !important; color: var(--charcoal) !important; }
+    .bg-sage { background: var(--sage-green) !important; color: var(--white) !important; }
+    .bg-charcoal { background: var(--charcoal) !important; color: var(--white) !important; }
 
     .card {
-      background: var(--white);
+      background: var(--white) !important;
+      color: var(--charcoal) !important;
       border-radius: 14px;
-      padding: 28px;
-      margin-bottom: 24px;
-      box-shadow: 0 2px 12px rgba(46, 58, 63, 0.03);
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(46, 58, 63, 0.04);
       border-left: 5px solid var(--sage-green);
     }
 
     .card h3 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       margin-bottom: 14px;
-      color: var(--charcoal);
+      color: var(--charcoal) !important;
+    }
+
+    /* Certifications Grid */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .cert-item {
+      background: var(--bg-cream) !important;
+      border-radius: 10px;
+      padding: 14px 16px;
+      border: 1px solid rgba(168, 176, 154, 0.4);
+    }
+
+    .cert-item h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      color: var(--charcoal) !important;
+      margin-bottom: 3px;
+    }
+
+    .cert-item p {
+      font-size: 0.82rem;
+      color: #556268 !important;
     }
 
     .grid-2 {
@@ -125,14 +152,14 @@
 
     .contact-btn {
       display: inline-block;
-      background: var(--charcoal);
-      color: var(--white);
+      background: var(--charcoal) !important;
+      color: var(--white) !important;
       text-decoration: none;
       padding: 12px 28px;
       border-radius: 8px;
       font-family: 'Poppins', sans-serif;
       font-weight: 500;
-      margin-top: 16px;
+      margin-top: 14px;
     }
   </style>
 </head>
@@ -150,6 +177,7 @@
         <a class="badge bg-rose" href="./04-Operations-Support">Operations</a>
         <a class="badge bg-sage" href="./06-AI-Powered-Tasks">AI Tasks</a>
         <a class="badge bg-charcoal" href="./07-Content-Creation">Content Creation</a>
+        <a class="badge bg-rose" href="#certificates">Certifications</a>
       </div>
     </header>
 
@@ -159,6 +187,55 @@
       <p style="text-align: left; margin-top: 12px;">
         I am an aspiring Virtual Assistant with more than <strong>9 years of experience</strong> in customer service and operations across hospitality, gaming, and service-focused environments. My goal is to help busy business owners stay organized, communicate effectively with customers, and manage daily operations smoothly.
       </p>
+    </section>
+
+    <section class="card" id="certificates" style="border-left: 5px solid var(--charcoal);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+        <h3 style="margin-bottom: 0;">📜 Verified Certifications & Credentials</h3>
+        <span style="font-size: 0.75rem; font-weight: 600; color: var(--charcoal); background: var(--dusty-rose); padding: 4px 10px; border-radius: 12px;">One VA, 360° Support</span>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-item" style="border-left: 4px solid #8B263E;">
+          <h4>Certificate of Accomplishment</h4>
+          <strong style="font-size: 0.88rem; color: var(--charcoal); display: block;">UP Open University + Concentrix</strong>
+          <p>Data Annotation for Aspiring BPO Professionals (16 Hours MODeL)</p>
+          <p style="font-size: 0.78rem; color: #777; margin-top: 4px;">Issued: 22 March 2026 • QR Verified</p>
+        </div>
+
+        <div class="cert-item" style="border-left: 4px solid var(--dusty-rose);">
+          <h4>Medical VA 102 – Medical Billing</h4>
+          <strong style="font-size: 0.88rem; color: var(--charcoal); display: block;">VA Growth PH</strong>
+          <p>HIPAA Compliant Badge • Coach: Leizel Quizon</p>
+          <p style="font-size: 0.78rem; color: #777; margin-top: 4px;">Completed: 1/10/2025</p>
+        </div>
+
+        <div class="cert-item" style="border-left: 4px solid var(--dusty-rose);">
+          <h4>Medical VA 101 – Medical Administrative</h4>
+          <strong style="font-size: 0.88rem; color: var(--charcoal); display: block;">VA Growth PH</strong>
+          <p>Clinical & Administrative Workflows • Coach: Leizel Quizon</p>
+          <p style="font-size: 0.78rem; color: #777; margin-top: 4px;">Completed: 1/10/2025</p>
+        </div>
+
+        <div class="cert-item" style="border-left: 4px solid #2A9D8F;">
+          <h4>HIPAA for Business Associates</h4>
+          <strong style="font-size: 0.88rem; color: var(--charcoal); display: block;">HIPAA Exams, Inc. (IACET Accredited)</strong>
+          <p>IACET CEU Provider • NY State Approved</p>
+          <p style="font-size: 0.78rem; color: #777; margin-top: 4px;">Completed: 1/10/2025 • Verifiable at teachm.hipaa.com</p>
+        </div>
+
+        <div class="cert-item" style="border-left: 4px solid var(--charcoal);">
+          <h4>Freelancing Skills & VA Training</h4>
+          <strong style="font-size: 0.88rem; color: var(--charcoal); display: block;">Mastery of Five Key Skills for Freelancing</strong>
+          <p>Professional Development • VA Coach: Angel Jalong</p>
+        </div>
+
+        <div class="cert-item" style="border-left: 4px solid var(--sage-green);">
+          <h4>General Virtual Assistant</h4>
+          <strong style="font-size: 0.88rem; color: var(--charcoal); display: block;">TESDA</strong>
+          <p>18-Day Intensive Training Program & Technical Readiness</p>
+        </div>
+      </div>
     </section>
 
     <section class="grid-2">
