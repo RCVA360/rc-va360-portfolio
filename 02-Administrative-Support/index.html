@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light only" />
+  <meta name="supported-color-schemes" content="light" />
+  <title>Administrative Support | RC.VA360</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: light only;
+      --bg-cream: #F8F6F1;
+      --dusty-rose: #D9A7A0;
+      --sage-green: #A8B09A;
+      --charcoal: #2E3A3F;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-cream) !important;
+      color: var(--charcoal) !important;
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      padding: 24px 16px;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .nav-btn {
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.85rem;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-weight: 500;
+      background: var(--charcoal);
+      color: var(--white) !important;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-btn-accent {
+      background: var(--dusty-rose);
+      color: var(--charcoal) !important;
+    }
+
+    .card {
+      background: var(--white) !important;
+      color: var(--charcoal) !important;
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(46, 58, 63, 0.04);
+      border-left: 5px solid var(--sage-green);
+    }
+
+    .card-rose {
+      border-left-color: var(--dusty-rose);
+    }
+
+    .card-charcoal {
+      border-left-color: var(--charcoal);
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      color: var(--charcoal) !important;
+      margin-bottom: 8px;
+    }
+
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem;
+      color: var(--charcoal) !important;
+      margin-bottom: 14px;
+    }
+
+    .task-item {
+      background: var(--bg-cream) !important;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(168, 176, 154, 0.35);
+    }
+
+    .task-item h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      color: var(--charcoal) !important;
+      margin-bottom: 4px;
+    }
+
+    .task-item p {
+      font-size: 0.9rem;
+      color: #556268 !important;
+      margin: 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .service-pill {
+      background: var(--bg-cream) !important;
+      border: 1px solid rgba(168, 176, 154, 0.3);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .tool-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      background: var(--bg-cream) !important;
+      color: var(--charcoal) !important;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid rgba(168, 176, 154, 0.4);
+    }
+
+    .placeholder-box {
+      border: 2px dashed rgba(168, 176, 154, 0.5);
+      border-radius: 10px;
+      padding: 24px;
+      text-align: center;
+      color: #6c757d;
+      font-size: 0.9rem;
+      margin-top: 10px;
+      background: rgba(248, 246, 241, 0.5);
+    }
+
+    .contact-btn {
+      display: inline-block;
+      background: var(--charcoal) !important;
+      color: var(--white) !important;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="top-nav">
+      <a href="../" class="nav-btn">← Back to Home</a>
+      <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="nav-btn nav-btn-accent">Get in Touch</a>
+    </div>
+
+    <header class="card card-rose">
+      <h1>Administrative Support</h1>
+      <p style="font-size: 1rem; margin-top: 8px;">
+        This section demonstrates my ability to organize information, support daily administrative tasks, and keep business activities structured.
+      </p>
+    </header>
+
+    <section class="card">
+      <h3>📋 Services I Can Support</h3>
+      <div class="services-grid">
+        <div class="service-pill">✔ Data entry</div>
+        <div class="service-pill">✔ Spreadsheet organization</div>
+        <div class="service-pill">✔ File organization</div>
+        <div class="service-pill">✔ Document organization</div>
+        <div class="service-pill">✔ Online research</div>
+        <div class="service-pill">✔ Scheduling</div>
+        <div class="service-pill">✔ Calendar management</div>
+        <div class="service-pill">✔ Email organization</div>
+        <div class="service-pill">✔ Follow-up tracking</div>
+        <div class="service-pill">✔ Information gathering</div>
+        <div class="service-pill">✔ Basic admin workflows</div>
+      </div>
+    </section>
+
+    <section class="card card-charcoal">
+      <h3>📂 Sample Tasks</h3>
+
+      <div class="task-item" style="border-left: 4px solid var(--dusty-rose);">
+        <h4>Spreadsheet Organization</h4>
+        <p>I can organize information into clear and easy-to-use spreadsheets.</p>
+      </div>
+
+      <div class="task-item" style="border-left: 4px solid var(--sage-green);">
+        <h4>File Organization</h4>
+        <p>I can help structure digital files and folders so important information is easier to find.</p>
+      </div>
+
+      <div class="task-item" style="border-left: 4px solid var(--charcoal);">
+        <h4>Research</h4>
+        <p>I can gather information from reliable sources and organize the results in a practical format.</p>
+      </div>
+
+      <div class="task-item" style="border-left: 4px solid var(--dusty-rose);">
+        <h4>Scheduling</h4>
+        <p>I can help organize appointments, tasks, deadlines, and schedules.</p>
+      </div>
+
+      <div class="task-item" style="border-left: 4px solid var(--sage-green);">
+        <h4>Follow-Up Tracking</h4>
+        <p>I can create simple systems for tracking pending responses, tasks, and follow-ups.</p>
+      </div>
+    </section>
+
+    <section class="card card-rose">
+      <h3>🎯 My Approach</h3>
+      <p>
+        I focus on accuracy, organization, clear documentation, and following client instructions.
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>🛠️ Tools</h3>
+      <div class="tool-tags">
+        <span class="tag">Google Workspace</span>
+        <span class="tag">Microsoft Office</span>
+        <span class="tag">Spreadsheets</span>
+        <span class="tag">Canva</span>
+        <span class="tag">AI Tools</span>
+      </div>
+    </section>
+
+    <section class="card card-charcoal">
+      <h3>📁 Portfolio Samples</h3>
+      <div class="placeholder-box">
+        Sample files and screenshots can be added to this section as my portfolio develops.
+      </div>
+    </section>
+
+    <footer class="card card-rose" style="text-align: center;">
+      <h3>RC.VA360</h3>
+      <p style="font-style: italic; font-weight: 600;">“You Focus on Business. I'll Handle the Details.”</p>
+      <a class="contact-btn" href="mailto:cipriano.rowenacarla.va@gmail.com">Let's Connect</a>
+    </footer>
+
+  </div>
+
+</body>
+</html>
