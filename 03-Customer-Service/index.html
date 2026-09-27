@@ -17,13 +17,13 @@
       --color-rose: #DCAE96;
       --color-cream-bg: #F8F6F0;
       --color-white: #FFFFFF;
-      --color-card-border: #E8E3D9;
+      --color-border: #EFE9DF;
       --color-muted: #5C6B73;
 
       --font-heading: 'Montserrat', sans-serif;
       --font-subheading: 'Poppins', sans-serif;
       --font-body: 'Open Sans', sans-serif;
-      --font-script: 'Caveat', cursive;
+      --font-tagline: 'Caveat', cursive;
     }
 
     * {
@@ -34,30 +34,34 @@
 
     body {
       background-color: var(--color-cream-bg);
-      color: var(--color-charcoal);
       font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.7;
+      color: var(--color-charcoal);
+      line-height: 1.65;
       padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
 
-    /* Container Card matching mobile screenshot style */
-    .page-container {
-      max-width: 680px;
-      margin: 0 auto;
+    /* Common Card Styling matching homepage */
+    .card {
+      width: 100%;
+      max-width: 480px;
       background: var(--color-white);
-      border-radius: 20px;
-      padding: 32px 28px;
-      box-shadow: 0 10px 30px rgba(47, 62, 70, 0.05);
-      border: 1px solid var(--color-card-border);
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(47, 62, 70, 0.06);
+      border: 1px solid var(--color-border);
+      padding: 28px 22px;
+      overflow: hidden;
     }
 
-    /* Navigation Bar / Back Button */
+    /* Navigation Header / Back Button */
     .nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .back-btn {
@@ -66,18 +70,18 @@
       gap: 8px;
       text-decoration: none;
       font-family: var(--font-subheading);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 600;
       color: var(--color-charcoal);
       background: var(--color-cream-bg);
       border: 1px solid var(--color-rose);
-      padding: 8px 18px;
-      border-radius: 25px;
+      padding: 7px 18px;
+      border-radius: 20px;
       transition: all 0.25s ease;
     }
 
     .back-btn .arrow {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       transition: transform 0.2s ease;
     }
 
@@ -85,6 +89,7 @@
       background: var(--color-sage);
       color: var(--color-white);
       border-color: var(--color-sage);
+      transform: translateY(-2px);
     }
 
     .back-btn:hover .arrow {
@@ -93,8 +98,8 @@
 
     .brand-mark {
       font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.95rem;
+      font-weight: 800;
+      font-size: 1rem;
       color: var(--color-charcoal);
       letter-spacing: 0.5px;
     }
@@ -103,79 +108,73 @@
       color: var(--color-rose);
     }
 
-    /* Titles & Headings */
+    /* Typography & Section Styles */
     h1 {
       font-family: var(--font-heading);
+      font-size: 1.6rem;
       font-weight: 800;
-      font-size: 2rem;
-      line-height: 1.25;
       color: var(--color-charcoal);
-      margin-bottom: 18px;
+      line-height: 1.25;
+      margin-bottom: 12px;
     }
 
     .divider {
       height: 2px;
       width: 100%;
       background: #EFE9DF;
-      margin-bottom: 30px;
+      margin-bottom: 24px;
     }
 
-    .section-tag {
+    .badge-label {
       display: inline-block;
       font-family: var(--font-subheading);
+      font-size: 0.78rem;
       font-weight: 700;
-      font-size: 0.85rem;
-      letter-spacing: 2px;
+      letter-spacing: 1.8px;
       text-transform: uppercase;
       color: var(--color-charcoal);
-      position: relative;
+      border-bottom: 2px solid var(--color-rose);
+      padding-bottom: 2px;
       margin-bottom: 14px;
     }
 
-    .section-tag::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 100%;
-      height: 2px;
-      background-color: var(--color-rose);
-      border-radius: 2px;
+    .section-block {
+      margin-bottom: 26px;
     }
 
-    p {
-      margin-bottom: 16px;
+    .section-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .bio-text {
+      font-size: 0.94rem;
+      line-height: 1.7;
       color: var(--color-muted);
+      margin-bottom: 12px;
     }
 
-    .section {
-      margin-bottom: 36px;
+    .bio-text strong {
+      color: var(--color-charcoal);
+      font-weight: 600;
     }
 
     /* Service Check List */
-    .service-grid {
+    .service-list {
       list-style: none;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
     }
 
-    @media (min-width: 500px) {
-      .service-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .service-grid li {
+    .service-list li {
       display: flex;
       align-items: center;
       gap: 10px;
       background: #FAF8F5;
-      padding: 10px 14px;
+      padding: 9px 14px;
       border-radius: 10px;
-      font-size: 0.95rem;
-      font-weight: 500;
+      font-size: 0.91rem;
       color: var(--color-charcoal);
       border-left: 3px solid var(--color-sage);
     }
@@ -185,59 +184,52 @@
       font-weight: bold;
     }
 
-    /* Style Pillars Cards */
+    /* Communication Style Cards */
     .style-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    @media (min-width: 500px) {
-      .style-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+      gap: 10px;
+      margin-top: 10px;
     }
 
     .style-card {
       background: #FDFCF9;
-      border: 1px solid var(--color-card-border);
+      border: 1px solid var(--color-border);
       border-radius: 12px;
-      padding: 14px 16px;
+      padding: 12px 14px;
     }
 
     .style-card strong {
       display: block;
       font-family: var(--font-subheading);
       color: var(--color-charcoal);
-      font-size: 1rem;
-      margin-bottom: 4px;
+      font-size: 0.95rem;
+      margin-bottom: 3px;
     }
 
     .style-card p {
-      font-size: 0.9rem;
-      margin-bottom: 0;
+      font-size: 0.88rem;
+      color: var(--color-muted);
+      margin: 0;
     }
 
-    /* Dialogue / Sample Box */
+    /* Sample Response Dialogue Box */
     .dialogue-box {
       background: #FDFBF8;
-      border: 1px solid var(--color-card-border);
+      border: 1px solid var(--color-border);
       border-radius: 14px;
-      padding: 20px;
-      margin-top: 14px;
-      position: relative;
+      padding: 16px;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
     .bubble {
-      padding: 12px 16px;
+      padding: 12px 14px;
       border-radius: 10px;
-      margin-bottom: 12px;
-      font-size: 0.92rem;
-    }
-
-    .bubble:last-child {
-      margin-bottom: 0;
+      font-size: 0.9rem;
+      line-height: 1.55;
     }
 
     .customer-bubble {
@@ -254,64 +246,114 @@
 
     .bubble-label {
       font-family: var(--font-subheading);
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
       display: block;
     }
 
     .customer-bubble .bubble-label { color: #A66E53; }
     .va-bubble .bubble-label { color: #5B7248; }
 
-    /* Footer / Tagline */
-    .footer-quote {
+    /* Footer Card & Contact styling */
+    .footer-card {
       text-align: center;
-      margin-top: 36px;
-      padding-top: 24px;
-      border-top: 1px dashed var(--color-card-border);
+      padding: 28px 20px;
     }
 
-    .script-tagline {
-      font-family: var(--font-script);
-      font-size: 1.35rem;
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 800;
       color: var(--color-charcoal);
+      margin-bottom: 12px;
     }
 
-    .script-tagline span {
+    .email-display {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--color-cream-bg);
+      border: 1px solid var(--color-rose);
+      padding: 10px 18px;
+      border-radius: 20px;
+      margin: 14px 0 16px;
+      max-width: 100%;
+    }
+
+    .email-icon {
+      font-size: 1.1rem;
+      color: var(--color-sage);
+    }
+
+    .email-text {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      text-decoration: none;
+      word-break: break-all;
+      transition: color 0.2s ease;
+    }
+
+    .email-text:hover {
       color: var(--color-rose);
+    }
+
+    .contact-btn {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      text-decoration: none;
+      font-family: var(--font-subheading);
+      font-size: 0.92rem;
+      font-weight: 600;
+      background-color: var(--color-charcoal);
+      color: var(--color-white);
+      padding: 11px 28px;
+      border-radius: 25px;
+      transition: all 0.25s ease;
+    }
+
+    .contact-btn:hover {
+      background-color: var(--color-sage);
+      transform: translateY(-2px);
     }
   </style>
 </head>
 <body>
 
-  <main class="page-container">
+  <!-- ================= MAIN CONTENT CARD ================= -->
+  <main class="card">
     
-    <!-- Top Bar with Back Button -->
+    <!-- Top Navigation Bar -->
     <header class="nav-header">
-      <a href="index.html" class="back-btn">
+      <!-- If this file is inside 03-Customer-Service-Support/, use href="../index.html" -->
+      <a href="../index.html" class="back-btn">
         <span class="arrow">←</span> Back Home
       </a>
       <div class="brand-mark">RC.VA<span>360</span></div>
     </header>
 
-    <!-- Main Title -->
+    <!-- Page Title -->
     <h1>Customer Service Support</h1>
     <div class="divider"></div>
 
     <!-- Section: Overview -->
-    <section class="section">
-      <div class="section-tag">OVERVIEW</div>
-      <p>Customer service is one of the strongest parts of my professional background.</p>
-      <p>I have more than 9 years of experience working in customer-facing and operations environments.</p>
-      <p>This experience taught me the importance of professional communication, patience, accuracy, teamwork, and understanding customer needs.</p>
+    <section class="section-block">
+      <span class="badge-label">OVERVIEW</span>
+      <p class="bio-text">Customer service is one of the strongest parts of my professional background.</p>
+      <p class="bio-text">I have more than <strong>9 years of experience</strong> working in customer-facing and operations environments.</p>
+      <p class="bio-text">This experience taught me the importance of professional communication, patience, accuracy, teamwork, and understanding customer needs.</p>
     </section>
 
     <!-- Section: What I Can Assist With -->
-    <section class="section">
-      <div class="section-tag">I CAN ASSIST WITH</div>
-      <ul class="service-grid">
+    <section class="section-block">
+      <span class="badge-label">I CAN ASSIST WITH</span>
+      <ul class="service-list">
         <li><span class="check-icon">✓</span> Customer inquiries</li>
         <li><span class="check-icon">✓</span> Professional message responses</li>
         <li><span class="check-icon">✓</span> Follow-ups</li>
@@ -325,9 +367,9 @@
     </section>
 
     <!-- Section: Communication Style -->
-    <section class="section">
-      <div class="section-tag">COMMUNICATION STYLE</div>
-      <p>My approach to customer communication is:</p>
+    <section class="section-block">
+      <span class="badge-label">COMMUNICATION STYLE</span>
+      <p class="bio-text">My approach to customer communication is:</p>
       <div class="style-grid">
         <div class="style-card">
           <strong>Clear</strong>
@@ -349,8 +391,8 @@
     </section>
 
     <!-- Section: Sample Customer Response -->
-    <section class="section">
-      <div class="section-tag">SAMPLE CUSTOMER RESPONSE</div>
+    <section class="section-block">
+      <span class="badge-label">SAMPLE CUSTOMER RESPONSE</span>
       <div class="dialogue-box">
         <div class="bubble customer-bubble">
           <span class="bubble-label">Customer</span>
@@ -364,10 +406,10 @@
     </section>
 
     <!-- Section: Portfolio Samples -->
-    <section class="section">
-      <div class="section-tag">PORTFOLIO SAMPLES</div>
-      <p>Future samples may include:</p>
-      <ul class="service-grid">
+    <section class="section-block">
+      <span class="badge-label">PORTFOLIO SAMPLES</span>
+      <p class="bio-text">Future samples may include:</p>
+      <ul class="service-list">
         <li><span class="check-icon">✦</span> Customer response templates</li>
         <li><span class="check-icon">✦</span> FAQ documents</li>
         <li><span class="check-icon">✦</span> Customer service workflows</li>
@@ -375,12 +417,28 @@
       </ul>
     </section>
 
-    <!-- Brand Sign-off Footer -->
-    <footer class="footer-quote">
-      <p class="script-tagline">"You Focus on Business. I'll Handle the Details. <span>♡</span>"</p>
-    </footer>
-
   </main>
+
+  <!-- ================= FOOTER / GET IN TOUCH CARD ================= -->
+  <section class="card footer-card">
+    <h2 class="section-title">Let's Work Together</h2>
+    <p class="bio-text" style="text-align: center; margin-bottom: 12px;">
+      Ready to elevate your customer support and streamline daily communication? Let's connect.
+    </p>
+
+    <!-- Visible Email Address -->
+    <div class="email-display">
+      <span class="email-icon">✉</span>
+      <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="email-text">
+        cipriano.rowenacarla.va@gmail.com
+      </a>
+    </div>
+
+    <!-- Get In Touch Button -->
+    <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="contact-btn">
+      Get In Touch
+    </a>
+  </section>
 
 </body>
 </html>
