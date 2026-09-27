@@ -11,6 +11,7 @@ Virtual Assistant | Administrative Support | Customer Care | Operations | AI & C
  * AI Tasks
  * Content Creation
  * Certifications
+   
 Welcome to My Portfolio
 I am a dedicated Virtual Assistant with more than 9 years of professional experience in customer service and operations across hospitality, gaming, and service-focused environments.
 My goal is to help busy business owners and teams stay organized, communicate effectively with customers, and manage everyday tasks more efficiently.
