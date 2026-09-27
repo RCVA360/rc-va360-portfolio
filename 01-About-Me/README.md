@@ -2,11 +2,11 @@
 
 Hi, I'm Rowena
 
-I am an aspiring Virtual Assistant with more than 9 years of experience in customer service and operations.
+I am a dedicated Virtual Assistant with more than 9 years of experience in customer service and operations.
 
 My professional background includes experience in hospitality, gaming, and service-focused environments. These experiences helped me develop strong communication, organization, customer service, teamwork, and problem-solving skills.
 
-I am now building my career in virtual assistance, combining my previous experience with digital tools, AI tools, content creation, and remote work skills.
+I am now building my career in virtual assistance, combining my previous experience with digital tools, AI tools, content creation and remote work skills.
 
 ---
 
