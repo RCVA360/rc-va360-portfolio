@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light only" />
+  <meta name="supported-color-schemes" content="light" />
   <title>About Me | RC.VA360</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +13,7 @@
 
   <style>
     :root {
+      color-scheme: light only;
       --bg-cream: #F8F6F1;
       --dusty-rose: #D9A7A0;
       --sage-green: #A8B09A;
@@ -25,8 +28,8 @@
     }
 
     body {
-      background-color: var(--bg-cream);
-      color: var(--charcoal);
+      background-color: var(--bg-cream) !important;
+      color: var(--charcoal) !important;
       font-family: 'Open Sans', sans-serif;
       line-height: 1.6;
       padding: 24px 16px;
@@ -52,16 +55,16 @@
       border-radius: 20px;
       font-weight: 500;
       background: var(--charcoal);
-      color: var(--white);
-      transition: opacity 0.2s ease;
+      color: var(--white) !important;
     }
 
     .card {
-      background: var(--white);
+      background: var(--white) !important;
+      color: var(--charcoal) !important;
       border-radius: 14px;
       padding: 28px;
       margin-bottom: 20px;
-      box-shadow: 0 2px 12px rgba(46, 58, 63, 0.03);
+      box-shadow: 0 2px 12px rgba(46, 58, 63, 0.05);
       border-left: 5px solid var(--sage-green);
     }
 
@@ -76,27 +79,27 @@
     h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 1.8rem;
-      color: var(--charcoal);
+      color: var(--charcoal) !important;
       margin-bottom: 6px;
     }
 
     h2 {
       font-family: 'Poppins', sans-serif;
       font-size: 1.1rem;
-      color: var(--dusty-rose);
+      color: var(--dusty-rose) !important;
       margin-bottom: 14px;
     }
 
     h3 {
       font-family: 'Montserrat', sans-serif;
       font-size: 1.25rem;
-      color: var(--charcoal);
+      color: var(--charcoal) !important;
       margin-bottom: 14px;
     }
 
     .tagline {
       font-style: italic;
-      color: var(--charcoal);
+      color: var(--charcoal) !important;
       font-weight: 600;
       margin-bottom: 16px;
     }
@@ -118,7 +121,7 @@
     }
 
     .cert-item {
-      background: var(--bg-cream);
+      background: var(--bg-cream) !important;
       border-radius: 10px;
       padding: 14px 16px;
       border: 1px solid rgba(168, 176, 154, 0.4);
@@ -127,13 +130,13 @@
     .cert-item h4 {
       font-family: 'Poppins', sans-serif;
       font-size: 0.95rem;
-      color: var(--charcoal);
+      color: var(--charcoal) !important;
       margin-bottom: 3px;
     }
 
     .cert-item p {
       font-size: 0.82rem;
-      color: #556268;
+      color: #556268 !important;
     }
 
     .values-table {
@@ -147,18 +150,18 @@
       text-align: left;
       border-bottom: 1px solid rgba(46, 58, 63, 0.08);
       font-size: 0.95rem;
+      color: var(--charcoal) !important;
     }
 
     .values-table th {
       font-family: 'Poppins', sans-serif;
-      color: var(--charcoal);
-      background: rgba(248, 246, 241, 0.7);
+      background: rgba(248, 246, 241, 0.9) !important;
     }
 
     .contact-btn {
       display: inline-block;
-      background: var(--charcoal);
-      color: var(--white);
+      background: var(--charcoal) !important;
+      color: var(--white) !important;
       text-decoration: none;
       padding: 12px 28px;
       border-radius: 8px;
@@ -174,7 +177,7 @@
     
     <div class="top-nav">
       <a href="../" class="nav-btn">← Back to Home</a>
-      <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="nav-btn" style="background: var(--dusty-rose); color: var(--charcoal);">Get in Touch</a>
+      <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="nav-btn" style="background: var(--dusty-rose) !important; color: var(--charcoal) !important;">Get in Touch</a>
     </div>
 
     <header class="card card-rose">
@@ -183,4 +186,46 @@
       <p class="tagline">“You Focus on Business. I'll Handle the Details. ♡”</p>
       
       <p style="margin-top: 14px;">
-        Hi, I'm
+        Hi, I'm Rowena! I am an aspiring Virtual Assistant with more than <strong>9 years of experience</strong> in customer service and operations across hospitality, gaming, and service-focused environments.
+      </p>
+      <p style="margin-top: 10px;">
+        These experiences helped me develop strong communication, organization, customer service, teamwork, and problem-solving skills. I am now building my career in virtual assistance, combining my professional background with modern digital tools, AI workflows, content creation, and remote operations management.
+      </p>
+    </header>
+
+    <section class="card card-charcoal">
+      <h3>🎓 Education & Academic Background</h3>
+      
+      <div style="margin-bottom: 16px;">
+        <h4 style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: var(--charcoal); margin-bottom: 2px;">
+          Bachelor of Science in Hotel and Restaurant Management
+        </h4>
+        <p style="font-size: 0.88rem; color: var(--dusty-rose); font-weight: 600; margin-bottom: 4px;">
+          Far Eastern University (FEU Manila) • 2010 – 2013
+        </p>
+        <p style="font-size: 0.88rem; color: #556268;">
+          Built the foundational discipline for 9+ years of service-driven operations, hospitality management, customer satisfaction, and cross-team communication.
+        </p>
+      </div>
+
+      <div>
+        <h4 style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: var(--charcoal); margin-bottom: 2px;">
+          Undergraduate Coursework in Nursing
+        </h4>
+        <p style="font-size: 0.88rem; color: var(--dusty-rose); font-weight: 600; margin-bottom: 4px;">
+          Far Eastern University (FEU Manila) • 2007 – 2010
+        </p>
+        <p style="font-size: 0.88rem; color: #556268;">
+          Provided the clinical terminology and healthcare foundation that directly powers specialized Medical VA tasks, patient documentation, and HIPAA compliance.
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>📜 Verified Certifications & Training</h3>
+      <div class="cert-grid">
+        <div class="cert-item" style="border-left: 4px solid #8B263E;">
+          <h4>Certificate of Accomplishment</h4>
+          <strong style="font-size: 0.88rem; color: var(--charcoal); display: block;">UP Open University + Concentrix</strong>
+          <p>Data Annotation for Aspiring BPO Professionals (16 Hours MODeL)</p>
+          <p style="font-size
