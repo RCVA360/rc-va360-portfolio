@@ -7,13 +7,20 @@
 
 ---
 
-[![Aspiring VA](https://img.shields.io/badge/Aspiring_Virtual_Assistant-D9A7A0?style=for-the-badge&logoColor=2E3A3F)](#about-rcva360)
-[![Customer Service](https://img.shields.io/badge/Customer_Service-A8B09A?style=for-the-badge&logoColor=white)](./03-Customer-Service)
-[![Operations](https://img.shields.io/badge/Operations-2E3A3F?style=for-the-badge&logoColor=white)](./04-Operations-Support)
-[![AI Tools](https://img.shields.io/badge/AI_Tools-D9A7A0?style=for-the-badge&logoColor=2E3A3F)](./06-AI-Powered-Tasks)
-[![Content Support](https://img.shields.io/badge/Content_Support-A8B09A?style=for-the-badge&logoColor=white)](./07-Content-Creation)
+<h1 align="center">RC.VA360</h1>
+<h3 align="center">Virtual Assistance & Remote Operations Support</h3>
+<p align="center"><em>“You Focus on Business. I'll Handle the Details. ♡”</em></p>
 
----
+<p align="center">
+  <a href="#about-rcva360"><img src="https://img.shields.io/badge/Aspiring_Virtual_Assistant-D9A7A0?style=for-the-badge&logoColor=2E3A3F" alt="Aspiring VA"/></a>
+  <a href="./03-Customer-Service"><img src="https://img.shields.io/badge/Customer_Service-A8B09A?style=for-the-badge&logoColor=white" alt="Customer Service"/></a>
+  <a href="./04-Operations-Support"><img src="https://img.shields.io/badge/Operations-2E3A3F?style=for-the-badge&logoColor=white" alt="Operations"/></a>
+  <a href="./06-AI-Powered-Tasks"><img src="https://img.shields.io/badge/AI_Tools-D9A7A0?style=for-the-badge&logoColor=2E3A3F" alt="AI Tools"/></a>
+  <a href="./07-Content-Creation"><img src="https://img.shields.io/badge/Content_Support-A8B09A?style=for-the-badge&logoColor=white" alt="Content Support"/></a>
+</p>
+
+<hr/>
+
 
 </div>
 
