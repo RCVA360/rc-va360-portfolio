@@ -1,1 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light only" />
+  <meta name="supported-color-schemes" content="light" />
+  <title>Social Media Support | RC.VA360</title>
+
+  <!-- Google Fonts according to RC.VA360 Brand Kit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: light only;
+      --color-charcoal: #2F3E46;
+      --color-sage: #9CAF88;
+      --color-rose: #DCAE96;
+      --color-cream-bg: #F8F6F0;
+      --color-white: #FFFFFF;
+      --color-border: #EFE9DF;
+      --color-muted: #5C6B73;
+
+      --font-heading: 'Montserrat', sans-serif;
+      --font-subheading: 'Poppins', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--color-cream-bg) !important;
+      color: var(--color-charcoal) !important;
+      font-family: var(--font-body);
+      line-height: 1.65;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Common Card Styling matching subpages */
+    .card {
+      width: 100%;
+      max-width: 480px;
+      background: var(--color-white) !important;
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(47, 62, 70, 0.06);
+      border: 1px solid var(--color-border);
+      padding: 28px 22px;
+      overflow: hidden;
+    }
+
+    /* Top Action Bar with Logo and Back Button */
+    .top-action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+      width: 100%;
+    }
+
+    .pill-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      text-decoration: none;
+      font-family: var(--font-subheading);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+      background-color: var(--color-charcoal);
+      color: var(--color-white) !important;
+      flex-shrink: 0;
+    }
+
+    .pill-nav-btn:hover {
+      background-color: var(--color-sage);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(47, 62, 70, 0.16);
+    }
+
+    .top-logo-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .header-logo-img {
+      height: 34px;
+      width: auto;
+      max-width: 130px;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Typography & Section Styles */
+    h1 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--color-charcoal) !important;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .divider {
+      height: 2px;
+      width: 100%;
+      background: var(--color-border);
+      margin-bottom: 24px;
+    }
+
+    .badge-label {
+      display: inline-block;
+      font-family: var(--font-subheading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--color-charcoal);
+      border-bottom: 2px solid var(--color-rose);
+      padding-bottom: 2px;
+      margin-bottom: 14px;
+    }
+
+    .section-block {
+      margin-bottom: 26px;
+    }
+
+    .section-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .bio-text {
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: var(--color-muted);
+      margin-bottom: 12px;
+    }
+
+    .bio-text strong {
+      color: var(--color-charcoal);
+      font-weight: 600;
+    }
+
+    /* Services List */
+    .service-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #FAF8F5;
+      padding: 9px 14px;
+      border-radius: 10px;
+      font-size: 0.91rem;
+      color: var(--color-charcoal);
+      border-left: 3px solid var(--color-sage);
+    }
+
+    .check-icon {
+      color: var(--color-sage);
+      font-weight: bold;
+    }
+
+    /* Step-by-Step Workflow Cards */
+    .workflow-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .workflow-card {
+      background: #FDFCF9;
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .step-number {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--color-sage);
+      color: var(--color-white);
+      font-family: var(--font-subheading);
+      font-weight: 700;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .workflow-card:nth-child(even) .step-number {
+      background: var(--color-rose);
+    }
+
+    .workflow-content p {
+      font-size: 0.9rem;
+      color: var(--color-charcoal);
+      font-weight: 500;
+      margin: 0;
+    }
+
+    /* Portfolio Project Card */
+    .project-card {
+      background: #FAF8F5;
+      border-radius: 12px;
+      padding: 16px 14px;
+      border: 1px solid var(--color-border);
+      border-left: 4px solid var(--color-rose);
+    }
+
+    .project-card h4 {
+      font-family: var(--font-subheading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-charcoal);
+      margin-bottom: 6px;
+    }
+
+    .project-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .project-list li {
+      font-size: 0.88rem;
+      color: var(--color-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .project-icon {
+      color: var(--color-rose);
+      font-weight: bold;
+    }
+
+    /* Tool Tags */
+    .tool-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      background: #FAF8F5;
+      color: var(--color-charcoal);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-family: var(--font-subheading);
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: 1px solid var(--color-border);
+    }
+
+    /* Footer Card & Contact Styling */
+    .footer-card {
+      text-align: center;
+      padding: 28px 20px;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--color-charcoal);
+      margin-bottom: 12px;
+    }
+
+    .email-display {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--color-cream-bg);
+      border: 1px solid var(--color-rose);
+      padding: 10px 18px;
+      border-radius: 20px;
+      margin: 14px 0 16px;
+      max-width: 100%;
+    }
+
+    .email-icon {
+      font-size: 1.1rem;
+      color: var(--color-sage);
+    }
+
+    .email-text {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      text-decoration: none;
+      word-break: break-all;
+      transition: color 0.2s ease;
+    }
+
+    .email-text:hover {
+      color: var(--color-rose);
+    }
+
+    .contact-btn {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      text-decoration: none;
+      font-family: var(--font-subheading);
+      font-size: 0.92rem;
+      font-weight: 600;
+      background-color: var(--color-charcoal);
+      color: var(--color-white) !important;
+      padding: 11px 28px;
+      border-radius: 25px;
+      transition: all 0.25s ease;
+    }
+
+    .contact-btn:hover {
+      background-color: var(--color-sage);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= MAIN CONTENT CARD ================= -->
+  <main class="card">
+    
+    <!-- Top Action Bar: Clean Logo on Right, Back Button on Left -->
+    <header class="top-action-bar">
+      <a href="../index.html" class="pill-nav-btn">← Back to Home</a>
+      <a href="../index.html" class="top-logo-link" title="Return to Home">
+        <img src="../logo.png" alt="RC.VA360 Logo" class="header-logo-img" />
+      </a>
+    </header>
+
+    <!-- Page Title -->
+    <h1>Social Media Support</h1>
+    <div class="divider"></div>
+
+    <!-- Section: Overview -->
+    <section class="section-block">
+      <span class="badge-label">OVERVIEW</span>
+      <p class="bio-text">
+        I can support businesses with the organization and preparation of social media content.
+      </p>
+      <p class="bio-text">
+        My focus is on creating practical, organized content that follows the client's brand direction.
+      </p>
+    </section>
+
+    <!-- Section: Services -->
+    <section class="section-block">
+      <span class="badge-label">SERVICES</span>
+      <ul class="service-list">
+        <li><span class="check-icon">✓</span> Content planning</li>
+        <li><span class="check-icon">✓</span> Content calendars</li>
+        <li><span class="check-icon">✓</span> Caption writing</li>
+        <li><span class="check-icon">✓</span> Hashtag organization</li>
+        <li><span class="check-icon">✓</span> Social media post ideas</li>
+        <li><span class="check-icon">✓</span> Basic Canva graphics</li>
+        <li><span class="check-icon">✓</span> Campaign organization</li>
+        <li><span class="check-icon">✓</span> Content scheduling support</li>
+        <li><span class="check-icon">✓</span> Engagement tracking</li>
+      </ul>
+    </section>
+
+    <!-- Section: Sample Content Workflow -->
+    <section class="section-block">
+      <span class="badge-label">SAMPLE CONTENT WORKFLOW</span>
+      <div class="workflow-timeline">
+
+        <div class="workflow-card">
+          <div class="step-number">1</div>
+          <div class="workflow-content">
+            <p>Understand the brand, audience, and content goal.</p>
+          </div>
+        </div>
+
+        <div class="workflow-card">
+          <div class="step-number">2</div>
+          <div class="workflow-content">
+            <p>Create content ideas based on the goal.</p>
+          </div>
+        </div>
+
+        <div class="workflow-card">
+          <div class="step-number">3</div>
+          <div class="workflow-content">
+            <p>Organize the ideas into a content calendar.</p>
+          </div>
+        </div>
+
+        <div class="workflow-card">
+          <div class="step-number">4</div>
+          <div class="workflow-content">
+            <p>Prepare captions, hashtags, and creative directions.</p>
+          </div>
+        </div>
+
+        <div class="workflow-card">
+          <div class="step-number">5</div>
+          <div class="workflow-content">
+            <p>Review the content for consistency before publishing.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section: Portfolio Project -->
+    <section class="section-block">
+      <span class="badge-label">PORTFOLIO PROJECT</span>
+      <div class="project-card">
+        <h4>RC.VA360 Social Media Campaign</h4>
+        <p class="bio-text" style="margin-bottom: 6px;">This sample project demonstrates:</p>
+        <ul class="project-list">
+          <li><span class="project-icon">✦</span> Content planning</li>
+          <li><span class="project-icon">✦</span> Content pillars</li>
+          <li><span class="project-icon">✦</span> Social media captions</li>
+          <li><span class="project-icon">✦</span> Creative direction</li>
+          <li><span class="project-icon">✦</span> Canva design concepts</li>
+          <li><span class="project-icon">✦</span> Campaign organization</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section: Tools -->
+    <section class="section-block">
+      <span class="badge-label">TOOLS</span>
+      <div class="tool-tags">
+        <span class="tag">Canva</span>
+        <span class="tag">AI Tools</span>
+        <span class="tag">Social Media Platforms</span>
+        <span class="tag">Spreadsheets</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER / GET IN TOUCH CARD ================= -->
+  <section class="card footer-card" id="contact">
+    <h2 class="section-title">Let's Work Together</h2>
+    <p class="bio-text" style="text-align: center; margin-bottom: 12px;">
+      Ready to elevate your social media presence with organized and on-brand content? Let's connect.
+    </p>
+
+    <!-- Visible Email Address -->
+    <div class="email-display">
+      <span class="email-icon">✉</span>
+      <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="email-text">
+        cipriano.rowenacarla.va@gmail.com
+      </a>
+    </div>
+
+    <!-- Send Message Button -->
+    <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="contact-btn">
+      Send Message
+    </a>
+  </section>
+
+</body>
+</html>
 
