@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Certifications & Professional Credentials | RC.VA360</title>
+  <title>Certifications & Credentials | RC.VA360</title>
 
   <!-- RC.VA360 Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,7 @@
     }
 
     .wrapper {
-      max-width: 1140px;
+      max-width: 1040px;
       margin: 2rem auto 4rem;
       background: var(--card-white);
       border-radius: 20px;
@@ -133,9 +133,9 @@
 
     .hero-title {
       font-family: var(--font-heading);
-      font-size: 2.45rem;
+      font-size: 2.35rem;
       font-weight: 800;
-      line-height: 1.2;
+      line-height: 1.25;
       color: var(--text-charcoal);
       margin-bottom: 0.4rem;
       max-width: 860px;
@@ -143,7 +143,7 @@
 
     .hero-tagline {
       font-family: var(--font-editorial);
-      font-size: 1.65rem;
+      font-size: 1.6rem;
       font-style: italic;
       font-weight: 500;
       color: var(--primary-rose);
@@ -153,7 +153,7 @@
 
     .hero-desc {
       color: var(--text-muted);
-      font-size: 1rem;
+      font-size: 0.98rem;
       line-height: 1.75;
       margin-bottom: 2rem;
       max-width: 780px;
@@ -221,7 +221,7 @@
       color: var(--text-muted);
     }
 
-    /* Main Content Section */
+    /* Main Section */
     .content-section {
       padding: 3.5rem 2.5rem;
     }
@@ -250,11 +250,11 @@
       margin-bottom: 2.5rem;
     }
 
-    /* Certificates Grid (2 columns for clean presentation) */
-    .certs-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
+    /* Clean Card Layout */
+    .certs-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
       margin-bottom: 4rem;
     }
 
@@ -263,27 +263,28 @@
       border: 1px solid var(--border-color);
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 6px 20px rgba(46, 58, 63, 0.04);
+      box-shadow: 0 4px 18px rgba(46, 58, 63, 0.04);
       display: flex;
       flex-direction: column;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .cert-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 24px rgba(46, 58, 63, 0.08);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(46, 58, 63, 0.08);
     }
 
     .cert-header {
-      padding: 0.85rem 1.25rem;
+      padding: 0.85rem 1.5rem;
       border-bottom: 1px solid var(--border-color);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: var(--tint-sage);
     }
 
     .cert-header.rose { background: var(--tint-rose); }
-    .cert-header.sage { background: var(--tint-sage); }
+    .cert-header.accent { background: #EBF3F0; }
 
     .cert-tag {
       font-family: var(--font-subheading);
@@ -291,18 +292,19 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      color: var(--secondary-sage);
     }
 
     .cert-header.rose .cert-tag { color: var(--primary-rose); }
-    .cert-header.sage .cert-tag { color: var(--secondary-sage); }
+    .cert-header.accent .cert-tag { color: #2E5A44; }
 
     .cert-status {
       font-size: 0.75rem;
-      color: var(--text-muted);
+      color: var(--text-charcoal);
       font-weight: 600;
       display: flex;
       align-items: center;
-      gap: 0.3rem;
+      gap: 0.35rem;
     }
 
     .cert-status-dot {
@@ -312,78 +314,61 @@
       border-radius: 50%;
     }
 
-    /* Certificate Image / Preview Frame */
-    .cert-preview-box {
-      width: 100%;
-      height: 240px;
-      background: #FAF8F5;
-      overflow: hidden;
-      border-bottom: 1px solid var(--border-color);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-    }
-
-    .cert-img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      border-radius: 6px;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 4px 12px rgba(46, 58, 63, 0.08);
-    }
-
     .cert-body {
-      padding: 1.5rem;
-      flex-grow: 1;
+      padding: 1.5rem 1.75rem;
       display: flex;
       flex-direction: column;
     }
 
     .cert-issuer {
       font-family: var(--font-subheading);
-      font-size: 0.78rem;
-      font-weight: 600;
+      font-size: 0.8rem;
+      font-weight: 700;
       color: var(--primary-rose);
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.25rem;
     }
 
     .cert-name {
       font-family: var(--font-heading);
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: 700;
       color: var(--text-charcoal);
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .cert-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+      font-family: var(--font-subheading);
     }
 
     .cert-desc {
-      font-size: 0.88rem;
-      color: var(--text-muted);
+      font-size: 0.9rem;
+      color: var(--text-charcoal);
       line-height: 1.6;
       margin-bottom: 1.25rem;
-      flex-grow: 1;
     }
 
     .cert-competencies {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.45rem;
+      gap: 0.5rem;
     }
 
     .competency-pill {
       background: var(--bg-cream);
       border: 1px solid var(--border-color);
-      padding: 0.25rem 0.65rem;
+      padding: 0.3rem 0.75rem;
       border-radius: 20px;
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       font-weight: 600;
       color: var(--text-charcoal);
     }
 
-    /* Continuing Education & Standards Strip */
+    /* Standards Box */
     .standards-wrap {
       background: var(--bg-cream);
       border: 1px solid var(--border-color);
@@ -494,11 +479,8 @@
       font-style: italic;
     }
 
-    /* Responsive */
+    /* Mobile Responsive Optimizations */
     @media (max-width: 850px) {
-      .certs-grid {
-        grid-template-columns: 1fr;
-      }
       .standards-list {
         grid-template-columns: 1fr;
       }
@@ -509,6 +491,11 @@
     }
 
     @media (max-width: 550px) {
+      .wrapper {
+        margin: 0;
+        border-radius: 0;
+        border: none;
+      }
       .nav-bar {
         padding: 1rem 1.25rem;
       }
@@ -518,8 +505,17 @@
       .hero-section {
         padding: 2.5rem 1.25rem;
       }
+      .hero-title {
+        font-size: 1.85rem;
+      }
       .content-section {
-        padding: 2.5rem 1.25rem;
+        padding: 2.25rem 1.25rem;
+      }
+      .cert-body {
+        padding: 1.25rem;
+      }
+      .cert-name {
+        font-size: 1.15rem;
       }
       .cta-banner-wrapper {
         margin: 0 1.25rem 2.5rem;
@@ -564,7 +560,7 @@
       <h1 class="hero-title">Validated Skills, Industry Standards, and Operational Excellence.</h1>
       <span class="hero-tagline">Continuous professional development backed by formal credentials.</span>
       <p class="hero-desc">
-        Trust in remote operations begins with verified competence. In addition to 9+ years of hands-on corporate front-office and high-touch operational experience, I continually invest in formal certifications to stay at the cutting edge of remote systems, executive assistance, compliance, and emerging digital workflows.
+        Trust in remote operations begins with verified competence. In addition to 9+ years of hands-on corporate front-office and luxury hospitality experience, I hold accredited credentials from national vocational bodies, premier state universities, and international compliance agencies in virtual assistance, healthcare operations, and data governance.
       </p>
 
       <div class="hero-actions">
@@ -578,29 +574,29 @@
       <div class="ribbon-item">
         <div class="ribbon-icon">✓</div>
         <div>
-          <strong>Verified Training</strong>
-          <span>Accredited institutions & programs</span>
+          <strong>TESDA Trained</strong>
+          <span>18-day intensive VA curriculum</span>
         </div>
       </div>
       <div class="ribbon-item">
         <div class="ribbon-icon">✓</div>
         <div>
-          <strong>Data Privacy</strong>
-          <span>Strict client confidentiality standards</span>
+          <strong>UP Open University</strong>
+          <span>Data annotation & analytics</span>
         </div>
       </div>
       <div class="ribbon-item">
         <div class="ribbon-icon">✓</div>
         <div>
-          <strong>Corporate Rigor</strong>
-          <span>Trained in enterprise workflows</span>
+          <strong>HIPAA Compliant</strong>
+          <span>IACET-accredited certification</span>
         </div>
       </div>
       <div class="ribbon-item">
         <div class="ribbon-icon">✓</div>
         <div>
-          <strong>Active Upskilling</strong>
-          <span>Modern AI & remote tooling stack</span>
+          <strong>Medical VA Certified</strong>
+          <span>Billing & administrative care</span>
         </div>
       </div>
     </div>
@@ -608,95 +604,130 @@
     <!-- MAIN BODY SECTION -->
     <section class="content-section">
 
-      <!-- CREDENTIALS SHOWCASE GRID -->
-      <div class="section-eyebrow">Professional Credentials</div>
-      <h2 class="section-title">Certifications & Completed Programs</h2>
-      <p class="section-subtitle">Formal training and verified certifications in remote support, executive assistance, and digital tools.</p>
+      <!-- CREDENTIALS LIST -->
+      <div class="section-eyebrow">Accredited Credentials</div>
+      <h2 class="section-title">Verified Certifications & Training Programs</h2>
+      <p class="section-subtitle">Official certifications and institutional programs completed by Rowena Carla Cipriano.</p>
 
-      <div class="certs-grid">
+      <div class="certs-stack">
 
-        <!-- Certificate 1: Virtual Assistant Masterclass / Comprehensive VA Program -->
+        <!-- 1. TESDA 18-Day Intensive VA Program -->
         <div class="cert-card">
-          <div class="cert-header rose">
-            <span class="cert-tag">Core Specialization</span>
-            <div class="cert-status"><span class="cert-status-dot"></span> Verified Credential</div>
-          </div>
-          <div class="cert-preview-box">
-            <img src="cert-va-specialist.png" alt="Virtual Assistant Certificate" class="cert-img" onerror="this.onerror=null; this.src='../banner.jpeg';">
+          <div class="cert-header accent">
+            <span class="cert-tag">National Technical Competency</span>
+            <div class="cert-status"><span class="cert-status-dot"></span> 18-Day Intensive Training · Verified</div>
           </div>
           <div class="cert-body">
-            <div class="cert-issuer">Professional VA Training Program</div>
-            <h3 class="cert-name">Virtual Assistant & Remote Operations Specialist</h3>
-            <p class="cert-desc">Comprehensive training covering executive calendar management, inbox zero workflows, client communications, digital asset management, and remote team collaboration tools.</p>
+            <div class="cert-issuer">Technical Education and Skills Development Authority (TESDA)</div>
+            <h3 class="cert-name">Certificate of Completion: 18-Day Intensive Virtual Assistant Training</h3>
+            <div class="cert-meta">National Vocational Curriculum · Competency-Based Assessment</div>
+            <p class="cert-desc">Rigorous 18-day practical boot camp covering end-to-end remote administrative operations, calendar management, professional digital communications, cloud workspaces, task prioritization, and remote workplace productivity standards.</p>
             <div class="cert-competencies">
               <span class="competency-pill">Executive Admin</span>
-              <span class="competency-pill">Calendar Defense</span>
-              <span class="competency-pill">Inbox Management</span>
-              <span class="competency-pill">Client Care</span>
+              <span class="competency-pill">Calendar Scheduling</span>
+              <span class="competency-pill">Google Workspace</span>
+              <span class="competency-pill">Professional Email Triage</span>
+              <span class="competency-pill">Remote Task Management</span>
             </div>
           </div>
         </div>
 
-        <!-- Certificate 2: Technical, Data or Operational Training -->
+        <!-- 2. UP Open University + Concentrix -->
         <div class="cert-card">
           <div class="cert-header sage">
-            <span class="cert-tag">Systems & Analytics</span>
-            <div class="cert-status"><span class="cert-status-dot"></span> Verified Credential</div>
-          </div>
-          <div class="cert-preview-box">
-            <img src="cert-data-operations.png" alt="Operational Training Certificate" class="cert-img" onerror="this.onerror=null; this.src='../banner.jpeg';">
+            <span class="cert-tag">Academic & Technical Credential</span>
+            <div class="cert-status"><span class="cert-status-dot"></span> QR Verified · 16-Hour Program</div>
           </div>
           <div class="cert-body">
-            <div class="cert-issuer">Operations & Data Governance</div>
-            <h3 class="cert-name">Operational Quality, Data Integrity & Tool Mastery</h3>
-            <p class="cert-desc">Rigorous instruction in process auditing, quality assurance, spreadsheet formulas, structured data tracking, and workflow documentation across enterprise ecosystems.</p>
+            <div class="cert-issuer">University of the Philippines Open University + Concentrix</div>
+            <h3 class="cert-name">Certificate of Accomplishment: Data Annotation for Aspiring BPO Professionals</h3>
+            <div class="cert-meta">Issued March 2026 · Massive Open Distance eLearning (MODeL)</div>
+            <p class="cert-desc">Technical training in structured data classification, labeling accuracy, quality assurance, and dataset verification delivered by the premier national university system in partnership with global enterprise Concentrix.</p>
             <div class="cert-competencies">
-              <span class="competency-pill">SOP Development</span>
-              <span class="competency-pill">Data Auditing</span>
-              <span class="competency-pill">Workflow QA</span>
-              <span class="competency-pill">Trello / Notion</span>
+              <span class="competency-pill">Data Annotation</span>
+              <span class="competency-pill">Data Integrity & QA</span>
+              <span class="competency-pill">Pattern Recognition</span>
+              <span class="competency-pill">BPO Operations</span>
             </div>
           </div>
         </div>
 
-        <!-- Certificate 3: AI-Powered Productivity / Digital Workflows -->
-        <div class="cert-card">
-          <div class="cert-header sage">
-            <span class="cert-tag">Modern Productivity</span>
-            <div class="cert-status"><span class="cert-status-dot"></span> Verified Credential</div>
-          </div>
-          <div class="cert-preview-box">
-            <img src="cert-ai-workflows.png" alt="AI & Digital Productivity Certificate" class="cert-img" onerror="this.onerror=null; this.src='../banner.jpeg';">
-          </div>
-          <div class="cert-body">
-            <div class="cert-issuer">Applied Technology & AI</div>
-            <h3 class="cert-name">AI-Powered Tasks & Executive Productivity</h3>
-            <p class="cert-desc">Hands-on application of generative AI tools and prompt engineering to accelerate market research, document synthesis, content drafting, and repetitive operational tasks.</p>
-            <div class="cert-competencies">
-              <span class="competency-pill">Prompt Engineering</span>
-              <span class="competency-pill">Research Synthesis</span>
-              <span class="competency-pill">Draft Acceleration</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Certificate 4: Professional Ethics, Privacy & Compliance -->
+        <!-- 3. HIPAA for Business Associates -->
         <div class="cert-card">
           <div class="cert-header rose">
-            <span class="cert-tag">Governance & Privacy</span>
-            <div class="cert-status"><span class="cert-status-dot"></span> Verified Credential</div>
-          </div>
-          <div class="cert-preview-box">
-            <img src="cert-privacy-ethics.png" alt="Data Security & Ethics Certificate" class="cert-img" onerror="this.onerror=null; this.src='../banner.jpeg';">
+            <span class="cert-tag">Regulatory Compliance</span>
+            <div class="cert-status"><span class="cert-status-dot"></span> IACET Accredited · NY State Approved</div>
           </div>
           <div class="cert-body">
-            <div class="cert-issuer">Corporate Governance & Standards</div>
-            <h3 class="cert-name">Data Confidentiality & Remote Work Ethics</h3>
-            <p class="cert-desc">Training in safe credential handling, password management protocols, non-disclosure compliance, and enterprise information security standards for remote contractors.</p>
+            <div class="cert-issuer">HIPAA Exams, Inc.</div>
+            <h3 class="cert-name">Certificate of Completion: HIPAA for Business Associates</h3>
+            <div class="cert-meta">Verifiable via teachmehipaa.com · IACET CEU Provider</div>
+            <p class="cert-desc">Formal compliance training on the Health Insurance Portability and Accountability Act (HIPAA), covering Protected Health Information (PHI) handling, remote workstation security, data privacy protocols, and breach reporting.</p>
             <div class="cert-competencies">
-              <span class="competency-pill">Data Security</span>
-              <span class="competency-pill">NDA Compliance</span>
-              <span class="competency-pill">Password Hygiene</span>
+              <span class="competency-pill">HIPAA Compliance</span>
+              <span class="competency-pill">PHI Confidentiality</span>
+              <span class="competency-pill">Data Security Standards</span>
+              <span class="competency-pill">Business Associate Protocols</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Medical VA 101 - Administrative -->
+        <div class="cert-card">
+          <div class="cert-header sage">
+            <span class="cert-tag">Healthcare Operations</span>
+            <div class="cert-status"><span class="cert-status-dot"></span> HIPAA Compliant Track</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">VA Growth PH</div>
+            <h3 class="cert-name">Certificate of Completion: Medical VA 101 – Medical Administrative</h3>
+            <div class="cert-meta">Instructor: Coach Leizel Quizon · Awarded to Rowena Carla Cipriano</div>
+            <p class="cert-desc">Comprehensive training in clinical front-desk coordination, patient appointment scheduling, Electronic Health Records (EHR) management, and discreet patient communication workflows.</p>
+            <div class="cert-competencies">
+              <span class="competency-pill">Medical Admin</span>
+              <span class="competency-pill">Patient Scheduling</span>
+              <span class="competency-pill">EHR Navigation</span>
+              <span class="competency-pill">Front-Office Care</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Medical VA 102 - Billing -->
+        <div class="cert-card">
+          <div class="cert-header sage">
+            <span class="cert-tag">Healthcare Revenue Support</span>
+            <div class="cert-status"><span class="cert-status-dot"></span> HIPAA Compliant Track</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">VA Growth PH</div>
+            <h3 class="cert-name">Certificate of Completion: Medical VA 102 – Medical Billing</h3>
+            <div class="cert-meta">Instructor: Coach Leizel Quizon · Awarded to Rowena Carla Cipriano</div>
+            <p class="cert-desc">Instruction in medical billing basics, claims verification, patient insurance eligibility checks, and billing documentation support for remote healthcare practices.</p>
+            <div class="cert-competencies">
+              <span class="competency-pill">Medical Billing Support</span>
+              <span class="competency-pill">Insurance Verification</span>
+              <span class="competency-pill">Claims Data Entry</span>
+              <span class="competency-pill">Audit Accuracy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Freelancing Skills & VA Training -->
+        <div class="cert-card">
+          <div class="cert-header rose">
+            <span class="cert-tag">Executive VA Mastery</span>
+            <div class="cert-status"><span class="cert-status-dot"></span> Verified Program</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">VA Growth PH</div>
+            <h3 class="cert-name">Certificate of Completion: Freelancing Skills & Virtual Assistant Training</h3>
+            <div class="cert-meta">Coach: Angel Jalong · Mastery of Five Key Skills for Remote Operations</div>
+            <p class="cert-desc">Practical training in client handling protocols, email management, executive task organization, and business software tools for distributed remote teams.</p>
+            <div class="cert-competencies">
+              <span class="competency-pill">Executive VA</span>
+              <span class="competency-pill">Calendar Defense</span>
+              <span class="competency-pill">Inbox Zero</span>
+              <span class="competency-pill">Remote Client Coordination</span>
             </div>
           </div>
         </div>
@@ -711,18 +742,18 @@
         
         <div class="standards-list">
           <div class="standard-item">
-            <strong>01 · Regular Tool Upgrades</strong>
-            <span>Active learning in modern productivity software, automations, and updated workspace features across Google and Microsoft 365.</span>
+            <strong>01 · Government & Academic Rigor</strong>
+            <span>Backed by TESDA's 18-day intensive assessment, UP Open University data standards, and corporate execution from Accenture.</span>
           </div>
 
           <div class="standard-item">
-            <strong>02 · Rigorous Data Security</strong>
-            <span>Strict adherence to credential security, zero storage of sensitive client passwords on unencrypted devices, and full NDA compliance.</span>
+            <strong>02 · Rigorous Data Security & HIPAA</strong>
+            <span>Full compliance with HIPAA confidentiality standards, credential security, zero unencrypted storage of sensitive client data, and strict NDA protocols.</span>
           </div>
 
           <div class="standard-item">
-            <strong>03 · Corporate Process Discipline</strong>
-            <span>Grounded by Accenture and luxury hospitality standards, ensuring every email, schedule, and document is executed with polish.</span>
+            <strong>03 · Modern Remote Workspaces</strong>
+            <span>Hands-on mastery of remote tools: Google Workspace, Microsoft 365, Trello Kanban systems, Discord workspaces, and AI-assisted workflows.</span>
           </div>
         </div>
       </div>
@@ -732,7 +763,7 @@
     <!-- Call to Action Banner -->
     <section class="cta-banner-wrapper">
       <div class="cta-banner-content">
-        <h2>Partner with a Qualified, Certified Professional</h2>
+        <h2>Partner with a Certified Professional</h2>
         <p>Bring calm, verified operational support to your business today. Let's discuss how my structured skillset can support your growth.</p>
         <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="cta-btn-action">Get in Touch</a>
       </div>
