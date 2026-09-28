@@ -7,10 +7,9 @@
   <meta name="supported-color-schemes" content="light" />
   <title>AI-Powered Tasks | RC.VA360</title>
 
-  <!-- Google Fonts according to RC.VA360 Brand Kit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -20,487 +19,880 @@
       --color-rose: #DCAE96;
       --color-cream-bg: #F8F6F0;
       --color-white: #FFFFFF;
-      --color-border: #EFE9DF;
+      --color-border: #EAE3D8;
       --color-muted: #5C6B73;
-
+      --color-tint-sage: #F2F4EE;
+      --color-tint-rose: #FAF2EE;
       --font-heading: 'Montserrat', sans-serif;
       --font-subheading: 'Poppins', sans-serif;
       --font-body: 'Open Sans', sans-serif;
+      --font-editorial: 'Cormorant Garamond', serif;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background-color: var(--color-cream-bg) !important;
-      color: var(--color-charcoal) !important;
+      background: var(--color-cream-bg);
+      color: var(--color-charcoal);
       font-family: var(--font-body);
-      line-height: 1.65;
-      padding: 24px 16px;
+      line-height: 1.6;
+      padding: 28px 16px 60px;
+    }
+
+    .wrapper {
+      max-width: 1180px;
+      margin: 0 auto;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 18px 42px rgba(47, 62, 70, 0.05);
+    }
+
+    .nav-bar {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
       gap: 20px;
+      padding: 1.2rem 2.5rem;
+      border-bottom: 1px solid var(--color-border);
+      background: #fff;
     }
 
-    /* Common Card Styling matching subpages */
-    .card {
-      width: 100%;
-      max-width: 480px;
-      background: var(--color-white) !important;
-      border-radius: 24px;
-      box-shadow: 0 8px 24px rgba(47, 62, 70, 0.06);
+    .brand-group {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand-logo-img {
+      display: block;
+      width: auto;
+      height: 52px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--color-charcoal);
+      text-decoration: none;
+      font-family: var(--font-subheading);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--color-rose);
+      font-weight: 600;
+    }
+
+    .btn-nav {
+      background: var(--color-sage);
+      color: #fff !important;
+      padding: 0.65rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 600 !important;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn-nav:hover {
+      background: #8ca07b;
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3rem;
+      align-items: center;
+      padding: 4rem 3rem 3rem;
+      background: radial-gradient(circle at top right, var(--color-tint-rose) 0%, transparent 60%);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--color-tint-sage);
+      border: 1px solid rgba(156, 175, 136, 0.4);
+      color: var(--color-charcoal);
+      border-radius: 999px;
+      padding: 0.4rem 0.9rem;
+      font-family: var(--font-subheading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .hero-badge span {
+      width: 8px;
+      height: 8px;
+      background: var(--color-sage);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 3vw, 4rem);
+      line-height: 1.12;
+      font-weight: 800;
+      margin-bottom: 0.45rem;
+      color: var(--color-charcoal);
+    }
+
+    .hero-tagline {
+      display: block;
+      font-family: var(--font-editorial);
+      font-weight: 500;
+      font-size: clamp(1.5rem, 2vw, 2.2rem);
+      font-style: italic;
+      color: var(--color-rose);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-copy {
+      max-width: 620px;
+      font-size: 1.04rem;
+      color: var(--color-muted);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 0.9rem 1.9rem;
+      border-radius: 999px;
+      font-family: var(--font-subheading);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--color-charcoal);
+      color: var(--color-white);
+      box-shadow: 0 10px 22px rgba(47, 62, 70, 0.12);
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1.5px solid var(--color-border);
+      color: var(--color-charcoal);
+      background: #fff;
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      min-height: 420px;
+    }
+
+    .visual-glow {
+      position: absolute;
+      width: 370px;
+      height: 370px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-tint-sage), var(--color-tint-rose));
+      border: 1px solid rgba(47, 62, 70, 0.08);
+      bottom: 22px;
+      z-index: 1;
+    }
+
+    .visual-monitor {
+      position: relative;
+      z-index: 2;
+      width: min(100%, 420px);
+      background: linear-gradient(180deg, #f4f3f0, #f8f8f5);
       border: 1px solid var(--color-border);
-      padding: 28px 22px;
-      overflow: hidden;
+      border-radius: 22px;
+      box-shadow: 0 20px 32px rgba(47, 62, 70, 0.10);
+      padding: 1rem;
     }
 
-    /* Top Action Bar with Logo and Back Button */
-    .top-action-bar {
+    .monitor-topbar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--color-border);
+      margin-bottom: 0.8rem;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--color-rose);
+      opacity: 0.8;
+    }
+
+    .dot:nth-child(2) { background: var(--color-sage); }
+    .dot:nth-child(3) { background: #d8d3c8; }
+
+    .monitor-panel {
+      background: linear-gradient(180deg, #ffffff, #f8f7f4);
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      padding: 1rem;
+    }
+
+    .panel-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 12px;
-      margin-bottom: 22px;
-      width: 100%;
+      padding-bottom: 0.7rem;
+      border-bottom: 1px dashed #ddd4c8;
+      margin-bottom: 0.85rem;
+      font-family: var(--font-subheading);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-muted);
     }
 
-    .pill-nav-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 5px;
-      text-decoration: none;
+    .panel-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .chip {
+      background: var(--color-tint-sage);
+      color: var(--color-charcoal);
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+      font-size: 0.72rem;
       font-family: var(--font-subheading);
-      font-size: 0.82rem;
       font-weight: 600;
-      padding: 8px 16px;
-      border-radius: 20px;
-      transition: all 0.25s ease;
-      white-space: nowrap;
-      background-color: var(--color-charcoal);
-      color: var(--color-white) !important;
+      border: 1px solid rgba(156, 175, 136, 0.35);
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .mini-card {
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 0.75rem;
+    }
+
+    .mini-label {
+      display: block;
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-muted);
+      margin-bottom: 0.4rem;
+      font-family: var(--font-subheading);
+    }
+
+    .mini-number {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-charcoal);
+      font-family: var(--font-heading);
+    }
+
+    .floating-pill {
+      position: absolute;
+      left: 0;
+      bottom: 14px;
+      z-index: 3;
+      background: rgba(255,255,255,0.96);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 0.7rem 1rem;
+      box-shadow: 0 10px 20px rgba(47, 62, 70, 0.08);
+    }
+
+    .floating-pill strong {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--color-charcoal);
+    }
+
+    .floating-pill span {
+      font-size: 0.72rem;
+      color: var(--color-sage);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-family: var(--font-subheading);
+      font-weight: 600;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.5rem;
+      padding: 1.6rem 3rem;
+      background: var(--color-tint-sage);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .metric {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .metric-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(156, 175, 136, 0.12);
+      color: var(--color-sage);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 1.1rem;
       flex-shrink: 0;
     }
 
-    .pill-nav-btn:hover {
-      background-color: var(--color-sage);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(47, 62, 70, 0.16);
-    }
-
-    .top-logo-link {
-      display: inline-flex;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    .header-logo-img {
-      height: 34px;
-      width: auto;
-      max-width: 130px;
-      object-fit: contain;
+    .metric strong {
       display: block;
-    }
-
-    /* Typography & Section Styles */
-    h1 {
-      font-family: var(--font-heading);
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--color-charcoal) !important;
-      line-height: 1.25;
-      margin-bottom: 12px;
-    }
-
-    .divider {
-      height: 2px;
-      width: 100%;
-      background: var(--color-border);
-      margin-bottom: 24px;
-    }
-
-    .badge-label {
-      display: inline-block;
       font-family: var(--font-subheading);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
       color: var(--color-charcoal);
-      border-bottom: 2px solid var(--color-rose);
-      padding-bottom: 2px;
-      margin-bottom: 14px;
-    }
-
-    .section-block {
-      margin-bottom: 26px;
-    }
-
-    .section-block:last-child {
-      margin-bottom: 0;
-    }
-
-    .bio-text {
-      font-size: 0.94rem;
-      line-height: 1.7;
-      color: var(--color-muted);
-      margin-bottom: 12px;
-    }
-
-    .bio-text strong {
-      color: var(--color-charcoal);
-      font-weight: 600;
-    }
-
-    /* Services List */
-    .service-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .service-list li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: #FAF8F5;
-      padding: 9px 14px;
-      border-radius: 10px;
-      font-size: 0.91rem;
-      color: var(--color-charcoal);
-      border-left: 3px solid var(--color-sage);
-    }
-
-    .check-icon {
-      color: var(--color-sage);
-      font-weight: bold;
-    }
-
-    /* Prompt Development Items */
-    .prompt-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .prompt-pill {
-      background: #FAF8F5;
-      padding: 9px 14px;
-      border-radius: 10px;
-      font-size: 0.91rem;
-      color: var(--color-charcoal);
-      border-left: 3px solid var(--color-rose);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .bullet-icon {
-      color: var(--color-rose);
-      font-weight: bold;
-    }
-
-    /* Portfolio Project Card */
-    .project-card {
-      background: #FAF8F5;
-      border-radius: 12px;
-      padding: 16px 14px;
-      border: 1px solid var(--color-border);
-      border-left: 4px solid var(--color-charcoal);
-    }
-
-    .project-card h4 {
-      font-family: var(--font-subheading);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--color-charcoal);
-      margin-bottom: 6px;
-    }
-
-    .project-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-top: 10px;
-    }
-
-    .project-list li {
-      font-size: 0.88rem;
-      color: var(--color-muted);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .project-icon {
-      color: var(--color-charcoal);
-      font-weight: bold;
-    }
-
-    /* Workflow Pipeline */
-    .workflow-flow {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 6px;
-      margin-top: 10px;
-      background: #FAF8F5;
-      padding: 14px;
-      border-radius: 12px;
-      border: 1px solid var(--color-border);
-    }
-
-    .flow-step {
-      background: var(--color-white);
-      border: 1px solid var(--color-border);
-      padding: 6px 12px;
-      border-radius: 16px;
-      font-family: var(--font-subheading);
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--color-charcoal);
-    }
-
-    .flow-arrow {
-      color: var(--color-rose);
-      font-weight: bold;
       font-size: 0.9rem;
     }
 
-    /* Notice Callout Box */
-    .notice-box {
-      background: #FAF8F5;
-      border: 1px solid var(--color-border);
-      border-left: 4px solid var(--color-rose);
-      border-radius: 12px;
-      padding: 14px 16px;
-      margin-top: 10px;
-    }
-
-    .notice-box strong {
+    .metric span {
       display: block;
-      font-family: var(--font-subheading);
-      color: var(--color-charcoal);
-      font-size: 0.94rem;
-      margin-bottom: 4px;
-    }
-
-    .notice-box p {
-      font-size: 0.88rem;
       color: var(--color-muted);
-      margin: 0;
-      line-height: 1.55;
+      font-size: 0.75rem;
     }
 
-    /* Footer Card & Contact Styling */
-    .footer-card {
-      text-align: center;
-      padding: 28px 20px;
+    .content {
+      padding: 4rem 3rem;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--color-rose);
+      font-family: var(--font-subheading);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.74rem;
+      margin-bottom: 0.5rem;
     }
 
     .section-title {
       font-family: var(--font-heading);
-      font-size: 1.4rem;
-      font-weight: 800;
+      font-size: clamp(1.8rem, 2vw, 2.3rem);
       color: var(--color-charcoal);
-      margin-bottom: 12px;
+      line-height: 1.15;
+      margin: 0;
     }
 
-    .email-display {
+    .section-subtitle {
+      color: var(--color-muted);
+      font-size: 0.98rem;
+      max-width: 650px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .feature-card {
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: 18px;
+      padding: 1.6rem 1.4rem;
+      border-top: 4px solid var(--color-sage);
+      box-shadow: 0 6px 18px rgba(47, 62, 70, 0.02);
+    }
+
+    .feature-number {
+      color: var(--color-rose);
+      font-family: var(--font-subheading);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.7rem;
+    }
+
+    .feature-card h3 {
+      font-family: var(--font-subheading);
+      font-size: 1.1rem;
+      color: var(--color-charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-card p {
+      color: var(--color-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.6rem;
+      margin-top: 2.5rem;
+    }
+
+    .panel {
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: 18px;
+      padding: 1.8rem 1.5rem;
+    }
+
+    .panel h3 {
+      font-family: var(--font-subheading);
+      font-size: 1.05rem;
+      color: var(--color-charcoal);
+      margin-bottom: 0.9rem;
+    }
+
+    .pill-list, .stack-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      list-style: none;
+    }
+
+    .pill-list li {
+      background: var(--color-tint-sage);
+      border: 1px solid rgba(156, 175, 136, 0.35);
+      border-radius: 999px;
+      padding: 0.45rem 0.8rem;
+      font-size: 0.8rem;
+      color: var(--color-charcoal);
+      font-weight: 600;
+    }
+
+    .stack-list li {
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      padding: 0.55rem 0.75rem;
+      font-size: 0.8rem;
+      color: var(--color-charcoal);
+      font-family: var(--font-subheading);
+      font-weight: 600;
+    }
+
+    .workflow {
+      background: var(--color-tint-rose);
+      border: 1px solid rgba(220, 174, 150, 0.42);
+      border-radius: 18px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .workflow-steps {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.7rem;
+      margin-top: 1rem;
+    }
+
+    .step {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      background-color: var(--color-cream-bg);
-      border: 1px solid var(--color-rose);
-      padding: 10px 18px;
-      border-radius: 20px;
-      margin: 14px 0 16px;
-      max-width: 100%;
-    }
-
-    .email-icon {
-      font-size: 1.1rem;
-      color: var(--color-sage);
-    }
-
-    .email-text {
-      font-family: var(--font-body);
-      font-size: 0.88rem;
-      font-weight: 600;
+      padding: 0.6rem 0.9rem;
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: 999px;
       color: var(--color-charcoal);
-      text-decoration: none;
-      word-break: break-all;
-      transition: color 0.2s ease;
+      font-family: var(--font-subheading);
+      font-size: 0.82rem;
+      font-weight: 600;
     }
 
-    .email-text:hover {
+    .arrow {
+      font-size: 1rem;
+      color: var(--color-rose);
+      font-weight: 800;
+    }
+
+    .cta {
+      margin: 2.25rem 0 0;
+      background: linear-gradient(135deg, rgba(47,62,70,0.88), rgba(47,62,70,0.94)), url('../banner.jpeg') center/cover no-repeat;
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .cta-inner {
+      text-align: center;
+      color: #fff;
+      padding: 4rem 2rem;
+    }
+
+    .cta-inner h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.7rem, 2.5vw, 2.4rem);
+      margin-bottom: 0.6rem;
+    }
+
+    .cta-inner p {
+      max-width: 620px;
+      margin: 0 auto 1.5rem;
+      color: rgba(255,255,255,0.82);
+      font-size: 1rem;
+    }
+
+    .cta-inner a {
+      display: inline-flex;
+      background: var(--color-rose);
+      color: var(--color-white);
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 0.9rem 2rem;
+      font-weight: 600;
+      font-family: var(--font-subheading);
+      transition: transform 0.2s ease;
+    }
+
+    .cta-inner a:hover { transform: translateY(-2px); }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 2.5rem;
+      border-top: 1px solid var(--color-border);
+      background: #fff;
+      color: var(--color-muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-tagline {
+      font-family: var(--font-editorial);
+      font-style: italic;
+      font-size: 1.1rem;
       color: var(--color-rose);
     }
 
-    .contact-btn {
-      display: block;
-      width: fit-content;
-      margin: 0 auto;
-      text-decoration: none;
-      font-family: var(--font-subheading);
-      font-size: 0.92rem;
-      font-weight: 600;
-      background-color: var(--color-charcoal);
-      color: var(--color-white) !important;
-      padding: 11px 28px;
-      border-radius: 25px;
-      transition: all 0.25s ease;
+    @media (max-width: 980px) {
+      .hero, .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .nav-bar {
+        flex-wrap: wrap;
+      }
     }
 
-    .contact-btn:hover {
-      background-color: var(--color-sage);
-      transform: translateY(-2px);
+    @media (max-width: 720px) {
+      body { padding: 12px 10px 40px; }
+      .nav-bar, .hero, .content, .metrics, .footer {
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 0.7rem 1rem;
+      }
+
+      .feature-grid,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .footer {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
-
-  <!-- ================= MAIN CONTENT CARD ================= -->
-  <main class="card">
-    
-    <!-- Top Action Bar: Clean Logo on Right, Back Button on Left -->
-    <header class="top-action-bar">
-      <a href="../index.html" class="pill-nav-btn">← Back to Home</a>
-      <a href="../index.html" class="top-logo-link" title="Return to Home">
-        <img src="../logo.png" alt="RC.VA360 Logo" class="header-logo-img" />
+  <div class="wrapper">
+    <header class="nav-bar">
+      <a href="../index.html" class="brand-group" aria-label="Go home">
+        <img src="../logo.png" alt="RC.VA360 Logo" class="brand-logo-img" />
       </a>
+
+      <nav aria-label="Main navigation" class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../01-About-Me/index.html">About Me</a>
+        <a href="../02-Administrative-Support/index.html">Admin Support</a>
+        <a href="../04-Operations-Support/index.html">Operations</a>
+        <a href="../06-AI-Powered-Tasks/index.html" class="active">AI Tasks</a>
+        <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="btn-nav">Let's Talk</a>
+      </nav>
     </header>
 
-    <!-- Page Title -->
-    <h1>AI-Powered Tasks</h1>
-    <div class="divider"></div>
-
-    <!-- Section: Overview -->
-    <section class="section-block">
-      <span class="badge-label">OVERVIEW</span>
-      <p class="bio-text">
-        I use AI tools as productivity assistants to help with research, content development, organization, brainstorming, and creative workflows.
-      </p>
-      <p class="bio-text">
-        AI is leveraged as a high-efficiency support tool while maintaining strict human review, quality control, and accuracy throughout the process.
-      </p>
-    </section>
-
-    <!-- Section: AI-Assisted Services -->
-    <section class="section-block">
-      <span class="badge-label">AI-ASSISTED SERVICES</span>
-      <ul class="service-list">
-        <li><span class="check-icon">✓</span> Prompt creation</li>
-        <li><span class="check-icon">✓</span> Content ideas</li>
-        <li><span class="check-icon">✓</span> Caption development</li>
-        <li><span class="check-icon">✓</span> Research assistance</li>
-        <li><span class="check-icon">✓</span> Content planning</li>
-        <li><span class="check-icon">✓</span> Commercial scripts</li>
-        <li><span class="check-icon">✓</span> Video concepts</li>
-        <li><span class="check-icon">✓</span> Image concepts</li>
-        <li><span class="check-icon">✓</span> Workflow ideas</li>
-        <li><span class="check-icon">✓</span> Administrative assistance</li>
-        <li><span class="check-icon">✓</span> Information organization</li>
-      </ul>
-    </section>
-
-    <!-- Section: Prompt Development -->
-    <section class="section-block">
-      <span class="badge-label">PROMPT DEVELOPMENT</span>
-      <p class="bio-text">I create structured prompts that provide AI tools with:</p>
-      <div class="prompt-grid">
-        <div class="prompt-pill"><span class="bullet-icon">✦</span> Clear objectives</div>
-        <div class="prompt-pill"><span class="bullet-icon">✦</span> Required format</div>
-        <div class="prompt-pill"><span class="bullet-icon">✦</span> Brand information</div>
-        <div class="prompt-pill"><span class="bullet-icon">✦</span> Product information</div>
-        <div class="prompt-pill"><span class="bullet-icon">✦</span> Visual instructions</div>
-        <div class="prompt-pill"><span class="bullet-icon">✦</span> Restrictions &amp; parameters</div>
-        <div class="prompt-pill"><span class="bullet-icon">✦</span> Desired output specifications</div>
-      </div>
-    </section>
-
-    <!-- Section: Example Project -->
-    <section class="section-block">
-      <span class="badge-label">EXAMPLE PROJECT</span>
-      <div class="project-card">
-        <h4>Bichu-Bichu Commercial Concept</h4>
-        <p class="bio-text" style="margin-bottom: 6px;">
-          Developed structured AI prompts for a comprehensive product commercial concept focused on:
+    <section class="hero">
+      <div>
+        <div class="hero-badge"><span></span> AI Workflow Support</div>
+        <h1 class="hero-title">AI-Powered Tasks</h1>
+        <span class="hero-tagline">Strategy, speed, and better execution.</span>
+        <p class="hero-copy">
+          I use AI as an operational assistant to accelerate research, draft content, organize information,
+          and build stronger creative workflows. Every deliverable is still reviewed, refined, and aligned to your standards before it reaches your audience.
         </p>
-        <ul class="project-list">
-          <li><span class="project-icon">▪</span> Product consistency</li>
-          <li><span class="project-icon">▪</span> Authentic product texture</li>
-          <li><span class="project-icon">▪</span> Packaging consistency</li>
-          <li><span class="project-icon">▪</span> Scene planning</li>
-          <li><span class="project-icon">▪</span> Voiceover scripting</li>
-          <li><span class="project-icon">▪</span> Overlay text</li>
-          <li><span class="project-icon">▪</span> Commercial creative direction</li>
-        </ul>
+
+        <div class="hero-actions">
+          <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="btn-primary">Get in Touch</a>
+          <a href="../index.html#services" class="btn-secondary">Back to Services</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="AI task dashboard preview">
+        <div class="visual-glow"></div>
+        <div class="visual-monitor">
+          <div class="monitor-topbar">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+
+          <div class="monitor-panel">
+            <div class="panel-header">
+              <span>Workflow assistant</span>
+              <span>Live</span>
+            </div>
+
+            <div class="panel-badges">
+              <span class="chip">Prompting</span>
+              <span class="chip">Research</span>
+              <span class="chip">Brand QA</span>
+            </div>
+
+            <div class="mini-grid">
+              <div class="mini-card">
+                <span class="mini-label">Tasks</span>
+                <span class="mini-number">24</span>
+              </div>
+              <div class="mini-card">
+                <span class="mini-label">Drafts</span>
+                <span class="mini-number">8</span>
+              </div>
+              <div class="mini-card">
+                <span class="mini-label">Review</span>
+                <span class="mini-number">94%</span>
+              </div>
+              <div class="mini-card">
+                <span class="mini-label">Saved Time</span>
+                <span class="mini-number">+31%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="floating-pill">
+          <strong>Human-in-the-loop</strong>
+          <span>Quality checked</span>
+        </div>
       </div>
     </section>
 
-    <!-- Section: My AI Workflow -->
-    <section class="section-block">
-      <span class="badge-label">MY AI WORKFLOW</span>
-      <div class="workflow-flow">
-        <span class="flow-step">Plan</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-step">Prompt</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-step">Generate</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-step">Review</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-step">Refine</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-step">Finalize</span>
+    <div class="metrics">
+      <div class="metric">
+        <div class="metric-icon">✓</div>
+        <div>
+          <strong>Research Acceleration</strong>
+          <span>Fast synthesis & briefs</span>
+        </div>
       </div>
-      <p class="bio-text" style="margin-top: 10px;">
-        All AI-generated work is rigorously reviewed and refined to ensure it perfectly aligns with project specifications and brand voice.
-      </p>
-    </section>
-
-    <!-- Section: Important Human-in-the-Loop Standard -->
-    <section class="section-block">
-      <div class="notice-box">
-        <strong>Important Standard</strong>
-        <p>
-          AI tools are productivity assistants. I personally review every output, verify factual details, and make adjustments tailored to the client's guidelines.
-        </p>
+      <div class="metric">
+        <div class="metric-icon">✓</div>
+        <div>
+          <strong>Content Direction</strong>
+          <span>Ideas, hooks, prompts</span>
+        </div>
       </div>
-    </section>
-
-  </main>
-
-  <!-- ================= FOOTER / GET IN TOUCH CARD ================= -->
-  <section class="card footer-card" id="contact">
-    <h2 class="section-title">Let's Work Together</h2>
-    <p class="bio-text" style="text-align: center; margin-bottom: 12px;">
-      Ready to accelerate your workflows and creative projects with smart AI assistance? Let's connect.
-    </p>
-
-    <!-- Visible Email Address -->
-    <div class="email-display">
-      <span class="email-icon">✉</span>
-      <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="email-text">
-        cipriano.rowenacarla.va@gmail.com
-      </a>
+      <div class="metric">
+        <div class="metric-icon">✓</div>
+        <div>
+          <strong>Brand Alignment</strong>
+          <span>Human review & polishing</span>
+        </div>
+      </div>
+      <div class="metric">
+        <div class="metric-icon">✓</div>
+        <div>
+          <strong>Workflow Clarity</strong>
+          <span>Structured delivery</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Send Message Button -->
-    <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="contact-btn">
-      Send Message
-    </a>
-  </section>
+    <main class="content">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Overview</div>
+          <h2 class="section-title">AI-assisted support that keeps quality high.</h2>
+        </div>
+        <p class="section-subtitle">I use AI tools to speed up production without sacrificing accuracy, brand voice, or operational standards.</p>
+      </div>
 
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-number">01 · Research</div>
+          <h3>Faster discovery</h3>
+          <p>AI helps narrow down topics, summarize information, collect references, and accelerate early-stage planning.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-number">02 · Content</div>
+          <h3>Smarter drafting</h3>
+          <p>I use AI to develop first drafts, captions, briefs, social concepts, and structured messaging aligned to your goals.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-number">03 · Review</div>
+          <h3>Human-level refinement</h3>
+          <p>Every output is reviewed for tone, factual clarity, and brand consistency before it is delivered to a client or audience.</p>
+        </article>
+      </div>
+
+      <div class="two-col">
+        <div class="panel">
+          <div class="eyebrow">AI-Assisted Services</div>
+          <h3>What I can support</h3>
+          <ul class="pill-list">
+            <li>Prompt creation</li>
+            <li>Content ideas</li>
+            <li>Caption development</li>
+            <li>Research assistance</li>
+            <li>Planning support</li>
+            <li>Commercial scripts</li>
+            <li>Video concepts</li>
+            <li>Image concepts</li>
+            <li>Workflow ideas</li>
+            <li>Administrative assistance</li>
+            <li>Information organization</li>
+            <li>Internal documentation</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <div class="eyebrow">Prompt Design</div>
+          <h3>What makes a strong prompt</h3>
+          <ul class="stack-list">
+            <li>Clear objective</li>
+            <li>Brand context</li>
+            <li>Required format</li>
+            <li>Product details</li>
+            <li>Visual direction</li>
+            <li>Output rules</li>
+            <li>Restrictions</li>
+            <li>Review cues</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="workflow">
+        <div class="eyebrow">My AI Workflow</div>
+        <h3 style="font-family: var(--font-subheading); font-size: 1.05rem; color: var(--color-charcoal);">A structured process for reliable output</h3>
+        <div class="workflow-steps">
+          <span class="step">Plan</span>
+          <span class="arrow">→</span>
+          <span class="step">Prompt</span>
+          <span class="arrow">→</span>
+          <span class="step">Generate</span>
+          <span class="arrow">→</span>
+          <span class="step">Review</span>
+          <span class="arrow">→</span>
+          <span class="step">Refine</span>
+          <span class="arrow">→</span>
+          <span class="step">Finalize</span>
+        </div>
+      </div>
+
+      <div class="feature-grid" style="margin-top: 2.5rem;">
+        <article class="feature-card">
+          <div class="feature-number">Example</div>
+          <h3>Bichu-Bichu concept</h3>
+          <p>Built AI-driven briefs for product consistency, scene planning, voiceover structure, and concept development.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-number">Output</div>
+          <h3>Refined for brand flow</h3>
+          <p>AI-generated drafts are always reviewed for clarity, voice, and alignment with client expectations.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-number">Standard</div>
+          <h3>Human check always applies</h3>
+          <p>I verify facts, tighten copy, and make sure final work is accurate, polished, and ready to use.</p>
+        </article>
+      </div>
+    </main>
+
+    <section class="cta">
+      <div class="cta-inner">
+        <h2>Ready to move faster with smarter support?</h2>
+        <p>Let’s use AI strategically to streamline your workflow without losing the human touch behind your brand.</p>
+        <a href="mailto:cipriano.rowenacarla.va@gmail.com">Send Me a Message</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>RC.VA360 · All Rights Reserved</span>
+      <span class="footer-tagline">You focus on business — I'll handle the details.</span>
+    </footer>
+  </div>
 </body>
 </html>
