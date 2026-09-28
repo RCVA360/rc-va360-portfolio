@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="color-scheme" content="light only" />
-  <meta name="supported-color-schemes" content="light" />
-  <title>Verified Certifications & Professional Training | RC.VA360</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certifications & Professional Credentials | RC.VA360</title>
 
-  <!-- Google Fonts according to RC.VA360 Brand Kit -->
+  <!-- RC.VA360 Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      color-scheme: light only;
-      --color-charcoal: #2F3E46;
-      --color-sage: #9CAF88;
-      --color-rose: #DCAE96;
-      --color-cream-bg: #F8F6F0;
-      --color-white: #FFFFFF;
-      --color-border: #EFE9DF;
-      --color-muted: #5C6B73;
+      --primary-rose: #D9A7A0;
+      --secondary-sage: #A8B09A;
+      --text-charcoal: #2E3A3F;
+      --text-muted: #5A6970;
+      --bg-cream: #F8F6F1;
+      --card-white: #FFFFFF;
+      --border-color: #E6E2D8;
+      --tint-sage: #F2F5F0;
+      --tint-rose: #FAF2F0;
 
       --font-heading: 'Montserrat', sans-serif;
       --font-subheading: 'Poppins', sans-serif;
       --font-body: 'Open Sans', sans-serif;
+      --font-editorial: 'Cormorant Garamond', serif;
     }
 
     * {
@@ -35,336 +35,715 @@
     }
 
     body {
-      background-color: var(--color-cream-bg) !important;
-      color: var(--color-charcoal) !important;
       font-family: var(--font-body);
-      line-height: 1.65;
-      padding: 24px 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
+      background-color: var(--bg-cream);
+      color: var(--text-charcoal);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    /* Common Card Styling matching subpages */
-    .card {
-      width: 100%;
-      max-width: 480px;
-      background: var(--color-white) !important;
-      border-radius: 24px;
-      box-shadow: 0 8px 24px rgba(47, 62, 70, 0.06);
-      border: 1px solid var(--color-border);
-      padding: 28px 22px;
+    .wrapper {
+      max-width: 1140px;
+      margin: 2rem auto 4rem;
+      background: var(--card-white);
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 14px 40px rgba(46, 58, 63, 0.06);
       overflow: hidden;
     }
 
-    /* Top Action Bar with Logo and Back Button */
-    .top-action-bar {
+    /* Navigation */
+    .nav-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 22px;
-      width: 100%;
+      padding: 1.25rem 2.5rem;
+      border-bottom: 1px solid var(--border-color);
+      background: #FFFFFF;
     }
 
-    .pill-nav-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 5px;
-      text-decoration: none;
-      font-family: var(--font-subheading);
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 8px 16px;
-      border-radius: 20px;
-      transition: all 0.25s ease;
-      white-space: nowrap;
-      background-color: var(--color-charcoal);
-      color: var(--color-white) !important;
-      flex-shrink: 0;
-    }
-
-    .pill-nav-btn:hover {
-      background-color: var(--color-sage);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(47, 62, 70, 0.16);
-    }
-
-    .top-logo-link {
-      display: inline-flex;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    .header-logo-img {
-      height: 34px;
+    .brand-group img {
+      max-height: 48px;
       width: auto;
-      max-width: 130px;
-      object-fit: contain;
       display: block;
     }
 
-    /* Typography & Section Styles */
-    h1 {
-      font-family: var(--font-heading);
-      font-size: 1.55rem;
-      font-weight: 800;
-      color: var(--color-charcoal) !important;
-      line-height: 1.3;
-      margin-bottom: 6px;
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      list-style: none;
     }
 
-    .subtitle {
+    .nav-links a {
+      text-decoration: none;
       font-family: var(--font-subheading);
-      font-size: 0.92rem;
-      color: var(--color-rose) !important;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-charcoal);
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary-rose);
       font-weight: 600;
-      margin-bottom: 12px;
     }
 
-    .divider {
-      height: 2px;
-      width: 100%;
-      background: var(--color-border);
-      margin-bottom: 24px;
+    .btn-nav {
+      background: var(--secondary-sage);
+      color: #fff !important;
+      padding: 0.55rem 1.3rem;
+      border-radius: 30px;
+      font-weight: 600 !important;
     }
 
-    .badge-label {
-      display: inline-block;
+    /* Hero Section */
+    .hero-section {
+      padding: 4rem 3rem 3rem;
+      background: radial-gradient(circle at top right, var(--tint-sage) 0%, transparent 65%);
+      border-bottom: 1px solid var(--border-color);
+      text-align: left;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--tint-sage);
+      border: 1px solid var(--secondary-sage);
+      color: var(--text-charcoal);
+      padding: 0.35rem 0.9rem;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-family: var(--font-subheading);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-badge span {
+      width: 7px;
+      height: 7px;
+      background: var(--secondary-sage);
+      border-radius: 50%;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: 2.45rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--text-charcoal);
+      margin-bottom: 0.4rem;
+      max-width: 860px;
+    }
+
+    .hero-tagline {
+      font-family: var(--font-editorial);
+      font-size: 1.65rem;
+      font-style: italic;
+      font-weight: 500;
+      color: var(--primary-rose);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+
+    .hero-desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+      max-width: 780px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      background: var(--text-charcoal);
+      color: #FFFFFF;
+      padding: 0.75rem 1.8rem;
+      border-radius: 30px;
+      font-family: var(--font-subheading);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .btn-secondary {
+      border: 1.5px solid var(--border-color);
+      color: var(--text-charcoal);
+      padding: 0.7rem 1.5rem;
+      border-radius: 30px;
+      font-family: var(--font-subheading);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    /* Metric Ribbon */
+    .value-ribbon {
+      background: var(--tint-sage);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 1.25rem 2.5rem;
+      border-bottom: 1px solid var(--border-color);
+      gap: 1.25rem;
+    }
+
+    .ribbon-item {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .ribbon-icon {
+      color: var(--secondary-sage);
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
+
+    .ribbon-item div strong {
+      display: block;
+      font-size: 0.84rem;
+      font-family: var(--font-subheading);
+      color: var(--text-charcoal);
+    }
+
+    .ribbon-item div span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Main Content Section */
+    .content-section {
+      padding: 3.5rem 2.5rem;
+    }
+
+    .section-eyebrow {
       font-family: var(--font-subheading);
       font-size: 0.78rem;
       font-weight: 700;
-      letter-spacing: 1.8px;
       text-transform: uppercase;
-      color: var(--color-charcoal);
-      border-bottom: 2px solid var(--color-rose);
-      padding-bottom: 2px;
-      margin-bottom: 16px;
-    }
-
-    /* Certification Item Cards */
-    .cert-item {
-      background: #FAF8F5;
-      border-radius: 12px;
-      padding: 16px 14px;
-      margin-bottom: 14px;
-      border: 1px solid var(--color-border);
-      border-left: 4px solid var(--color-sage);
-    }
-
-    .cert-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .cert-item h4 {
-      font-family: var(--font-subheading);
-      font-size: 0.96rem;
-      font-weight: 600;
-      color: var(--color-charcoal) !important;
-      margin-bottom: 8px;
-    }
-
-    .cert-item ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    .cert-item li {
-      font-size: 0.88rem;
-      color: var(--color-muted);
-      margin-bottom: 4px;
-      line-height: 1.5;
-    }
-
-    .cert-item li strong {
-      color: var(--color-charcoal);
-      font-weight: 600;
-    }
-
-    /* Footer Card & Contact Styling */
-    .footer-card {
-      text-align: center;
-      padding: 28px 20px;
+      letter-spacing: 0.06em;
+      color: var(--primary-rose);
+      margin-bottom: 0.35rem;
     }
 
     .section-title {
       font-family: var(--font-heading);
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: var(--color-charcoal);
-      margin-bottom: 12px;
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--text-charcoal);
+      margin-bottom: 0.35rem;
     }
 
-    .bio-text {
+    .section-subtitle {
+      color: var(--text-muted);
       font-size: 0.94rem;
-      line-height: 1.7;
-      color: var(--color-muted);
+      margin-bottom: 2.5rem;
     }
 
-    .email-display {
-      display: inline-flex;
+    /* Certificates Grid (2 columns for clean presentation) */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .cert-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(46, 58, 63, 0.04);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(46, 58, 63, 0.08);
+    }
+
+    .cert-header {
+      padding: 0.85rem 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cert-header.rose { background: var(--tint-rose); }
+    .cert-header.sage { background: var(--tint-sage); }
+
+    .cert-tag {
+      font-family: var(--font-subheading);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .cert-header.rose .cert-tag { color: var(--primary-rose); }
+    .cert-header.sage .cert-tag { color: var(--secondary-sage); }
+
+    .cert-status {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .cert-status-dot {
+      width: 7px;
+      height: 7px;
+      background: #4CAF50;
+      border-radius: 50%;
+    }
+
+    /* Certificate Image / Preview Frame */
+    .cert-preview-box {
+      width: 100%;
+      height: 240px;
+      background: #FAF8F5;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      background-color: var(--color-cream-bg);
-      border: 1px solid var(--color-rose);
-      padding: 10px 18px;
-      border-radius: 20px;
-      margin: 14px 0 16px;
+      padding: 1rem;
+    }
+
+    .cert-img {
       max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 12px rgba(46, 58, 63, 0.08);
     }
 
-    .email-icon {
-      font-size: 1.1rem;
-      color: var(--color-sage);
+    .cert-body {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
 
-    .email-text {
-      font-family: var(--font-body);
-      font-size: 0.88rem;
+    .cert-issuer {
+      font-family: var(--font-subheading);
+      font-size: 0.78rem;
       font-weight: 600;
-      color: var(--color-charcoal);
-      text-decoration: none;
-      word-break: break-all;
-      transition: color 0.2s ease;
+      color: var(--primary-rose);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.3rem;
     }
 
-    .email-text:hover {
-      color: var(--color-rose);
+    .cert-name {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-charcoal);
+      margin-bottom: 0.6rem;
     }
 
-    .contact-btn {
+    .cert-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .cert-competencies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .competency-pill {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-color);
+      padding: 0.25rem 0.65rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-charcoal);
+    }
+
+    /* Continuing Education & Standards Strip */
+    .standards-wrap {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2.25rem 2.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .standards-wrap h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--text-charcoal);
+      margin-bottom: 0.4rem;
+    }
+
+    .standards-wrap p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+
+    .standards-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .standard-item {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      padding: 1.25rem;
+      border-radius: 12px;
+    }
+
+    .standard-item strong {
       display: block;
-      width: fit-content;
-      margin: 0 auto;
+      font-family: var(--font-subheading);
+      font-size: 0.88rem;
+      color: var(--text-charcoal);
+      margin-bottom: 0.3rem;
+    }
+
+    .standard-item span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      display: block;
+    }
+
+    /* CTA Banner */
+    .cta-banner-wrapper {
+      margin: 0 2.5rem 3.5rem;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      background: linear-gradient(135deg, rgba(46, 58, 63, 0.88), rgba(46, 58, 63, 0.94)), url('../banner.jpeg') center/cover no-repeat;
+    }
+
+    .cta-banner-content {
+      padding: 3.5rem 2rem;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .cta-banner-content h2 {
+      font-family: var(--font-heading);
+      font-size: 1.95rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .cta-banner-content p {
+      color: #e2e8ea;
+      font-size: 0.98rem;
+      max-width: 580px;
+      margin: 0 auto 1.75rem;
+      line-height: 1.6;
+    }
+
+    .cta-btn-action {
+      background: var(--primary-rose);
+      color: #FFFFFF;
+      padding: 0.85rem 2.2rem;
+      border-radius: 30px;
       text-decoration: none;
       font-family: var(--font-subheading);
-      font-size: 0.92rem;
       font-weight: 600;
-      background-color: var(--color-charcoal);
-      color: var(--color-white) !important;
-      padding: 11px 28px;
-      border-radius: 25px;
-      transition: all 0.25s ease;
+      font-size: 0.95rem;
+      display: inline-block;
     }
 
-    .contact-btn:hover {
-      background-color: var(--color-sage);
-      transform: translateY(-2px);
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 1.75rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .footer-tagline {
+      font-family: var(--font-editorial);
+      font-size: 1.15rem;
+      color: var(--primary-rose);
+      font-style: italic;
+    }
+
+    /* Responsive */
+    @media (max-width: 850px) {
+      .certs-grid {
+        grid-template-columns: 1fr;
+      }
+      .standards-list {
+        grid-template-columns: 1fr;
+      }
+      .value-ribbon {
+        grid-template-columns: 1fr 1fr;
+        padding: 1.25rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .nav-bar {
+        padding: 1rem 1.25rem;
+      }
+      .nav-links a:not(.btn-nav) {
+        display: none;
+      }
+      .hero-section {
+        padding: 2.5rem 1.25rem;
+      }
+      .content-section {
+        padding: 2.5rem 1.25rem;
+      }
+      .cta-banner-wrapper {
+        margin: 0 1.25rem 2.5rem;
+      }
+      .value-ribbon {
+        grid-template-columns: 1fr;
+      }
+      footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 1.5rem 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- ================= MAIN CONTENT CARD ================= -->
-  <main class="card">
-    
-    <!-- Top Action Bar: Clean Logo on Right, Back Button on Left -->
-    <header class="top-action-bar">
-      <a href="../index.html" class="pill-nav-btn">← Back to Home</a>
-      <a href="../index.html" class="top-logo-link" title="Return to Home">
-        <img src="../logo.png" alt="RC.VA360 Logo" class="header-logo-img" />
+  <div class="wrapper">
+    <!-- Navigation Bar -->
+    <header class="nav-bar">
+      <a href="../index.html" class="brand-group">
+        <img src="../logo.png" alt="RC.VA360 Logo">
       </a>
+
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../01-About-Me/index.html">About Me</a>
+        <a href="../02-Administrative-Support/index.html">Admin Support</a>
+        <a href="../03-Customer-Service-Support/index.html">Customer Care</a>
+        <a href="../04-Operations-Support/index.html">Operations</a>
+        <a href="index.html" class="active">Certifications</a>
+        <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="btn-nav">Let's Talk</a>
+      </nav>
     </header>
 
-    <!-- Page Title & Header -->
-    <h1>Verified Certifications &amp; Professional Training</h1>
-    <p class="subtitle">RC.VA360 | Rowena Carla Cipriano</p>
-    <div class="divider"></div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-badge">
+        <span></span> Verified Qualifications & Continuous Learning
+      </div>
+      <h1 class="hero-title">Validated Skills, Industry Standards, and Operational Excellence.</h1>
+      <span class="hero-tagline">Continuous professional development backed by formal credentials.</span>
+      <p class="hero-desc">
+        Trust in remote operations begins with verified competence. In addition to 9+ years of hands-on corporate front-office and high-touch operational experience, I continually invest in formal certifications to stay at the cutting edge of remote systems, executive assistance, compliance, and emerging digital workflows.
+      </p>
 
-    <!-- Credentials Section -->
-    <section>
-      <span class="badge-label">CREDENTIALS &amp; SPECIALIZATIONS</span>
+      <div class="hero-actions">
+        <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="btn-primary">Work With a Certified VA</a>
+        <a href="../index.html#services" class="btn-secondary">&larr; Back to Services</a>
+      </div>
+    </section>
 
-      <!-- 1. Data Annotation -->
-      <div class="cert-item" style="border-left-color: #8B263E;">
-        <h4>1. Data Annotation for Aspiring BPO Professionals</h4>
-        <ul>
-          <li><strong>Issuing Institution:</strong> University of the Philippines Open University + Concentrix</li>
-          <li><strong>Program Type:</strong> Massive Open Distance eLearning (16 Hours)</li>
-          <li><strong>Issued:</strong> 22 March 2026 | QR Verified</li>
-          <li><strong>Signatories:</strong> Dr. Melinda Bandalaria • Dr. Myra Almodiel</li>
-        </ul>
+    <!-- Metric Ribbon -->
+    <div class="value-ribbon">
+      <div class="ribbon-item">
+        <div class="ribbon-icon">✓</div>
+        <div>
+          <strong>Verified Training</strong>
+          <span>Accredited institutions & programs</span>
+        </div>
+      </div>
+      <div class="ribbon-item">
+        <div class="ribbon-icon">✓</div>
+        <div>
+          <strong>Data Privacy</strong>
+          <span>Strict client confidentiality standards</span>
+        </div>
+      </div>
+      <div class="ribbon-item">
+        <div class="ribbon-icon">✓</div>
+        <div>
+          <strong>Corporate Rigor</strong>
+          <span>Trained in enterprise workflows</span>
+        </div>
+      </div>
+      <div class="ribbon-item">
+        <div class="ribbon-icon">✓</div>
+        <div>
+          <strong>Active Upskilling</strong>
+          <span>Modern AI & remote tooling stack</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN BODY SECTION -->
+    <section class="content-section">
+
+      <!-- CREDENTIALS SHOWCASE GRID -->
+      <div class="section-eyebrow">Professional Credentials</div>
+      <h2 class="section-title">Certifications & Completed Programs</h2>
+      <p class="section-subtitle">Formal training and verified certifications in remote support, executive assistance, and digital tools.</p>
+
+      <div class="certs-grid">
+
+        <!-- Certificate 1: Virtual Assistant Masterclass / Comprehensive VA Program -->
+        <div class="cert-card">
+          <div class="cert-header rose">
+            <span class="cert-tag">Core Specialization</span>
+            <div class="cert-status"><span class="cert-status-dot"></span> Verified Credential</div>
+          </div>
+          <div class="cert-preview-box">
+            <img src="cert-va-specialist.png" alt="Virtual Assistant Certificate" class="cert-img" onerror="this.onerror=null; this.src='../banner.jpeg';">
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">Professional VA Training Program</div>
+            <h3 class="cert-name">Virtual Assistant & Remote Operations Specialist</h3>
+            <p class="cert-desc">Comprehensive training covering executive calendar management, inbox zero workflows, client communications, digital asset management, and remote team collaboration tools.</p>
+            <div class="cert-competencies">
+              <span class="competency-pill">Executive Admin</span>
+              <span class="competency-pill">Calendar Defense</span>
+              <span class="competency-pill">Inbox Management</span>
+              <span class="competency-pill">Client Care</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificate 2: Technical, Data or Operational Training -->
+        <div class="cert-card">
+          <div class="cert-header sage">
+            <span class="cert-tag">Systems & Analytics</span>
+            <div class="cert-status"><span class="cert-status-dot"></span> Verified Credential</div>
+          </div>
+          <div class="cert-preview-box">
+            <img src="cert-data-operations.png" alt="Operational Training Certificate" class="cert-img" onerror="this.onerror=null; this.src='../banner.jpeg';">
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">Operations & Data Governance</div>
+            <h3 class="cert-name">Operational Quality, Data Integrity & Tool Mastery</h3>
+            <p class="cert-desc">Rigorous instruction in process auditing, quality assurance, spreadsheet formulas, structured data tracking, and workflow documentation across enterprise ecosystems.</p>
+            <div class="cert-competencies">
+              <span class="competency-pill">SOP Development</span>
+              <span class="competency-pill">Data Auditing</span>
+              <span class="competency-pill">Workflow QA</span>
+              <span class="competency-pill">Trello / Notion</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificate 3: AI-Powered Productivity / Digital Workflows -->
+        <div class="cert-card">
+          <div class="cert-header sage">
+            <span class="cert-tag">Modern Productivity</span>
+            <div class="cert-status"><span class="cert-status-dot"></span> Verified Credential</div>
+          </div>
+          <div class="cert-preview-box">
+            <img src="cert-ai-workflows.png" alt="AI & Digital Productivity Certificate" class="cert-img" onerror="this.onerror=null; this.src='../banner.jpeg';">
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">Applied Technology & AI</div>
+            <h3 class="cert-name">AI-Powered Tasks & Executive Productivity</h3>
+            <p class="cert-desc">Hands-on application of generative AI tools and prompt engineering to accelerate market research, document synthesis, content drafting, and repetitive operational tasks.</p>
+            <div class="cert-competencies">
+              <span class="competency-pill">Prompt Engineering</span>
+              <span class="competency-pill">Research Synthesis</span>
+              <span class="competency-pill">Draft Acceleration</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificate 4: Professional Ethics, Privacy & Compliance -->
+        <div class="cert-card">
+          <div class="cert-header rose">
+            <span class="cert-tag">Governance & Privacy</span>
+            <div class="cert-status"><span class="cert-status-dot"></span> Verified Credential</div>
+          </div>
+          <div class="cert-preview-box">
+            <img src="cert-privacy-ethics.png" alt="Data Security & Ethics Certificate" class="cert-img" onerror="this.onerror=null; this.src='../banner.jpeg';">
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">Corporate Governance & Standards</div>
+            <h3 class="cert-name">Data Confidentiality & Remote Work Ethics</h3>
+            <p class="cert-desc">Training in safe credential handling, password management protocols, non-disclosure compliance, and enterprise information security standards for remote contractors.</p>
+            <div class="cert-competencies">
+              <span class="competency-pill">Data Security</span>
+              <span class="competency-pill">NDA Compliance</span>
+              <span class="competency-pill">Password Hygiene</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- 2. Medical VA 102 -->
-      <div class="cert-item" style="border-left-color: var(--color-rose);">
-        <h4>2. Medical VA 102 – Medical Billing</h4>
-        <ul>
-          <li><strong>Issuing Organization:</strong> VA Growth PH</li>
-          <li><strong>Credential:</strong> Certificate of Completion (HIPAA Compliant Badge)</li>
-          <li><strong>Date Completed:</strong> 1/10/2025</li>
-          <li><strong>Coach:</strong> Leizel Quizon</li>
-        </ul>
-      </div>
+      <!-- CONTINUOUS LEARNING STANDARDS -->
+      <div class="standards-wrap">
+        <div class="section-eyebrow">Commitment to Quality</div>
+        <h3>Continuous Upskilling & Working Standards</h3>
+        <p>Skills change quickly in the remote work space. To ensure clients receive modern, reliable service, RC.VA360 operates under three foundational quality commitments:</p>
+        
+        <div class="standards-list">
+          <div class="standard-item">
+            <strong>01 · Regular Tool Upgrades</strong>
+            <span>Active learning in modern productivity software, automations, and updated workspace features across Google and Microsoft 365.</span>
+          </div>
 
-      <!-- 3. Medical VA 101 -->
-      <div class="cert-item" style="border-left-color: var(--color-rose);">
-        <h4>3. Medical VA 101 – Medical Administrative</h4>
-        <ul>
-          <li><strong>Issuing Organization:</strong> VA Growth PH</li>
-          <li><strong>Credential:</strong> Certificate of Completion (Clinical &amp; Admin Workflows)</li>
-          <li><strong>Date Completed:</strong> 1/10/2025</li>
-          <li><strong>Coach:</strong> Leizel Quizon</li>
-        </ul>
-      </div>
+          <div class="standard-item">
+            <strong>02 · Rigorous Data Security</strong>
+            <span>Strict adherence to credential security, zero storage of sensitive client passwords on unencrypted devices, and full NDA compliance.</span>
+          </div>
 
-      <!-- 4. HIPAA -->
-      <div class="cert-item" style="border-left-color: #2A9D8F;">
-        <h4>4. HIPAA for Business Associates</h4>
-        <ul>
-          <li><strong>Issuing Organization:</strong> HIPAA Exams, Inc.</li>
-          <li><strong>Accreditation:</strong> IACET Accredited CEU Provider • NY State Approved</li>
-          <li><strong>Status:</strong> Program Requirements Completed • Verifiable at teachm.hipaa.com</li>
-          <li><strong>Date Completed:</strong> 1/10/2025</li>
-        </ul>
-      </div>
-
-      <!-- 5. Freelancing Skills -->
-      <div class="cert-item" style="border-left-color: var(--color-charcoal);">
-        <h4>5. Freelancing Skills &amp; Virtual Assistant Training</h4>
-        <ul>
-          <li><strong>Program:</strong> Mastery of Five Key Skills for Freelancing</li>
-          <li><strong>Focus:</strong> Professional Development &amp; Remote Client Management</li>
-          <li><strong>VA Coach:</strong> Angel Jalong</li>
-        </ul>
-      </div>
-
-      <!-- 6. General VA -->
-      <div class="cert-item" style="border-left-color: var(--color-sage);">
-        <h4>6. General Virtual Assistant</h4>
-        <ul>
-          <li><strong>Issuing Organization:</strong> TESDA</li>
-          <li><strong>Program:</strong> 18-Day Intensive Training Program &amp; Technical Readiness</li>
-        </ul>
+          <div class="standard-item">
+            <strong>03 · Corporate Process Discipline</strong>
+            <span>Grounded by Accenture and luxury hospitality standards, ensuring every email, schedule, and document is executed with polish.</span>
+          </div>
+        </div>
       </div>
 
     </section>
 
-  </main>
+    <!-- Call to Action Banner -->
+    <section class="cta-banner-wrapper">
+      <div class="cta-banner-content">
+        <h2>Partner with a Qualified, Certified Professional</h2>
+        <p>Bring calm, verified operational support to your business today. Let's discuss how my structured skillset can support your growth.</p>
+        <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="cta-btn-action">Get in Touch</a>
+      </div>
+    </section>
 
-  <!-- ================= FOOTER / GET IN TOUCH CARD ================= -->
-  <section class="card footer-card" id="contact">
-    <h2 class="section-title">Let's Work Together</h2>
-    <p class="bio-text" style="text-align: center; margin-bottom: 12px;">
-      Ready to collaborate with a certified and verified professional? Let's connect.
-    </p>
-
-    <!-- Visible Email Address -->
-    <div class="email-display">
-      <span class="email-icon">✉</span>
-      <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="email-text">
-        cipriano.rowenacarla.va@gmail.com
-      </a>
-    </div>
-
-    <!-- Send Message Button -->
-    <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="contact-btn">
-      Send Message
-    </a>
-  </section>
+    <!-- Footer -->
+    <footer>
+      <span>RC.VA360 · All Rights Reserved</span>
+      <span class="footer-tagline">You focus on business — I'll handle the details.</span>
+    </footer>
+  </div>
 
 </body>
 </html>
