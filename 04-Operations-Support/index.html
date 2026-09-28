@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Operations Support | RC.VA360</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operations Support | RC.VA360 Remote Operations</title>
 
-  <!-- Google Fonts according to RC.VA360 Brand Kit -->
+  <!-- RC.VA360 Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --color-charcoal: #2F3E46;
-      --color-sage: #9CAF88;
-      --color-rose: #DCAE96;
-      --color-cream-bg: #F8F6F0;
-      --color-white: #FFFFFF;
-      --color-border: #EFE9DF;
-      --color-muted: #5C6B73;
+      --primary-rose: #D9A7A0;
+      --secondary-sage: #A8B09A;
+      --text-charcoal: #2E3A3F;
+      --text-muted: #5A6970;
+      --bg-cream: #F8F6F1;
+      --card-white: #FFFFFF;
+      --border-color: #E6E2D8;
+      --tint-sage: #F2F5F0;
+      --tint-rose: #FAF2F0;
 
       --font-heading: 'Montserrat', sans-serif;
       --font-subheading: 'Poppins', sans-serif;
       --font-body: 'Open Sans', sans-serif;
+      --font-editorial: 'Cormorant Garamond', serif;
     }
 
     * {
@@ -32,427 +35,785 @@
     }
 
     body {
-      background-color: var(--color-cream-bg);
       font-family: var(--font-body);
-      color: var(--color-charcoal);
-      line-height: 1.65;
-      padding: 24px 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
+      background-color: var(--bg-cream);
+      color: var(--text-charcoal);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    /* Common Card Styling */
-    .card {
-      width: 100%;
-      max-width: 480px;
-      background: var(--color-white);
-      border-radius: 24px;
-      box-shadow: 0 8px 24px rgba(47, 62, 70, 0.06);
-      border: 1px solid var(--color-border);
-      padding: 28px 22px;
+    .wrapper {
+      max-width: 1140px;
+      margin: 2rem auto 4rem;
+      background: var(--card-white);
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 14px 40px rgba(46, 58, 63, 0.06);
       overflow: hidden;
     }
 
-    /* Top Action Bar with Logo */
-    .top-action-bar {
+    /* Navigation */
+    .nav-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 22px;
-      width: 100%;
+      padding: 1.25rem 2.5rem;
+      border-bottom: 1px solid var(--border-color);
+      background: #FFFFFF;
     }
 
-    .pill-nav-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      text-decoration: none;
-      font-family: var(--font-subheading);
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 9px 18px;
-      border-radius: 30px;
-      transition: all 0.25s ease;
-      white-space: nowrap;
-      background-color: var(--color-charcoal);
-      color: var(--color-white);
-    }
-
-    .pill-nav-btn:hover {
-      background-color: var(--color-sage);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(47, 62, 70, 0.16);
-    }
-
-    .top-logo-link {
-      display: inline-block;
-      text-decoration: none;
-    }
-
-    .header-logo-img {
-      height: 38px;
+    .brand-group img {
+      max-height: 48px;
       width: auto;
-      max-width: 150px;
-      object-fit: contain;
       display: block;
     }
 
-    /* Typography & Section Styles */
-    h1 {
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-family: var(--font-subheading);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-charcoal);
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary-rose);
+      font-weight: 600;
+    }
+
+    .btn-nav {
+      background: var(--secondary-sage);
+      color: #fff !important;
+      padding: 0.55rem 1.3rem;
+      border-radius: 30px;
+      font-weight: 600 !important;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 4rem 3rem 3rem;
+      background: radial-gradient(circle at top right, var(--tint-sage) 0%, transparent 65%);
+      border-bottom: 1px solid var(--border-color);
+      text-align: left;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--tint-sage);
+      border: 1px solid var(--secondary-sage);
+      color: var(--text-charcoal);
+      padding: 0.35rem 0.9rem;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-family: var(--font-subheading);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-badge span {
+      width: 7px;
+      height: 7px;
+      background: var(--secondary-sage);
+      border-radius: 50%;
+    }
+
+    .hero-title {
       font-family: var(--font-heading);
-      font-size: 1.6rem;
+      font-size: 2.45rem;
       font-weight: 800;
-      color: var(--color-charcoal);
-      line-height: 1.25;
-      margin-bottom: 12px;
+      line-height: 1.2;
+      color: var(--text-charcoal);
+      margin-bottom: 0.4rem;
+      max-width: 860px;
     }
 
-    .divider {
-      height: 2px;
-      width: 100%;
-      background: #EFE9DF;
-      margin-bottom: 24px;
+    .hero-tagline {
+      font-family: var(--font-editorial);
+      font-size: 1.65rem;
+      font-style: italic;
+      font-weight: 500;
+      color: var(--primary-rose);
+      margin-bottom: 1.25rem;
+      display: block;
     }
 
-    .badge-label {
-      display: inline-block;
+    .hero-desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+      max-width: 780px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      background: var(--text-charcoal);
+      color: #FFFFFF;
+      padding: 0.75rem 1.8rem;
+      border-radius: 30px;
+      font-family: var(--font-subheading);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .btn-secondary {
+      border: 1.5px solid var(--border-color);
+      color: var(--text-charcoal);
+      padding: 0.7rem 1.5rem;
+      border-radius: 30px;
+      font-family: var(--font-subheading);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    /* Metric Ribbon */
+    .value-ribbon {
+      background: var(--tint-sage);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 1.25rem 2.5rem;
+      border-bottom: 1px solid var(--border-color);
+      gap: 1.25rem;
+    }
+
+    .ribbon-item {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .ribbon-icon {
+      color: var(--secondary-sage);
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
+
+    .ribbon-item div strong {
+      display: block;
+      font-size: 0.84rem;
+      font-family: var(--font-subheading);
+      color: var(--text-charcoal);
+    }
+
+    .ribbon-item div span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Section Styling */
+    .content-section {
+      padding: 3.5rem 2.5rem;
+    }
+
+    .section-eyebrow {
       font-family: var(--font-subheading);
       font-size: 0.78rem;
       font-weight: 700;
-      letter-spacing: 1.8px;
       text-transform: uppercase;
-      color: var(--color-charcoal);
-      border-bottom: 2px solid var(--color-rose);
-      padding-bottom: 2px;
-      margin-bottom: 14px;
-    }
-
-    .section-block {
-      margin-bottom: 26px;
-    }
-
-    .section-block:last-child {
-      margin-bottom: 0;
-    }
-
-    .bio-text {
-      font-size: 0.94rem;
-      line-height: 1.7;
-      color: var(--color-muted);
-      margin-bottom: 12px;
-    }
-
-    .bio-text strong {
-      color: var(--color-charcoal);
-      font-weight: 600;
-    }
-
-    /* Operations Support Area List */
-    .service-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .service-list li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: #FAF8F5;
-      padding: 9px 14px;
-      border-radius: 10px;
-      font-size: 0.91rem;
-      color: var(--color-charcoal);
-      border-left: 3px solid var(--color-sage);
-    }
-
-    .check-icon {
-      color: var(--color-sage);
-      font-weight: bold;
-    }
-
-    /* Step-by-Step Workflow Cards */
-    .workflow-timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .workflow-card {
-      background: #FDFCF9;
-      border: 1px solid var(--color-border);
-      border-radius: 12px;
-      padding: 12px 14px;
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-    }
-
-    .step-number {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--color-sage);
-      color: var(--color-white);
-      font-family: var(--font-subheading);
-      font-weight: 700;
-      font-size: 0.82rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .workflow-card:nth-child(even) .step-number {
-      background: var(--color-rose);
-    }
-
-    .workflow-content strong {
-      display: block;
-      font-family: var(--font-subheading);
-      color: var(--color-charcoal);
-      font-size: 0.95rem;
-      margin-bottom: 3px;
-    }
-
-    .workflow-content p {
-      font-size: 0.88rem;
-      color: var(--color-muted);
-      margin: 0;
-    }
-
-    /* Portfolio Samples List */
-    .sample-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .sample-list li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: #FAF8F5;
-      padding: 9px 14px;
-      border-radius: 10px;
-      font-size: 0.91rem;
-      color: var(--color-charcoal);
-      border-left: 3px solid var(--color-rose);
-    }
-
-    .sample-icon {
-      color: var(--color-rose);
-      font-weight: bold;
-    }
-
-    /* Footer Card & Contact Styling */
-    .footer-card {
-      text-align: center;
-      padding: 28px 20px;
+      letter-spacing: 0.06em;
+      color: var(--primary-rose);
+      margin-bottom: 0.35rem;
     }
 
     .section-title {
       font-family: var(--font-heading);
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: var(--color-charcoal);
-      margin-bottom: 12px;
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--text-charcoal);
+      margin-bottom: 0.35rem;
     }
 
-    .email-display {
-      display: inline-flex;
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      margin-bottom: 2.25rem;
+    }
+
+    /* Visual Portfolio Artifact Grid (3 Real Showcase Items) */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .artifact-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(46, 58, 63, 0.04);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .artifact-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(46, 58, 63, 0.08);
+    }
+
+    .artifact-top-bar {
+      padding: 0.75rem 1.15rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .artifact-top-bar.rose { background: var(--tint-rose); }
+    .artifact-top-bar.sage { background: var(--tint-sage); }
+    .artifact-top-bar.slate { background: #EEF2F4; }
+
+    .artifact-tag {
+      font-family: var(--font-subheading);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .artifact-top-bar.rose .artifact-tag { color: var(--primary-rose); }
+    .artifact-top-bar.sage .artifact-tag { color: var(--secondary-sage); }
+    .artifact-top-bar.slate .artifact-tag { color: var(--text-charcoal); }
+
+    .artifact-code-id {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Image Preview Container */
+    .artifact-img-box {
+      width: 100%;
+      height: 180px;
+      background: #F4F2EC;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      background-color: var(--color-cream-bg);
-      border: 1px solid var(--color-rose);
-      padding: 10px 18px;
-      border-radius: 20px;
-      margin: 14px 0 16px;
-      max-width: 100%;
     }
 
-    .email-icon {
+    .artifact-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.3s ease;
+    }
+
+    .artifact-card:hover .artifact-img-box img {
+      transform: scale(1.03);
+    }
+
+    .artifact-body {
+      padding: 1.35rem 1.25rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .artifact-title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-charcoal);
+      margin-bottom: 0.45rem;
+    }
+
+    .artifact-desc {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 1.15rem;
+      flex-grow: 1;
+    }
+
+    .artifact-summary {
+      background: var(--bg-cream);
+      border-left: 3px solid var(--secondary-sage);
+      padding: 0.65rem 0.85rem;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      line-height: 1.45;
+      color: var(--text-charcoal);
+    }
+
+    /* Core Capabilities Grid (4 Pillars) */
+    .capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+      margin-bottom: 4rem;
+    }
+
+    .capability-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2rem;
+      border-top: 4px solid var(--secondary-sage);
+    }
+
+    .capability-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .cap-icon {
+      width: 34px;
+      height: 34px;
+      background: var(--tint-sage);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--secondary-sage);
+    }
+
+    .cap-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .cap-title {
+      font-family: var(--font-heading);
       font-size: 1.1rem;
-      color: var(--color-sage);
+      font-weight: 700;
+      color: var(--text-charcoal);
     }
 
-    .email-text {
-      font-family: var(--font-body);
+    .capability-card ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .capability-card li {
       font-size: 0.88rem;
+      color: var(--text-muted);
+      padding-left: 1.25rem;
+      position: relative;
+      line-height: 1.55;
+    }
+
+    .capability-card li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--primary-rose);
+      font-weight: 800;
+    }
+
+    /* Tools Stack Strip */
+    .tools-wrap {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2rem 2.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .tools-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .tool-badge {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      padding: 0.45rem 1rem;
+      border-radius: 30px;
+      font-family: var(--font-subheading);
+      font-size: 0.85rem;
       font-weight: 600;
-      color: var(--color-charcoal);
-      text-decoration: none;
-      word-break: break-all;
-      transition: color 0.2s ease;
+      color: var(--text-charcoal);
     }
 
-    .email-text:hover {
-      color: var(--color-rose);
+    /* CTA Banner */
+    .cta-banner-wrapper {
+      margin: 0 2.5rem 3.5rem;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      background: linear-gradient(135deg, rgba(46, 58, 63, 0.88), rgba(46, 58, 63, 0.94)), url('../banner.jpeg') center/cover no-repeat;
     }
 
-    .contact-btn {
-      display: block;
-      width: fit-content;
-      margin: 0 auto;
+    .cta-banner-content {
+      padding: 3.5rem 2rem;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .cta-banner-content h2 {
+      font-family: var(--font-heading);
+      font-size: 1.95rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .cta-banner-content p {
+      color: #e2e8ea;
+      font-size: 0.98rem;
+      max-width: 580px;
+      margin: 0 auto 1.75rem;
+      line-height: 1.6;
+    }
+
+    .cta-btn-action {
+      background: var(--primary-rose);
+      color: #FFFFFF;
+      padding: 0.85rem 2.2rem;
+      border-radius: 30px;
       text-decoration: none;
       font-family: var(--font-subheading);
-      font-size: 0.92rem;
       font-weight: 600;
-      background-color: var(--color-charcoal);
-      color: var(--color-white);
-      padding: 11px 28px;
-      border-radius: 25px;
-      transition: all 0.25s ease;
+      font-size: 0.95rem;
+      display: inline-block;
     }
 
-    .contact-btn:hover {
-      background-color: var(--color-sage);
-      transform: translateY(-2px);
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 1.75rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .footer-tagline {
+      font-family: var(--font-editorial);
+      font-size: 1.15rem;
+      color: var(--primary-rose);
+      font-style: italic;
+    }
+
+    /* Responsive Rules */
+    @media (max-width: 950px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+      .capabilities-grid {
+        grid-template-columns: 1fr;
+      }
+      .value-ribbon {
+        grid-template-columns: 1fr 1fr;
+        padding: 1.25rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .nav-bar {
+        padding: 1rem 1.25rem;
+      }
+      .nav-links a:not(.btn-nav) {
+        display: none;
+      }
+      .hero-section {
+        padding: 2.5rem 1.25rem;
+      }
+      .content-section {
+        padding: 2.5rem 1.25rem;
+      }
+      .cta-banner-wrapper {
+        margin: 0 1.25rem 2.5rem;
+      }
+      .value-ribbon {
+        grid-template-columns: 1fr;
+      }
+      footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 1.5rem 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- ================= MAIN CONTENT CARD ================= -->
-  <main class="card">
-    
-    <!-- Top Action Bar with Logo replacing the redundant button -->
-    <header class="top-action-bar">
-      <a href="../index.html" class="pill-nav-btn">← Back to Home</a>
-      <a href="../index.html" class="top-logo-link" title="Return to Home">
-        <img src="../logo.png" alt="RC.VA360 Logo" class="header-logo-img" />
+  <div class="wrapper">
+    <!-- Navigation Bar -->
+    <header class="nav-bar">
+      <a href="../index.html" class="brand-group">
+        <img src="../logo.png" alt="RC.VA360 Logo">
       </a>
+
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../01-About-Me/index.html">About Me</a>
+        <a href="../02-Administrative-Support/index.html">Admin Support</a>
+        <a href="../03-Customer-Service-Support/index.html">Customer Care</a>
+        <a href="index.html" class="active">Operations</a>
+        <a href="../06-AI-Powered-Tasks/index.html">AI Tasks</a>
+        <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="btn-nav">Let's Talk</a>
+      </nav>
     </header>
 
-    <!-- Page Title -->
-    <h1>Operations Support</h1>
-    <div class="divider"></div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-badge">
+        <span></span> Systems, SOPs & Workflow Execution
+      </div>
+      <h1 class="hero-title">Scalable Business Operations That Keep Your Team Running on Track.</h1>
+      <span class="hero-tagline">Turning daily operational chaos into predictable, step-by-step systems.</span>
+      <p class="hero-desc">
+        A growing business cannot scale on memory alone. Without clear procedures, tasks fall through the cracks, onboarding is slow, and founders become bottlenecks. Drawing on 9+ years of operational discipline and hands-on experience as an operational trainer and analyst, I build reproducible SOPs, structure project boards, and oversee daily execution so your business operates smoothly with or without your direct oversight.
+      </p>
 
-    <!-- Section: Overview -->
-    <section class="section-block">
-      <span class="badge-label">OVERVIEW</span>
-      <p class="bio-text">My background in operations has helped me understand the importance of organization, teamwork, procedures, and consistent daily support.</p>
-      <p class="bio-text">I can assist businesses with routine operational tasks that help keep work organized.</p>
+      <div class="hero-actions">
+        <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="btn-primary">Streamline Your Operations</a>
+        <a href="../index.html#services" class="btn-secondary">&larr; Back to Services</a>
+      </div>
     </section>
 
-    <!-- Section: Operations Support Areas -->
-    <section class="section-block">
-      <span class="badge-label">OPERATIONS SUPPORT AREAS</span>
-      <ul class="service-list">
-        <li><span class="check-icon">✓</span> Daily task tracking</li>
-        <li><span class="check-icon">✓</span> Workflow organization</li>
-        <li><span class="check-icon">✓</span> Team support</li>
-        <li><span class="check-icon">✓</span> Process documentation</li>
-        <li><span class="check-icon">✓</span> Task follow-ups</li>
-        <li><span class="check-icon">✓</span> Scheduling</li>
-        <li><span class="check-icon">✓</span> Information management</li>
-        <li><span class="check-icon">✓</span> Administrative coordination</li>
-        <li><span class="check-icon">✓</span> Documentation</li>
-        <li><span class="check-icon">✓</span> Routine operations support</li>
-      </ul>
-    </section>
+    <!-- Metric Ribbon -->
+    <div class="value-ribbon">
+      <div class="ribbon-item">
+        <div class="ribbon-icon">✓</div>
+        <div>
+          <strong>Documented SOPs</strong>
+          <span>Clear, step-by-step repeatability</span>
+        </div>
+      </div>
+      <div class="ribbon-item">
+        <div class="ribbon-icon">✓</div>
+        <div>
+          <strong>Trainer Experience</strong>
+          <span>Mentoring, handoffs & onboarding</span>
+        </div>
+      </div>
+      <div class="ribbon-item">
+        <div class="ribbon-icon">✓</div>
+        <div>
+          <strong>Project Governance</strong>
+          <span>Milestone tracking & task audits</span>
+        </div>
+      </div>
+      <div class="ribbon-item">
+        <div class="ribbon-icon">✓</div>
+        <div>
+          <strong>Process Efficiency</strong>
+          <span>Bottleneck elimination & cleanup</span>
+        </div>
+      </div>
+    </div>
 
-    <!-- Section: Example Workflow -->
-    <section class="section-block">
-      <span class="badge-label">EXAMPLE WORKFLOW</span>
-      <div class="workflow-timeline">
-        
-        <div class="workflow-card">
-          <div class="step-number">1</div>
-          <div class="workflow-content">
-            <strong>Receive</strong>
-            <p>Understand the task, instructions, and deadline.</p>
+    <!-- MAIN BODY SECTION -->
+    <section class="content-section">
+
+      <!-- WORK SAMPLES / CASE ARTIFACTS -->
+      <div class="section-eyebrow">Proof of Execution</div>
+      <h2 class="section-title">Operational Hubs & Workspace Blueprints</h2>
+      <p class="section-subtitle">Real-world boards and communication ecosystems managing multi-disciplinary remote teams.</p>
+
+      <div class="portfolio-grid">
+
+        <!-- Artifact 1: Trello Agile Kanban Board -->
+        <div class="artifact-card">
+          <div class="artifact-top-bar rose">
+            <span class="artifact-tag">Project Board Governance</span>
+            <span class="artifact-code-id">TRELLO-OPS</span>
+          </div>
+
+          <!-- Preview image (falls back cleanly if not yet uploaded) -->
+          <div class="artifact-img-box">
+            <img src="trello-ops-sample.png" alt="Trello Agile Board" onerror="this.onerror=null; this.src='../banner.jpeg';">
+          </div>
+
+          <div class="artifact-body">
+            <h3 class="artifact-title">Agile Kanban Board & Team Workflow</h3>
+            <p class="artifact-desc">A structured operational board coordinating cross-functional deliverables—from brand development and social content to video production and milestone delivery.</p>
+            
+            <div class="artifact-summary">
+              <strong>Core System:</strong> Color-coded status tags (Urgent, In Progress, Review, Done) paired with deadline management and checklist tracking.
+            </div>
           </div>
         </div>
 
-        <div class="workflow-card">
-          <div class="step-number">2</div>
-          <div class="workflow-content">
-            <strong>Organize</strong>
-            <p>Break the task into clear steps and gather the required information.</p>
+        <!-- Artifact 2: Microsoft Teams Enterprise Hub -->
+        <div class="artifact-card">
+          <div class="artifact-top-bar sage">
+            <span class="artifact-tag">Enterprise Ecosystem</span>
+            <span class="artifact-code-id">MS-TEAMS</span>
+          </div>
+
+          <!-- Preview image -->
+          <div class="artifact-img-box">
+            <img src="teams-ops-sample.png" alt="Microsoft Teams Collaboration" onerror="this.onerror=null; this.src='../banner.jpeg';">
+          </div>
+
+          <div class="artifact-body">
+            <h3 class="artifact-title">Enterprise Communication & Channels</h3>
+            <p class="artifact-desc">Structured Microsoft Teams channels organizing departmental discussions, file sharing, calendar sprint reviews, and corporate business reporting.</p>
+
+            <div class="artifact-summary">
+              <strong>Core System:</strong> Channel categorization preventing message clutter, with linked cloud directories and daily executive recaps.
+            </div>
           </div>
         </div>
 
-        <div class="workflow-card">
-          <div class="step-number">3</div>
-          <div class="workflow-content">
-            <strong>Complete</strong>
-            <p>Perform the task according to the client's instructions.</p>
+        <!-- Artifact 3: Discord Remote Virtual Office -->
+        <div class="artifact-card">
+          <div class="artifact-top-bar slate">
+            <span class="artifact-tag">Remote Work Hub</span>
+            <span class="artifact-code-id">DISCORD-HUB</span>
           </div>
-        </div>
 
-        <div class="workflow-card">
-          <div class="step-number">4</div>
-          <div class="workflow-content">
-            <strong>Review</strong>
-            <p>Check the completed work for accuracy and missing information.</p>
+          <!-- Preview image -->
+          <div class="artifact-img-box">
+            <img src="discord-ops-sample.png" alt="Discord Collaboration" onerror="this.onerror=null; this.src='../banner.jpeg';">
           </div>
-        </div>
 
-        <div class="workflow-card">
-          <div class="step-number">5</div>
-          <div class="workflow-content">
-            <strong>Report</strong>
-            <p>Provide a clear update on the completed task or any items that need attention.</p>
+          <div class="artifact-body">
+            <h3 class="artifact-title">Virtual Office & Real-Time Sync</h3>
+            <p class="artifact-desc">Synchronous remote collaboration environment featuring live voice stream rooms, daily asynchronous standups, and instant peer support.</p>
+
+            <div class="artifact-summary">
+              <strong>Core System:</strong> Voice sprint channels, screen-share collaboration, and organized role-permission access for remote VAs.
+            </div>
           </div>
         </div>
 
       </div>
+
+      <!-- CORE CAPABILITIES GRID -->
+      <div class="section-eyebrow">Service Breakdown</div>
+      <h2 class="section-title">How I Support Your Business Infrastructure</h2>
+      <p class="section-subtitle">Disciplined operational governance that keeps distributed teams aligned.</p>
+
+      <div class="capabilities-grid">
+        <!-- 01 SOP Documentation -->
+        <div class="capability-card">
+          <div class="capability-header">
+            <div class="cap-icon">
+              <!-- Book / SOP Icon -->
+              <svg viewBox="0 0 24 24"><path d="M19 2H6c-1.2 0-2 .8-2 2v16c0 1.2.8 2 2 2h13c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
+            </div>
+            <div class="cap-title">SOP Writing & Process Documentation</div>
+          </div>
+          <ul>
+            <li>Documenting messy, undocumented tasks into clear, repeatable step-by-step SOPs.</li>
+            <li>Creating Notion knowledge bases and quick-reference guides for team members.</li>
+            <li>Keeping internal documentation updated as software and business tools evolve.</li>
+          </ul>
+        </div>
+
+        <!-- 02 Team Training & Onboarding -->
+        <div class="capability-card">
+          <div class="capability-header">
+            <div class="cap-icon">
+              <!-- Training / Mentor Icon -->
+              <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            </div>
+            <div class="cap-title">Onboarding & Operational Training</div>
+          </div>
+          <ul>
+            <li>Drawing upon my background as an operational trainer to mentor incoming staff.</li>
+            <li>Guiding new hires through platforms, company standards, and workflow routines.</li>
+            <li>Creating video walkthrough checklists to reduce founder onboarding hours.</li>
+          </ul>
+        </div>
+
+        <!-- 03 Project Board Governance -->
+        <div class="capability-card">
+          <div class="capability-header">
+            <div class="cap-icon">
+              <!-- Kanban Board Icon -->
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 14H7V7h4v10zm6-4h-4V7h4v6z"/></svg>
+            </div>
+            <div class="cap-title">Project Board Governance</div>
+          </div>
+          <ul>
+            <li>Structuring and maintaining Trello, Asana, ClickUp, and Notion Kanban boards.</li>
+            <li>Ensuring task cards include clear briefs, assignees, deadlines, and checklists.</li>
+            <li>Running daily audits to prevent tasks from stalling in "in progress" states.</li>
+          </ul>
+        </div>
+
+        <!-- 04 Workflow & Quality Auditing -->
+        <div class="capability-card">
+          <div class="capability-header">
+            <div class="cap-icon">
+              <!-- Audit / Analytics Icon -->
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+            </div>
+            <div class="cap-title">Workflow Audits & Data Integrity</div>
+          </div>
+          <ul>
+            <li>Auditing operational databases, spreadsheets, and CRM entries for accuracy.</li>
+            <li>Identifying and eliminating friction points in daily handoffs and dependencies.</li>
+            <li>Synthesizing weekly operational summaries to give founders complete transparency.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SOFTWARE ECOSYSTEM -->
+      <div class="tools-wrap">
+        <div class="section-eyebrow">Tool Ecosystem</div>
+        <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-charcoal); margin-bottom: 0.25rem;">Operations & Project Management Stack</h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted);">Systems I organize and manage daily to keep businesses running predictably:</p>
+        
+        <div class="tools-badges">
+          <div class="tool-badge">Trello (Kanban Systems)</div>
+          <div class="tool-badge">Microsoft Teams</div>
+          <div class="tool-badge">Discord (Remote Workspaces)</div>
+          <div class="tool-badge">Notion (SOPs & Wikis)</div>
+          <div class="tool-badge">Google Workspace (Sheets, Docs, Drive)</div>
+          <div class="tool-badge">Slack Operations Channels</div>
+          <div class="tool-badge">Asana / ClickUp</div>
+          <div class="tool-badge">Loom (Process Walkthroughs)</div>
+        </div>
+      </div>
+
     </section>
 
-    <!-- Section: My Goal -->
-    <section class="section-block">
-      <span class="badge-label">MY GOAL</span>
-      <p class="bio-text">
-        My goal is to help business owners and teams keep routine work organized so they can focus on higher-priority business activities.
-      </p>
+    <!-- Call to Action Banner -->
+    <section class="cta-banner-wrapper">
+      <div class="cta-banner-content">
+        <h2>Ready for Clean, Dependable Operations?</h2>
+        <p>Turn undocumented workflows into organized systems. Let me bring structure, accountability, and clarity to your daily business operations.</p>
+        <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="cta-btn-action">Discuss Operations Support</a>
+      </div>
     </section>
 
-    <!-- Section: Portfolio Samples -->
-    <section class="section-block">
-      <span class="badge-label">PORTFOLIO SAMPLES</span>
-      <p class="bio-text">This section can include:</p>
-      <ul class="sample-list">
-        <li><span class="sample-icon">✦</span> Workflow examples</li>
-        <li><span class="sample-icon">✦</span> Task trackers</li>
-        <li><span class="sample-icon">✦</span> SOP samples</li>
-        <li><span class="sample-icon">✦</span> Operations checklists</li>
-        <li><span class="sample-icon">✦</span> Process documentation</li>
-      </ul>
-    </section>
-
-  </main>
-
-  <!-- ================= FOOTER / GET IN TOUCH CARD ================= -->
-  <section class="card footer-card" id="contact">
-    <h2 class="section-title">Let's Work Together</h2>
-    <p class="bio-text" style="text-align: center; margin-bottom: 12px;">
-      Ready to keep routine work organized and optimize your operations? Let's connect.
-    </p>
-
-    <!-- Visible Email Address -->
-    <div class="email-display">
-      <span class="email-icon">✉</span>
-      <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="email-text">
-        cipriano.rowenacarla.va@gmail.com
-      </a>
-    </div>
-
-    <!-- Send Message Button -->
-    <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="contact-btn">
-      Send Message
-    </a>
-  </section>
+    <!-- Footer -->
+    <footer>
+      <span>RC.VA360 · All Rights Reserved</span>
+      <span class="footer-tagline">You focus on business — I'll handle the details.</span>
+    </footer>
+  </div>
 
 </body>
 </html>
