@@ -212,36 +212,129 @@
       color: var(--secondary-sage);
     }
 
-    /* Hero Right Visual: Cutout Profile Photo */
+    /* Hero Right Visual: 3D Floating Portrait with Animations */
     .hero-visual-wrapper {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      min-height: 430px;
+      min-height: 500px;
+      perspective: 1200px;
     }
 
+    /* Animated Background Circle with Pulse */
     .hero-backdrop-circle {
       position: absolute;
-      width: 350px;
-      height: 350px;
+      width: 380px;
+      height: 380px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--tint-sage), var(--tint-rose));
+      background: linear-gradient(135deg, rgba(168, 176, 154, 0.2), rgba(217, 167, 160, 0.25));
       border: 2px solid var(--border-color);
-      bottom: 15px;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 1;
+      animation: floatCircle 5s ease-in-out infinite;
+      box-shadow: 0 0 30px rgba(217, 167, 160, 0.1);
     }
 
+    /* Glow Ring Effect */
+    .hero-backdrop-circle::before {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(217, 167, 160, 0.15), transparent 70%);
+      animation: glowPulse 4s ease-in-out infinite;
+    }
+
+    /* Main Image with 3D Float */
     .hero-cutout-img {
       position: relative;
       z-index: 2;
       width: 100%;
-      max-width: 360px;
+      max-width: 380px;
       height: auto;
       display: block;
-      filter: drop-shadow(0 14px 24px rgba(46, 58, 63, 0.12));
+      filter: drop-shadow(0 25px 50px rgba(46, 58, 63, 0.18));
+      border-radius: 12px;
+      animation: float3D 5.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+      transform-style: preserve-3d;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
+    .hero-cutout-img:hover {
+      filter: drop-shadow(0 35px 70px rgba(46, 58, 63, 0.25));
+      animation-play-state: paused;
+      transform: scale(1.03) translateY(-8px);
+    }
+
+    /* 3D Float Animation */
+    @keyframes float3D {
+      0% {
+        transform: translateY(0px) rotateX(0deg) rotateY(-2deg) rotateZ(0.5deg);
+      }
+      25% {
+        transform: translateY(-18px) rotateX(2deg) rotateY(1deg) rotateZ(-0.5deg);
+      }
+      50% {
+        transform: translateY(-12px) rotateX(0deg) rotateY(2deg) rotateZ(0.3deg);
+      }
+      75% {
+        transform: translateY(-20px) rotateX(-2deg) rotateY(-1deg) rotateZ(-0.3deg);
+      }
+      100% {
+        transform: translateY(0px) rotateX(0deg) rotateY(-2deg) rotateZ(0.5deg);
+      }
+    }
+
+    /* Circle Float Animation */
+    @keyframes floatCircle {
+      0%, 100% {
+        transform: translateX(-50%) translateY(0px);
+      }
+      50% {
+        transform: translateX(-50%) translateY(-12px);
+      }
+    }
+
+    /* Glow Pulse Animation */
+    @keyframes glowPulse {
+      0%, 100% {
+        opacity: 0.4;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.7;
+        transform: scale(1.15);
+      }
+    }
+
+    /* Shimmer Effect on Image */
+    .hero-cutout-img::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+      animation: shimmer 3.5s infinite;
+      border-radius: 12px;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    @keyframes shimmer {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+
+    /* Floating Pill with Independent Animation */
     .floating-exp-pill {
       position: absolute;
       bottom: 25px;
@@ -251,8 +344,30 @@
       border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 0.65rem 1rem;
-      box-shadow: 0 8px 20px rgba(46, 58, 63, 0.08);
+      box-shadow: 0 12px 30px rgba(46, 58, 63, 0.12);
       font-family: var(--font-subheading);
+      animation: floatPill 4s ease-in-out infinite;
+      transition: all 0.3s ease;
+    }
+
+    .floating-exp-pill:hover {
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 16px 40px rgba(46, 58, 63, 0.18);
+    }
+
+    @keyframes floatPill {
+      0%, 100% {
+        transform: translateY(0px) translateX(0px);
+      }
+      25% {
+        transform: translateY(-8px) translateX(2px);
+      }
+      50% {
+        transform: translateY(-12px) translateX(-2px);
+      }
+      75% {
+        transform: translateY(-6px) translateX(2px);
+      }
     }
 
     .floating-exp-pill strong {
@@ -590,7 +705,7 @@
         </div>
       </div>
 
-      <!-- Hero Visual: Cutout Profile Photo -->
+      <!-- Hero Visual: 3D Animated Floating Portrait -->
       <div class="hero-visual-wrapper">
         <div class="hero-backdrop-circle"></div>
         <img src="profile.png" alt="Professional Virtual Assistant" class="hero-cutout-img">
