@@ -8,7 +8,7 @@
   <!-- RC.VA360 Brand Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700[...]
 
   <style>
     :root {
@@ -218,17 +218,19 @@
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      min-height: 430px;
+      min-height: 500px;
     }
 
     .hero-backdrop-circle {
       position: absolute;
-      width: 350px;
-      height: 350px;
+      width: 420px;
+      height: 420px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--tint-sage), var(--tint-rose));
-      border: 2px solid var(--border-color);
-      bottom: 15px;
+      background: linear-gradient(135deg, rgba(168, 176, 154, 0.15), rgba(217, 167, 160, 0.2));
+      border: 3px solid var(--border-color);
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 1;
     }
 
@@ -236,10 +238,16 @@
       position: relative;
       z-index: 2;
       width: 100%;
-      max-width: 360px;
+      max-width: 380px;
       height: auto;
       display: block;
-      filter: drop-shadow(0 14px 24px rgba(46, 58, 63, 0.12));
+      filter: drop-shadow(0 20px 40px rgba(46, 58, 63, 0.15));
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .hero-cutout-img:hover {
+      transform: translateY(-4px);
     }
 
     .floating-exp-pill {
@@ -593,7 +601,7 @@
       <!-- Hero Visual: Cutout Profile Photo -->
       <div class="hero-visual-wrapper">
         <div class="hero-backdrop-circle"></div>
-        <img src="profile.png" alt="Professional Virtual Assistant" class="hero-cutout-img">
+        <img src="hero-portrait.png" alt="Professional Virtual Assistant" class="hero-cutout-img">
         <div class="floating-exp-pill">
           <strong>Systematic & Reliable</strong>
           <span>Remote Operations Hub</span>
@@ -718,7 +726,7 @@
           <h3>RC.VA360 Social Media Campaign</h3>
           <p>Multi-platform campaign demonstrating consistent brand voice, caption copywriting, and organized scheduling pipelines.</p>
         </div>
-        <a href="05-Social-Media-Support/index.html" style="font-family: var(--font-subheading); font-weight: 600; color: var(--secondary-sage); text-decoration: none; font-size: 0.9rem;">Explore Campaign &rarr;</a>
+        <a href="05-Social-Media-Support/index.html" style="font-family: var(--font-subheading); font-weight: 600; color: var(--secondary-sage); text-decoration: none; font-size: 0.9rem;">Explore Project &rarr;</a>
       </div>
     </section>
 
@@ -726,7 +734,7 @@
     <section class="cta-banner-wrapper">
       <div class="cta-banner-content">
         <h2>Ready to Reclaim Your Time?</h2>
-        <p>Let’s collaborate to build dependable remote systems, eliminate your admin backlog, and elevate your customer experience.</p>
+        <p>Let's collaborate to build dependable remote systems, eliminate your admin backlog, and elevate your customer experience.</p>
         <a href="mailto:cipriano.rowenacarla.va@gmail.com" class="cta-btn-action">Send Me a Message</a>
       </div>
     </section>
