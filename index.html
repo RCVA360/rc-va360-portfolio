@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RC.VA360 | Remote Operations & Virtual Support</title>
 
-  <!-- RC.VA360 Brand Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
@@ -28,11 +27,7 @@
       --font-editorial: 'Cormorant Garamond', serif;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: var(--font-body);
@@ -42,7 +37,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Desktop Outer Container */
     .wrapper {
       max-width: 1200px;
       margin: 2rem auto 4rem;
@@ -53,7 +47,6 @@
       overflow: hidden;
     }
 
-    /* Fixed Navigation Bar */
     .nav-bar {
       display: flex;
       justify-content: space-between;
@@ -92,9 +85,7 @@
       transition: color 0.2s ease;
     }
 
-    .nav-links a:hover {
-      color: var(--primary-rose);
-    }
+    .nav-links a:hover { color: var(--primary-rose); }
 
     .btn-nav {
       background: var(--secondary-sage);
@@ -105,11 +96,8 @@
       transition: background 0.2s ease !important;
     }
 
-    .btn-nav:hover {
-      background: #919a83 !important;
-    }
+    .btn-nav:hover { background: #919a83 !important; }
 
-    /* Desktop Hero Section */
     .hero-section {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
@@ -212,208 +200,58 @@
       color: var(--secondary-sage);
     }
 
-    /* Hero Right Visual: Premium 3D Portrait with Multiple Animations */
     .hero-visual-wrapper {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      min-height: 550px;
-      perspective: 1500px;
+      min-height: 430px;
     }
 
-    /* Animated Background Circle with Multiple Layers */
     .hero-backdrop-circle {
       position: absolute;
-      width: 400px;
-      height: 400px;
+      width: 350px;
+      height: 350px;
       border-radius: 50%;
-      background: linear-gradient(135deg, rgba(168, 176, 154, 0.25), rgba(217, 167, 160, 0.3));
+      background: linear-gradient(135deg, var(--tint-sage), var(--tint-rose));
       border: 2px solid var(--border-color);
-      bottom: 5px;
-      left: 50%;
-      transform: translateX(-50%);
+      bottom: 15px;
       z-index: 1;
-      animation: floatCircle 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
-      box-shadow: 0 0 40px rgba(217, 167, 160, 0.15);
     }
 
-    /* Inner Glow Ring */
-    .hero-backdrop-circle::before {
-      content: '';
-      position: absolute;
-      inset: -25px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(217, 167, 160, 0.2), transparent 70%);
-      animation: glowPulse 5s ease-in-out infinite;
-    }
-
-    /* Outer Shimmer Ring */
-    .hero-backdrop-circle::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-      animation: rotateGlow 8s linear infinite;
-    }
-
-    /* Main Hero Image with Advanced 3D */
     .hero-cutout-img {
       position: relative;
       z-index: 2;
       width: 100%;
-      max-width: 400px;
+      max-width: 360px;
       height: auto;
       display: block;
-      filter: drop-shadow(0 35px 60px rgba(46, 58, 63, 0.2));
-      border-radius: 16px;
-      animation: float3DAdvanced 7s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
-      transform-style: preserve-3d;
-      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      filter: drop-shadow(0 14px 24px rgba(46, 58, 63, 0.12));
+      border-radius: 12px;
+      transition: transform 0.2s ease;
     }
 
     .hero-cutout-img:hover {
-      filter: drop-shadow(0 45px 90px rgba(46, 58, 63, 0.3));
-      animation-play-state: paused;
-      transform: scale(1.05) translateY(-15px) rotateX(8deg);
+      transform: translateY(-4px);
     }
 
-    /* Advanced 3D Float with Rotation and Vertical Movement */
-    @keyframes float3DAdvanced {
-      0% {
-        transform: translateY(0px) translateX(0px) rotateX(0deg) rotateY(-3deg) rotateZ(0.8deg) scaleY(1);
-      }
-      15% {
-        transform: translateY(-20px) translateX(-8px) rotateX(4deg) rotateY(2deg) rotateZ(-0.5deg) scaleY(1.02);
-      }
-      30% {
-        transform: translateY(-25px) translateX(8px) rotateX(2deg) rotateY(3deg) rotateZ(0.3deg) scaleY(1.01);
-      }
-      50% {
-        transform: translateY(-18px) translateX(0px) rotateX(-2deg) rotateY(-2deg) rotateZ(-0.8deg) scaleY(1.02);
-      }
-      70% {
-        transform: translateY(-22px) translateX(-6px) rotateX(3deg) rotateY(2deg) rotateZ(0.5deg) scaleY(1.01);
-      }
-      85% {
-        transform: translateY(-15px) translateX(6px) rotateX(-3deg) rotateY(-3deg) rotateZ(-0.3deg) scaleY(1);
-      }
-      100% {
-        transform: translateY(0px) translateX(0px) rotateX(0deg) rotateY(-3deg) rotateZ(0.8deg) scaleY(1);
-      }
-    }
-
-    /* Circle Float Animation */
-    @keyframes floatCircle {
-      0%, 100% {
-        transform: translateX(-50%) translateY(0px) scale(1);
-      }
-      25% {
-        transform: translateX(-50%) translateY(-15px) scale(1.05);
-      }
-      50% {
-        transform: translateX(-50%) translateY(-20px) scale(1.08);
-      }
-      75% {
-        transform: translateX(-50%) translateY(-12px) scale(1.04);
-      }
-    }
-
-    /* Glow Pulse with Intensity */
-    @keyframes glowPulse {
-      0%, 100% {
-        opacity: 0.4;
-        transform: scale(1);
-      }
-      50% {
-        opacity: 0.8;
-        transform: scale(1.2);
-      }
-    }
-
-    /* Rotating Outer Glow */
-    @keyframes rotateGlow {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* Premium Shimmer with Multiple Waves */
-    .hero-cutout-img::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.2), transparent 70%);
-      animation: shimmerWave 4s infinite;
-      border-radius: 16px;
-      pointer-events: none;
-      z-index: 10;
-    }
-
-    @keyframes shimmerWave {
-      0% {
-        transform: translate(-100%, -100%) rotate(45deg);
-      }
-      100% {
-        transform: translate(100%, 100%) rotate(45deg);
-      }
-    }
-
-    /* Floating Pill with Complex Motion */
     .floating-exp-pill {
       position: absolute;
-      bottom: 30px;
-      left: 15px;
+      bottom: 25px;
+      left: 10px;
       z-index: 3;
       background: #FFFFFF;
-      border: 1.5px solid var(--border-color);
-      border-radius: 14px;
-      padding: 0.75rem 1.2rem;
-      box-shadow: 0 15px 40px rgba(46, 58, 63, 0.15);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 0.65rem 1rem;
+      box-shadow: 0 8px 20px rgba(46, 58, 63, 0.08);
       font-family: var(--font-subheading);
-      animation: floatPillComplex 5.5s ease-in-out infinite;
-      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-      backdrop-filter: blur(10px);
-      background: rgba(255, 255, 255, 0.95);
-    }
-
-    .floating-exp-pill:hover {
-      transform: translateY(-10px) scale(1.08) rotateY(5deg);
-      box-shadow: 0 20px 50px rgba(46, 58, 63, 0.2);
-      backdrop-filter: blur(15px);
-    }
-
-    /* Complex Floating Pill Motion */
-    @keyframes floatPillComplex {
-      0% {
-        transform: translateY(0px) translateX(0px) rotateZ(0deg);
-      }
-      25% {
-        transform: translateY(-12px) translateX(4px) rotateZ(2deg);
-      }
-      50% {
-        transform: translateY(-18px) translateX(-4px) rotateZ(-2deg);
-      }
-      75% {
-        transform: translateY(-10px) translateX(3px) rotateZ(1deg);
-      }
-      100% {
-        transform: translateY(0px) translateX(0px) rotateZ(0deg);
-      }
     }
 
     .floating-exp-pill strong {
       display: block;
       font-size: 0.9rem;
       color: var(--text-charcoal);
-      font-weight: 700;
     }
 
     .floating-exp-pill span {
@@ -421,10 +259,9 @@
       color: var(--secondary-sage);
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
     }
 
-    /* Value Ribbon */
     .value-ribbon {
       background: var(--tint-sage);
       display: grid;
@@ -458,11 +295,7 @@
       color: var(--text-muted);
     }
 
-    /* Portfolio Section: 6 Execution Service Folders */
-    .services-section {
-      padding: 4.5rem 3.5rem;
-    }
-
+    .services-section { padding: 4.5rem 3.5rem; }
     .section-title {
       font-family: var(--font-heading);
       font-size: 1.95rem;
@@ -470,12 +303,7 @@
       color: var(--text-charcoal);
       margin-bottom: 0.35rem;
     }
-
-    .section-subtitle {
-      color: var(--text-muted);
-      font-size: 0.98rem;
-      margin-bottom: 2.75rem;
-    }
+    .section-subtitle { color: var(--text-muted); font-size: 0.98rem; margin-bottom: 2.75rem; }
 
     .folder-grid {
       display: grid;
@@ -517,9 +345,7 @@
       border-color: var(--secondary-sage);
     }
 
-    .folder-card:hover::before {
-      background: var(--primary-rose);
-    }
+    .folder-card:hover::before { background: var(--primary-rose); }
 
     .folder-num {
       font-family: var(--font-heading);
@@ -553,7 +379,6 @@
       margin-top: auto;
     }
 
-    /* Featured Projects */
     .featured-strip {
       padding: 0 3.5rem 4.5rem;
       display: grid;
@@ -595,7 +420,6 @@
       margin-bottom: 1.25rem;
     }
 
-    /* Call to Action Banner (banner.jpeg) */
     .cta-banner-wrapper {
       margin: 0 3.5rem 4rem;
       border-radius: 20px;
@@ -646,7 +470,6 @@
       transform: translateY(-2px);
     }
 
-    /* Footer */
     footer {
       border-top: 1px solid var(--border-color);
       padding: 2rem 3.5rem;
@@ -664,54 +487,31 @@
       font-style: italic;
     }
 
-    /* Responsive */
     @media (max-width: 900px) {
       .hero-section {
         grid-template-columns: 1fr;
         padding: 3rem 2rem;
         text-align: center;
       }
-      .hero-actions {
-        justify-content: center;
-      }
-      .hero-desc {
-        margin: 0 auto 2rem;
-      }
-      .folder-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .value-ribbon {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 1.5rem;
-      }
+      .hero-actions { justify-content: center; }
+      .hero-desc { margin: 0 auto 2rem; }
+      .folder-grid { grid-template-columns: repeat(2, 1fr); }
+      .value-ribbon { grid-template-columns: repeat(2, 1fr); padding: 1.5rem; }
     }
 
     @media (max-width: 600px) {
-      .nav-bar {
-        padding: 1rem 1.25rem;
-      }
-      .nav-links a:not(.btn-nav) {
-        display: none;
-      }
-      .folder-grid {
-        grid-template-columns: 1fr;
-      }
-      .value-ribbon {
-        grid-template-columns: 1fr;
-      }
-      .hero-title {
-        font-size: 2rem;
-      }
-      .cta-banner-content {
-        padding: 2.5rem 1.5rem;
-      }
+      .nav-bar { padding: 1rem 1.25rem; }
+      .nav-links a:not(.btn-nav) { display: none; }
+      .folder-grid { grid-template-columns: 1fr; }
+      .value-ribbon { grid-template-columns: 1fr; }
+      .hero-title { font-size: 2rem; }
+      .cta-banner-content { padding: 2.5rem 1.5rem; }
     }
   </style>
 </head>
 <body>
 
   <div class="wrapper">
-    <!-- Clean Nav Bar: About Me & Customer Care Stay Here -->
     <header class="nav-bar">
       <a href="index.html" class="brand-group">
         <img src="logo.png" alt="RC.VA360 Logo" class="brand-logo-img">
@@ -727,12 +527,9 @@
       </nav>
     </header>
 
-    <!-- Desktop Asymmetrical Hero Section -->
     <section class="hero-section">
       <div class="hero-content">
-        <div class="hero-badge">
-          <span></span> 9+ Years Professional Operations Experience
-        </div>
+        <div class="hero-badge"><span></span> 9+ Years Professional Operations Experience</div>
         <h1 class="hero-title">Virtual Assistance & Operations Support</h1>
         <span class="hero-tagline">You focus on business — I'll handle the details.</span>
         <p class="hero-desc">
@@ -745,10 +542,9 @@
         </div>
       </div>
 
-      <!-- Hero Visual: Premium 3D Animated Portrait with Moving Object Effects -->
       <div class="hero-visual-wrapper">
         <div class="hero-backdrop-circle"></div>
-        <img src="hero-portrait.png" alt="Professional Virtual Assistant" class="hero-cutout-img">
+        <img src="logo.png" alt="RC.VA360 Logo" class="hero-cutout-img">
         <div class="floating-exp-pill">
           <strong>Systematic & Reliable</strong>
           <span>Remote Operations Hub</span>
@@ -756,7 +552,6 @@
       </div>
     </section>
 
-    <!-- Value Metric Ribbon -->
     <div class="value-ribbon">
       <div class="ribbon-item">
         <div class="ribbon-icon">✓</div>
@@ -788,13 +583,11 @@
       </div>
     </div>
 
-    <!-- Service Folders Grid (About Me & Customer Care are excluded to prevent duplication) -->
     <section class="services-section" id="services">
       <h2 class="section-title">Execution & Support Folders</h2>
       <p class="section-subtitle">Structured remote solutions tailored for busy founders and operators.</p>
 
       <div class="folder-grid">
-        <!-- 02 Administrative Support -->
         <a href="02-Administrative-Support/index.html" class="folder-card">
           <div>
             <div class="folder-num">01 · LOGISTICS</div>
@@ -804,7 +597,6 @@
           <div class="folder-arrow">View details &rarr;</div>
         </a>
 
-        <!-- 04 Operations Support -->
         <a href="04-Operations-Support/index.html" class="folder-card">
           <div>
             <div class="folder-num">02 · SYSTEMS</div>
@@ -814,7 +606,6 @@
           <div class="folder-arrow">View details &rarr;</div>
         </a>
 
-        <!-- 05 Social Media Support -->
         <a href="05-Social-Media-Support/index.html" class="folder-card">
           <div>
             <div class="folder-num">03 · ENGAGEMENT</div>
@@ -824,7 +615,6 @@
           <div class="folder-arrow">View details &rarr;</div>
         </a>
 
-        <!-- 06 AI-Powered Tasks -->
         <a href="06-AI-Powered-Tasks/index.html" class="folder-card">
           <div>
             <div class="folder-num">04 · PRODUCTIVITY</div>
@@ -834,7 +624,6 @@
           <div class="folder-arrow">View details &rarr;</div>
         </a>
 
-        <!-- 07 Content Creation -->
         <a href="07-Content-Creation/index.html" class="folder-card">
           <div>
             <div class="folder-num">05 · CREATIVE</div>
@@ -844,7 +633,6 @@
           <div class="folder-arrow">View details &rarr;</div>
         </a>
 
-        <!-- 08 Certifications -->
         <a href="08-Certifications/index.html" class="folder-card">
           <div>
             <div class="folder-num">06 · CREDENTIALS</div>
@@ -856,7 +644,6 @@
       </div>
     </section>
 
-    <!-- Case Studies / Featured Projects -->
     <section class="featured-strip">
       <div class="project-card">
         <div>
@@ -877,7 +664,6 @@
       </div>
     </section>
 
-    <!-- Call to Action Banner (Configured with your email) -->
     <section class="cta-banner-wrapper">
       <div class="cta-banner-content">
         <h2>Ready to Reclaim Your Time?</h2>
@@ -886,7 +672,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer>
       <span>RC.VA360 · All Rights Reserved</span>
       <span class="footer-tagline">You focus on business — I'll handle the details.</span>
